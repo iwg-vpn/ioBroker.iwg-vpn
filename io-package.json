@@ -1,0 +1,147 @@
+{
+    "common": {
+        "name": "iwg-vpn",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "WireGuard VPN",
+        "titleLang": {
+            "en": "WireGuard VPN",
+            "de": "WireGuard-VPN",
+            "ru": "WireGuard VPN",
+            "pt": "VPN WireGuard",
+            "nl": "WireGuard VPN",
+            "fr": "VPN WireGuard",
+            "it": "WireGuard VPN",
+            "es": "VPN de WireGuard",
+            "pl": "WireGuard VPN",
+            "zh-cn": "线卫VPN"
+        },
+        "desc": {
+            "en": "THE adapter for setting up WireGuard VPN",
+            "de": "DER Adapter zum Einrichten von WireGuard VPN",
+            "ru": "Адаптер для настройки WireGuard VPN",
+            "pt": "O adaptador para configurar VPN WireGuard",
+            "nl": "DE adapter voor het instellen van WireGuard VPN",
+            "fr": "L'adaptateur pour configurer WireGuard VPN",
+            "it": "L'adattatore per configurare WireGuard VPN",
+            "es": "EL adaptador para configurar WireGuard VPN",
+            "pl": "Adapter do konfiguracji WireGuard VPN",
+            "zh-cn": "用于设置 WireGuard VPN 的适配器"
+        },
+        "authors": [
+            "iwg-vpn <iwg.vpn@gmail.com>"
+        ],
+        "keywords": [
+            "von",
+            "remote",
+            "connect",
+            "link",
+            "wireguard"
+        ],
+        "license": "CC-BY-NC-4.0",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "iwg-vpn.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/master/admin/iwg-vpn.png",
+        "readme": "https://github.com/iwg-vpn/ioBroker.iwg-vpn/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "network",
+        "compact": true,
+        "materialize": true,
+        "adminUI": {
+            "config": "json"
+        },
+        "messagebox": true,
+        "subscribe": "messagebox",
+        "dependencies": [
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        },
+        {
+            "_id": "local",
+            "type": "channel",
+            "common": {
+                "name": "Local Peer data"
+            },
+            "native": {}
+        },     
+        {
+            "_id": "local.address",
+            "type": "state",
+            "common": {
+                "role": "text",
+                "name": "Local peer address(es)",
+                "type": "string",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        },
+        {
+            "_id": "server",
+            "type": "channel",
+            "common": {
+                "name": "Server data"
+            },
+            "native": {}
+        },     
+        {
+            "_id": "server.address",
+            "type": "state",
+            "common": {
+                "role": "text",
+                "name": "Server Endpoint",
+                "type": "string",
+                "read": true,
+                "write": true,
+                "def": false
+            },
+            "native": {}
+        }             
+    ]
+}
