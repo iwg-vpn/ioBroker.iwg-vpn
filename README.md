@@ -3,16 +3,12 @@
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.iwg-vpn.svg)](https://www.npmjs.com/package/iobroker.iwg-vpn)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.iwg-vpn.svg)](https://www.npmjs.com/package/iobroker.iwg-vpn)
-![Number of Installations (latest)](http://iobroker.live/badges/iwg-vpn-installed.svg)
-![Number of Installations (stable)](http://iobroker.live/badges/iwg-vpn-stable.svg)
-[![Dependency Status](https://img.shields.io/david/iwg-vpn/iobroker.iwg-vpn.svg)](https://david-dm.org/iwg-vpn/iobroker.iwg-vpn)
-[![Known Vulnerabilities](https://snyk.io/test/github/iwg-vpn/ioBroker.iwg-vpn/badge.svg)](https://snyk.io/test/github/iwg-vpn/ioBroker.iwg-vpn)
 
 [![NPM](https://nodei.co/npm/iobroker.iwg-vpn.png?downloads=true)](https://nodei.co/npm/iobroker.iwg-vpn/)
 
 ## iwg-vpn adapter for ioBroker
 
-THE adapter for setting up WireGuard VPN.
+THE adapter for setting up a secure connection from remote devices to the ioBroker and local network leveraging the [WireGuard](https://www.wireguard.com) VPN.
 
 For detailed description please refer to the addapter configuration screen.
 
