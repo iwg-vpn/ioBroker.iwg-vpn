@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.0.1",
+        "version": "0.0.3",
         "news": {
             "0.0.1": {
                 "en": "initial release",
@@ -68,19 +68,16 @@
         },
         "messagebox": true,
         "subscribe": "messagebox",
-        "dependencies": [
-            {
-                "js-controller": ">=1.4.2"
-            }
-        ]
+        "dependencies": [{
+            "js-controller": ">=1.4.2"
+        }]
     },
     "native": {
         "option1": true,
         "option2": "42"
     },
     "objects": [],
-    "instanceObjects": [
-        {
+    "instanceObjects": [{
             "_id": "info",
             "type": "channel",
             "common": {
@@ -108,7 +105,7 @@
                 "name": "Local Peer data"
             },
             "native": {}
-        },     
+        },
         {
             "_id": "local.address",
             "type": "state",
@@ -129,7 +126,7 @@
                 "name": "Server data"
             },
             "native": {}
-        },     
+        },
         {
             "_id": "server.address",
             "type": "state",
@@ -142,6 +139,6 @@
                 "def": false
             },
             "native": {}
-        }             
+        }
     ]
 }
