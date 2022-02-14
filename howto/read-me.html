@@ -69,7 +69,22 @@
                         None of the devices is required to have a public IP address or to be reachable from the internet. No ports are required to be opened on your local network router. But, to be able to connect to each other via the VPN, the devices have to be properly set
                         up.
                     </p>
+                    <h2>
+                        Adding the adapter to ioBroker
+                    </h2>
 
+                    <p>
+                        To add the adapter to your ioBroker you have to execute the following commands on the ioBroker host:
+                    </p>
+                    <p>
+                        <code>cd /opt/iobroker</code>
+                    </p>
+                    <p>
+                        <code>sudo npm i iobroker.iwg-vpn</code>
+                    </p>
+                    <p>
+                        <code>iob add iwg-vpn</code>
+                    </p>
                     <h2>
                         Installing Wireguard
                     </h2>
@@ -110,7 +125,7 @@
 
                     <p>
                         You can add these commands manually via, e.g., touching a file under
-                        <code>/etc/sudoers.d/</code> and configuring it using <code>visudo</code> or you can download and run the script that will do it for you. To make the configuration via the script open the shell and execute the commands:
+                        <code>/etc/sudoers.d/</code> and configuring it using <code>visudo</code> or you can run the script that will do it for you. To make the configuration via the script open the shell and execute the commands:
                     </p>
 
                     <p>
@@ -159,6 +174,12 @@
                         Please use the installed app on a mobile device (peer) to generate the key pair. On a peer running Linux use the command:
                     </p>
 
+                    <p>
+                        <code>sudo su</code>
+                    </p>
+                    <p>
+                        <code>cd /etc/wireguard/</code>
+                    </p>
                     <p>
                         <code>wg genkey | tee privatekey | wg pubkey > publickey</code>
                     </p>
