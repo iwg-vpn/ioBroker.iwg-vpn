@@ -10,7 +10,8 @@
 
 THE adapter for setting up a secure connection from remote devices to the ioBroker and local network leveraging the [WireGuard](https://www.wireguard.com) VPN.
 
-For detailed description please refer to the addapter configuration screen.
+For detailed description please refer to the addapter configuration screen or follow the
+link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/read-me.html.
 
 ## License
 Creative Commons Attribution-NonCommercial (CC BY-NC)

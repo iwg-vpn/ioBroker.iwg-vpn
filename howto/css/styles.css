@@ -277,6 +277,7 @@ code {
     max-width: var(--site-width);
     padding: 0 var(--layout-padding);
     margin-left: auto;
+    margin-top: 10px;
     /* display: flex; */
     align-items: right;
     position: relative;

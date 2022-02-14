@@ -5,13 +5,27 @@
     <meta charset="utf-8">
     <title>Setting up the iobroker.iwg-vpn adapter</title>
     <link rel="stylesheet" media="all" href="./css/styles.css" />
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
 </head>
 
 <body>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                    pageLanguage: 'en'
+                },
+                'google_translate_element'
+            );
+        }
+    </script>
+
     <header class="iwg-header">
         <div class="iwg-header-container">
             <img class="site-logo-img" src="./img/iwg-vpn.png">
             <h2>iobroker.iwg-vpn</h2>
+            <div id="google_translate_element" style="margin: 10px"></div>
             <div class="iwg-header-container-right">
                 <a href="https://www.paypal.com/donate/?hosted_button_id=6XZHXGV7UUM8N">
                     <img src="https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif">
@@ -28,10 +42,13 @@
                         Introduction
                     </h1>
                     <p>
-                        <a href="https://www.wireguard.com/">WireGuard</a> is a relatively new VPN implementation that was added to the Linux 5.6 kernel in 2020 and is faster and simpler than other popular VPN options like IPsec and OpenVPN.
+                        <a href="https://www.wireguard.com/">WireGuard</a> is a VPN implementation that was recently added to the Linux kernel. It is faster and simpler than other popular VPN implementations like OpenVPN or IPsec.
                     </p>
 
                     <p>This adapter helps to easily set up an own Wireguard-based VPN and connect to a local ioBroker and local network from everwhere and any remote device. And all this can be done just in a minute.</p>
+
+                    <p>Please be aware that at the moment the adapter is supported on Linux hosts only. If you run ioBroker on a Windows machine watch out for upcoming releases.
+                    </p>
 
                     <h1>
                         Overview
@@ -58,7 +75,7 @@
                     </h2>
 
                     <p>
-                        Every device on the VPN must have the WireGuard up and running. You can install WireGuard on your ioBroker host manually following the instructions on the official WireGuard <a href="https://www.wireguard.com/install/">Installation</a>                        page. Alternativelly, you can download and run a shell script which will simplify the installation and make your life easier.
+                        Every device on the VPN must have the WireGuard up and running. You can install WireGuard on your ioBroker host manually following the instructions on the official WireGuard <a href="https://www.wireguard.com/install/">Installation</a>                        page. Alternativelly, you can run a shell script which will simplify the installation and make your life easier.
                     </p>
 
                     <p>
@@ -229,6 +246,25 @@
                     <p>
                         <img src="./img/connected.png" loading="lazy">
                     </p>
+                    <h2>
+                        Some words about security
+                    </h2>
+                    <p>
+                        Security is an important aspect of any communication in generall and in this case even especially important. Please be aware that this adapter helps you to set up a communication channel and easily manage the WireGuard interface, but doesn't participate
+                        in the communication itself. The entire communication is handled by the WireGuard. You can refer for the detailed description of how everything works and how the security is ensured to the WireGuard <a href="https://www.wireguard.com/papers/wireguard.pdf">whitepaper</a>.
+                    </p>
+
+                    <p>
+                        You always control your VPN. Deleting all the peers or having no active peers configured makes your ioBroker host unreachable under the VPN address. Stopping the adapter will stop the WireGuard and remove the WireGuard network interface entirely.
+                    </p>
+
+                    <h2>
+                        Support
+                    </h2>
+                    <p>
+                        In case you have a question or missing a feature feel free to contact iwg.vpn@gmail.com
+                    </p>
+
                 </div>
 
             </article>
