@@ -6,11 +6,13 @@
 
 [![NPM](https://nodei.co/npm/iobroker.iwg-vpn.png?downloads=true)](https://nodei.co/npm/iobroker.iwg-vpn/)
 
+WireGuard is a registered trademark of Jason A. Donenfeld. (https://www.wireguard.com)
+
 ## iwg-vpn adapter for ioBroker
 
 THE adapter for setting up a secure connection from remote devices to the ioBroker and local network leveraging the [WireGuard](https://www.wireguard.com) VPN.
 
-For detailed description please refer to the addapter configuration screen or follow the
+For detailed description please refer to the adapter configuration screen or follow the
 link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/read-me.html.
 
 ## License

@@ -38,6 +38,18 @@
         <main class="iwg-layout-content">
             <article class="iwg-card">
                 <div class="iwg-article-body txt">
+                    <p align="right" style="font-size: 0.6em">
+                        WireGuard is a registered trademark of Jason A. Donenfeld. (<a href="https://www.wireguard.com/">https://www.wireguard.com/</a>)</p>
+                    <h5>
+                        Recently added
+                    </h5>
+
+                    <ul>
+                        <li>
+                            NAT Support. <a href=" #nat ">Take me right there!</a>
+                        </li>
+                    </ul>
+
                     <h1>
                         Introduction
                     </h1>
@@ -45,7 +57,8 @@
                         <a href="https://www.wireguard.com/">WireGuard</a> is a VPN implementation that was recently added to the Linux kernel. It is faster and simpler than other popular VPN implementations like OpenVPN or IPsec.
                     </p>
 
-                    <p>This adapter helps to easily set up an own Wireguard-based VPN and connect to a local ioBroker and local network from everwhere and any remote device. And all this can be done just in a minute.</p>
+                    <p>This adapter helps to easily set up an own Wireguard-based VPN and connect to a local ioBroker and local network from everwhere and any remote device. And all this can be done just in a minute.
+                    </p>
 
                     <p>Please be aware that at the moment the adapter is supported on Linux hosts only. If you run ioBroker on a Windows machine watch out for upcoming releases.
                     </p>
@@ -54,14 +67,15 @@
                         Overview
                     </h1>
 
-                    <p>To set up a VPN, we need at least two devices that we want to connect. One of these is the device hosting the ioBroker. The other device could be a smartphone or a computer on another local network.</p>
+                    <p>To set up a VPN, we need at least two devices that we want to connect. One of these is the device hosting the ioBroker. The other device could be a smartphone or a computer on another local network.
+                    </p>
 
                     <figure>
                         <p>
-                            <img src="./img/overview.png" loading="lazy">
+                            <img src="./img/overview.png " loading="lazy ">
                         </p>
                         <figcaption>
-                            Connectivity overview
+                            Overview
                         </figcaption>
                     </figure>
 
@@ -90,7 +104,7 @@
                     </h2>
 
                     <p>
-                        Every device on the VPN must have the WireGuard up and running. You can install WireGuard on your ioBroker host manually following the instructions on the official WireGuard <a href="https://www.wireguard.com/install/">Installation</a>                        page. Alternativelly, you can run a shell script which will simplify the installation and make your life easier.
+                        Every device on the VPN must have the WireGuard up and running. You can install WireGuard on your ioBroker host manually following the instructions on the official WireGuard <a href="https://www.wireguard.com/install/ ">Installation</a>                        page. Alternativelly, you can run a shell script which will simplify the installation and make your life easier.
                     </p>
 
                     <p>
@@ -119,8 +133,9 @@
                         </li>
                     </ul>
                     <p>
-                        To be able to set up the WireGuard network interface, the ioBroker needs to execute WireGuard's <code>wg</code> and <code>wg-quick</code> commands with elevated privileges. Exactly the same way as today the ioBroker configured
-                        to execute commands like <code>systemctl start</code> or <code>apt-get</code> without providing the sudo password, we have to add to this configuration the commands required to manage WireGuard interface.
+                        To be able to set up the WireGuard network interface, the ioBroker needs to execute WireGuard's
+                        <code>wg</code> and <code>wg-quick</code> commands with elevated privileges. Exactly the same way as today the ioBroker configured to execute commands like <code>systemctl start</code> or <code>apt-get</code> without providing
+                        the sudo password, we have to add to this configuration the commands required to manage WireGuard interface.
                     </p>
 
                     <p>
@@ -144,14 +159,14 @@
                     </p>
 
                     <p>
-                        <img src="./img/adapter-connection-status.png" loading="lazy">
+                        <img src="./img/adapter-connection-status.png " loading="lazy ">
                     </p>
                     <p>
                         Once connected, the adapter gets a private IP address and assigns it to the local WireGuard network interface. Starting from this point the ioBroker host is reachable in VPN under this IP address. You can always see the private IP address of your ioBroker
                         host in the <code>Objects</code> screen of the ioBroker:
                     </p>
                     <p>
-                        <img src="./img/local-address.png" loading="lazy">
+                        <img src="./img/local-address.png " loading="lazy ">
                     </p>
 
                     <h2>
@@ -161,9 +176,8 @@
                     <p>Let's call the other devices on your VPN peers. The ioBroker host and the peers are devices on the same VPN.
                     </p>
                     <p>
-                        Once configured, the adapter not only gets its own IP address, it also gets 3 additional IP addresses to be used by the peers. Before adding a peer to your VPN you have to install the WireGuard package or the WireGuard app also on this peer. Please follow
-                        the instructions on the official WireGuard <a href="https://www.wireguard.com/install/">Installation</a> page matching to the operating system of the peer. If your peer running a Linux, you can use the same
-                        installation script as for the ioBroker host.
+                        Once configured, the adapter not only gets its own IP address, it also gets 3 additional IP addresses to be used by the peers. Before adding a peer to your VPN you have to install the WireGuard package or the WireGuard app also on this peer. For connecting
+                        individual devices to a network via VPN, there are apps or programs from WireGuard itself for most operating systems. Please follow the instructions on the official WireGuard <a href="https://www.wireguard.com/install/ ">Installation</a>                        page matching to the operating system of the peer. If your peer running a Linux, you can use the same installation script as for the ioBroker host.
                     </p>
 
                     <p>To encrypt and decrypt network packets, we need keys. Once the WireGuard is installed on a peer, the key paar has to be generated. The private key will be used to decrypt incomming network packets and must be never revealed. The public
@@ -185,7 +199,8 @@
                     </p>
 
                     <p>
-                        This command will create the keys and store them in <code>privatekey</code> and <code>publickey</code> files and print the publickey to stdout. You will need both keys later for configuration, so print also the privatekey to stdout:
+                        This command will create the keys and store them in <code>privatekey</code> and
+                        <code>publickey</code> files and print the publickey to stdout. You will need both keys later for configuration, so print also the privatekey to stdout:
                     </p>
 
                     <p>
@@ -197,11 +212,12 @@
                         Adding peers to VPN
                     </h2>
                     <p>
-                        To add a peer open the adapter configuration and click on <code>PEERS</code>, then <code>+</code> to add a new row in the table and provide the required details:
+                        To add a peer open the adapter configuration and click on <code>PEERS</code>, then
+                        <code>+</code> to add a new row in the table and provide the required details:
                     </p>
 
                     <p>
-                        <img src="./img/adapter-config.png" loading="lazy">
+                        <img src="./img/adapter-config-peers.png " loading="lazy ">
                     </p>
 
 
@@ -216,7 +232,7 @@
                             <code>Public Key</code> — The public key of the generated on the peer key pair. It will be used for network traffic encryption.
                         </li>
                         <li>
-                            <code>Active</code> — Only active peers are really available on VPN. You can configure more peers than IP addresses available, but only active ones with unique IP addresses will be added to your VPN. By switching this property
+                            <code>Active</code> — Only active peers are really available on VPN. You can configure more peers than VPN IP addresses available, but only active ones with unique IP addresses will be added to your VPN. By switching this property
                             on and off you can add or remove a preconfigured peer to/from your VPN.
                         </li>
                     </ul>
@@ -230,61 +246,132 @@
                     </h2>
                     <p>
                         Now it's time for peers to join your VPN. If everything went well, the adapter has already created a config for every active peer. Open the <code>Objects</code> screen in the ioBroker, find the
-                        <code>iwg-vpn</code> section and your active peers. Every peer object has an <code>address</code> state containing the assigned private IP address and the <code>config</code> state with prepared configuration.
+                        <code>iwg-vpn</code> section and your active peers. Every peer object has an
+                        <code>address</code> state containing the assigned private IP address and the
+                        <code>config</code> state with prepared configuration.
 
                     </p>
                     <p>
-                        <img src="./img/peer-config.png" loading="lazy">
+                        <img src="./img/peer-config.png " loading="lazy ">
                     </p>
 
                     <p>Copy the configuration string and paste it into a text editor. It looks like this:</p>
 
                     <p>
-                        <img src="./img/peer-config-file.png" loading="lazy">
+                        <img src="./img/peer-config-file.png " loading="lazy ">
                     </p>
 
                     <p>
-                        Replace the placeholder <code>&lt;private_key&gt;</code> with your peer's private key and place the whole content into a config file on the peer. For a mobile peer you can just paste the copied configuration into the iOS or Android
-                        app, for a Linux peer create a file containing the configuration at
-                        <code>/etc/wireguard/wg0.conf</code>.
-                    </p>
+                        Replace the placeholder <code>&lt;private_key&gt;</code> with your peer's private key and place the whole content as a config on a peer. E.g., on an Android device the configuration would look like:
+                        <p>
+                            <img src="./img/android-config.png " style="width: auto; min-width: 50px " loading="lazy ">
+                        </p>
 
-                    <p>
-                        Having the WireGuard installed and configuration file created, the VPN interface can be started on a peer. To start/stop the WireGuard on the mobile peer use the installed app, on a Linux peer use the command:
-                    </p>
-                    <p>
-                        <code>wg-quick up wg0</code>
-                    </p>
-                    <p>to start and </p>
-                    <p><code>wg-quick down wg0</code> </p>
-                    <p>to stop the WireGuard interface.</p>
-                    <h2>
-                        Connecting
-                    </h2>
-                    <p>
-                        Everything is set up and you're ready to go! Open your favorite browser on the peer and navigate to the ioBroker via the VPN using the ioBroker's private IP address:
-                    </p>
-                    <p>
-                        <img src="./img/connected.png" loading="lazy">
-                    </p>
-                    <h2>
-                        Some words about security
-                    </h2>
-                    <p>
-                        Security is an important aspect of any communication in generall and in this case even especially important. Please be aware that this adapter helps you to set up a communication channel and easily manage the WireGuard interface, but doesn't participate
-                        in the communication itself. The entire communication is handled by the WireGuard. You can refer for the detailed description of how everything works and how the security is ensured to the WireGuard <a href="https://www.wireguard.com/papers/wireguard.pdf">whitepaper</a>.
-                    </p>
 
-                    <p>
-                        You always control your VPN. Deleting all the peers or having no active peers configured makes your ioBroker host unreachable under the VPN address. Stopping the adapter will stop the WireGuard and remove the WireGuard network interface entirely.
-                    </p>
+                        <p>
+                            For a Linux peer create a file containing the configuration at
+                            <code>/etc/wireguard/wg0.conf</code>.
+                        </p>
 
-                    <h2>
-                        Support
-                    </h2>
-                    <p>
-                        In case you have a question or missing a feature feel free to contact iwg.vpn@gmail.com
-                    </p>
+                        <p>
+                            Having the WireGuard installed and configuration file created, the VPN interface can be started on a peer. To start/stop the WireGuard on the mobile peer use the installed app, on a Linux peer use the command:
+                        </p>
+                        <p>
+                            <code>wg-quick up wg0</code>
+                        </p>
+                        <p>to start and </p>
+                        <p><code>wg-quick down wg0</code> </p>
+                        <p>to stop the WireGuard interface.</p>
+                        <h2>
+                            Connecting
+                        </h2>
+                        <p>
+                            Everything is set up and you're ready to go! Open your favorite browser on the peer and navigate to the ioBroker via the VPN using the ioBroker's private IP address:
+                        </p>
+                        <p>
+                            <img src="./img/connected.png " loading="lazy ">
+                        </p>
+
+                        <p>
+                            Of couse you can access any application/server running on the ioBroker host from any of your remote devices (i.e. peers) in exactly the same way, e.g., access the Phoscon Web-Server:
+                        </p>
+                        <p>
+                            <img src="./img/android-phoscon.png " style="width: auto; min-width: 50px " loading="lazy ">
+                        </p>
+
+                        <h2 id="nat ">
+                            NAT
+                        </h2>
+                        <p>
+                            The adapter supports NAT (<b>N</b>etwork <b>A</b>ddress <b>T</b>ranslation) or more precisely 1:1 NAT that maps one internal address (in a local network) to one external address (in VPN). The figure below shows an example of
+                            a NAT configuration. The network interface on ioBroker host has got 2 VPN addresses assigned: <code>10.0.0.136</code> and <code>10.0.0.138</code>. The VPN address <code>10.0.0.138</code> is configured to forward the incomming
+                            traffic to a device in the local network having the internal IP <code>192.168.0.1</code>. With this configuration a peer with VPN IP address <code>10.0.0.137</code> is able to access the ioBroker host under VPN IP <code>10.0.0.136</code>                            and the local network device under the VPN IP address <code>10.0.0.138</code>:
+                        </p>
+                        <figure>
+                            <p>
+                                <img src="./img/nat.png " loading="lazy ">
+                            </p>
+                            <figcaption>
+                                1:1 NAT
+                            </figcaption>
+                        </figure>
+
+                        <p>
+                            The VPN addresses the adapter gets can be configured either to be used as peer addresses or as addresses mapped to local network devices. The must be no overlap, i.e. a VPN IP address of an active peer cannot be used as a NAT IP address and vice versa.
+                        </p>
+
+                        <h3>
+                            NAT Configuration
+
+                        </h3>
+
+                        <p>
+                            The NAT configuration is very simple and similar to the Peers configuration. Open the adapter configuration, click on <code>NAT</code>, then <code>+</code> to add a new row in the table and provide the required details:
+                        </p>
+                        <p>
+                            <img src="./img/nat-configuration.png " loading="lazy ">
+                        </p>
+
+                        <ul>
+                            <li>
+                                <code>Source IP</code> — The VPN IP address you'd like to map to a device in the local network. The IP can be selected from a drop-down list of addresses in your VPN.
+                            </li>
+                            <li>
+                                <code>Destination IP</code> — The IP of a device in the local network you'd like to access from your VPN peers.
+                            </li>
+                            <li>
+                                <code>Active</code> — Only active NAT mappings are really available on VPN. You can configure more NAT mappings than VPN IP addresses available, but only active ones with unique IP addresses will be added to your VPN. By
+                                switching this property on and off you can add or remove a predefined NAT configuration to/from your VPN.
+                            </li>
+                        </ul>
+                        <p>
+                            To apply your configuration hit <code>SAVE AND CLOSE</code> button.
+                        </p>
+                        <p>
+                            Once the NAT is configured the devices in the local network can be accessed in exactly the same way as the ioBroker host. Just navigate on your peer to the as NAT configured VPN IP address:
+                        </p>
+                        <p>
+                            <img src="./img/nat-access.png " style="width: auto; min-width: 50px " loading="lazy ">
+                        </p>
+                        <h2>
+                            Some words about security
+                        </h2>
+                        <p>
+                            Security is an important aspect of any communication in generall and in this case even especially important. Please be aware that this adapter helps you to set up a communication channel and easily manage the WireGuard interface, but doesn't participate
+                            in the communication itself. The entire communication is handled by the WireGuard. You can refer for the detailed description of how everything works and how the security is ensured to the WireGuard
+                            <a href="https://www.wireguard.com/papers/wireguard.pdf ">whitepaper</a>.
+                        </p>
+
+                        <p>
+                            You always control your VPN. Deleting all the peers or having no active peers configured makes your ioBroker host unreachable under the VPN address. Stopping the adapter will stop the WireGuard and remove the WireGuard network interface entirely.
+                        </p>
+
+                        <h2>
+                            Support
+                        </h2>
+                        <p>
+                            In case you have a question or missing a feature feel free to contact iwg.vpn@gmail.com
+                        </p>
 
                 </div>
 
