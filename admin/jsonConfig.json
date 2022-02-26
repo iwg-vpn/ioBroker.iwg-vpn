@@ -1,0 +1,119 @@
+{
+    "type": "tabs",
+    "i18n": true,
+    "items": {
+        "_docpanel": {
+            "type": "panel",
+            "label": "READ ME",
+            "items": {
+                "_link2documentation": {
+                    "type": "staticLink",
+                    "label": "Click HERE for HowTo description",
+                    "href": "https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/read-me.html",
+                    "style": {
+                        "fontSize": 16,
+                        "marginBottom": 20
+                    }
+                }
+            }
+        },
+        "_remotes": {
+            "type": "panel",
+            "disabled": "!_alive",
+            "label": "Peers",
+            "items": {
+                "params.remotes": {
+                    "type": "table",
+                    "items": [
+                        {
+                            "type": "selectSendTo",                           
+                            "title": "IP",
+                            "noTranslation": true,
+                            "command": "get-hosts",
+                            "attr": "ip",
+                            "jsonData": "{\"name\": \"${data.name}\"}",
+                            "validator": "data.ip != null && data.ip != undefined",
+                            "validatorNoSaveOnError": true
+                        },
+                        {
+                            "type": "text",
+                            "title": "Name",
+                            "attr": "name",
+                            "validator": "data.name && data.name.length > 0",
+                            "validatorNoSaveOnError": true
+                        },
+                        {
+                            "type": "text",
+                            "title": "Public Key",
+                            "attr": "publicKey",
+                            "hidden": "data.isAutoGenerateKeys == true",
+                            "validator": "data.publicKey && data.publicKey.length == 44",
+                            "validatorNoSaveOnError": true
+                        },
+                        {
+                            "type": "checkbox",
+                            "title": "Active",
+                            "attr": "isActive",
+                            "default": false
+                        }
+                    ]
+                },
+                "_validatePeers": {
+                    "newLine": true,
+                    "variant": "contained",
+                    "color": "primary",
+                    "disabled": "!_alive",
+                    "type": "sendTo",
+                    "command": "validate-config",
+                    "jsonData": "{\"config\": \"${JSON.stringify(data.params)}\"}",
+                    "label": "Validate Config"
+                }
+            }    
+        },
+        "_nat": {
+            "type": "panel",
+            "label": "NAT",
+            "disabled": "!_alive",
+            "items": {
+                "params.nats": {
+                    "type": "table",
+                    "items": [
+                        {
+                            "type": "selectSendTo",                           
+                            "title": "Source IP",
+                            "noTranslation": true,
+                            "command": "get-hosts",
+                            "attr": "src",
+                            "jsonData": "{\"name\": \"${data.name}\"}",
+                            "validator": "data.src != null && data.src != undefined",
+                            "validatorNoSaveOnError": true
+                        },
+                        {
+                            "type": "text",
+                            "title": "Destination IP",
+                            "attr": "dst",
+                            "validator": "data.dst && data.dst.length > 0",
+                            "validatorNoSaveOnError": true
+                        },
+                        {
+                            "type": "checkbox",
+                            "title": "Active",
+                            "attr": "isActive",
+                            "default": false
+                        }
+                    ]
+                },
+                "_validateNats": {
+                    "newLine": true,
+                    "variant": "contained",
+                    "color": "primary",
+                    "disabled": "!_alive",
+                    "type": "sendTo",
+                    "command": "validate-config",
+                    "jsonData": "{\"config\": \"${JSON.stringify(data.params)}\"}",
+                    "label": "Validate Config"
+                  }
+            }
+        }        
+    }
+}

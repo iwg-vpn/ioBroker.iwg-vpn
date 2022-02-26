@@ -1,9 +1,33 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.0.3",
+        "version": "0.0.8",
         "news": {
-            "0.0.1": {
+            "0.0.8": {
+                "en": "Validate your configuration before applying it",
+                "de": "Validieren Sie Ihre Konfiguration, bevor Sie sie anwenden",
+                "ru": "Проверьте свою конфигурацию перед ее применением",
+                "pt": "Valide sua configuração antes de aplicá-la",
+                "nl": "Valideer uw configuratie voordat u deze toepast",
+                "fr": "Validez votre configuration avant de l'appliquer",
+                "it": "Convalida la tua configurazione prima di applicarla",
+                "es": "Valida tu configuración antes de aplicarla",
+                "pl": "Sprawdź poprawność konfiguracji przed jej zastosowaniem",
+                "zh-cn": "在应用之前验证您的配置"
+            },
+            "0.0.7": {
+                "en": "NAT into the local network",
+                "de": "NAT in das lokale Netzwerk",
+                "ru": "NAT в локальную сеть",
+                "pt": "NAT na rede local",
+                "nl": "NAT in het lokale netwerk",
+                "fr": "NAT dans le réseau local",
+                "it": "NAT nella rete locale",
+                "es": "NAT en la red local",
+                "pl": "NAT do sieci lokalnej",
+                "zh-cn": "NAT 进入本地网络"
+            },
+            "0.0.5": {
                 "en": "initial release",
                 "de": "Erstveröffentlichung",
                 "ru": "Начальная версия",
@@ -68,16 +92,19 @@
         },
         "messagebox": true,
         "subscribe": "messagebox",
-        "dependencies": [{
-            "js-controller": ">=1.4.2"
-        }]
+        "dependencies": [
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ]
     },
     "native": {
         "option1": true,
         "option2": "42"
     },
     "objects": [],
-    "instanceObjects": [{
+    "instanceObjects": [
+        {
             "_id": "info",
             "type": "channel",
             "common": {
@@ -105,7 +132,7 @@
                 "name": "Local Peer data"
             },
             "native": {}
-        },
+        },     
         {
             "_id": "local.address",
             "type": "state",
@@ -115,30 +142,48 @@
                 "type": "string",
                 "read": true,
                 "write": false,
-                "def": false
+                "def": "0"
             },
             "native": {}
         },
         {
-            "_id": "server",
-            "type": "channel",
-            "common": {
-                "name": "Server data"
-            },
-            "native": {}
-        },
-        {
-            "_id": "server.address",
+            "_id": "local.handshake",
             "type": "state",
             "common": {
                 "role": "text",
-                "name": "Server Endpoint",
+                "name": "Latest handshake",
                 "type": "string",
                 "read": true,
-                "write": true,
-                "def": false
+                "write": false,
+                "def": "0"
             },
             "native": {}
-        }
+        },
+        {
+            "_id": "local.received",
+            "type": "state",
+            "common": {
+                "role": "text",
+                "name": "Transfer, received",
+                "type": "string",
+                "read": true,
+                "write": false,
+                "def": "0"
+            },
+            "native": {}
+        },
+        {
+            "_id": "local.sent",
+            "type": "state",
+            "common": {
+                "role": "text",
+                "name": "Transfer, sent",
+                "type": "string",
+                "read": true,
+                "write": false,
+                "def": "0"
+            },
+            "native": {}
+        }            
     ]
 }
