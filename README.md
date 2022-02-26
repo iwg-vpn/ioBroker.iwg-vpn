@@ -15,6 +15,11 @@ THE adapter for setting up a secure connection from remote devices to the ioBrok
 For detailed description please refer to the adapter configuration screen or follow the
 link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/read-me.html.
 
+## Prerequisites
+* node: >= 14.x
+* js-controller: >=2.0.0
+* iobroker.admin: >=5.1.0
+
 
 ## Changelog
 
