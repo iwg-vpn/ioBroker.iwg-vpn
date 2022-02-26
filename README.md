@@ -15,6 +15,22 @@ THE adapter for setting up a secure connection from remote devices to the ioBrok
 For detailed description please refer to the adapter configuration screen or follow the
 link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/read-me.html.
 
+
+## Changelog
+
+### v0.0.8
+* Validate your configuration before applying it
+* Information about latest handshake and sent/received bytes via the WireGuard network interface
+
+### v0.0.7 
+
+* Support of NAT between VPN and the ioBroker host's local network
+
+### v0.0.5 
+
+* Initial published release
+
+
 ## License
 Creative Commons Attribution-NonCommercial (CC BY-NC)
 

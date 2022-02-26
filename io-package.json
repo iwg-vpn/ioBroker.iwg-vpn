@@ -92,19 +92,12 @@
         },
         "messagebox": true,
         "subscribe": "messagebox",
-        "dependencies": [
-            {
-                "js-controller": ">=1.4.2"
-            }
-        ]
-    },
-    "native": {
-        "option1": true,
-        "option2": "42"
+        "dependencies": [{
+            "js-controller": ">=1.4.2"
+        }]
     },
     "objects": [],
-    "instanceObjects": [
-        {
+    "instanceObjects": [{
             "_id": "info",
             "type": "channel",
             "common": {
@@ -132,7 +125,7 @@
                 "name": "Local Peer data"
             },
             "native": {}
-        },     
+        },
         {
             "_id": "local.address",
             "type": "state",
@@ -184,6 +177,6 @@
                 "def": "0"
             },
             "native": {}
-        }            
+        }
     ]
 }
