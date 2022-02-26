@@ -55,6 +55,12 @@
         "vinyl-source-stream": "^2.0.0",
         "vinyl-sourcemaps-apply": "^0.2.1"
     },
+    "engines": {
+        "node": ">=14.x"
+    },
+    "os": [
+        "linux"
+    ],
     "main": "main.js",
     "scripts": {
         "test:js": "mocha \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",
