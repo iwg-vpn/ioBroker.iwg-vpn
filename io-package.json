@@ -86,6 +86,7 @@
         "mode": "daemon",
         "type": "network",
         "connectionType": "cloud",
+        "dataSource": "push",
         "compact": true,
         "materialize": true,
         "adminUI": {
@@ -94,7 +95,7 @@
         "messagebox": true,
         "subscribe": "messagebox",
         "dependencies": [{
-            "js-controller": ">=1.4.2"
+            "js-controller": ">=2.0.0"
         }]
     },
     "native": {},
