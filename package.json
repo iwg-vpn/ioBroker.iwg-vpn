@@ -6,7 +6,7 @@
         "name": "iwg-vpn",
         "email": "iwg.vpn@gmail.com"
     },
-    "homepage": "https://github.com/iwg-vpn/iobroker.iwg-vpn",
+    "homepage": "https://github.com/iwg-vpn/ioBroker.iwg-vpn",
     "license": "CC-BY-NC-4.0",
     "keywords": [
         "vpn",
@@ -17,7 +17,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/iwg-vpn/iobroker.iwg-vpn"
+        "url": "git+https://github.com/iwg-vpn/ioBroker.iwg-vpn"
     },
     "dependencies": {
         "@iobroker/adapter-core": "^2.5.1",
@@ -72,7 +72,7 @@
         "default": "node node_modules/gulp/bin/gulp default"
     },
     "bugs": {
-        "url": "https://github.com/iwg-vpn/iobroker.iwg-vpn/issues"
+        "url": "git+https://github.com/iwg-vpn/ioBroker.iwg-vpn/issues"
     },
     "readmeFilename": "README.md"
 }
