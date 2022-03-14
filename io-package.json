@@ -96,6 +96,9 @@
         "subscribe": "messagebox",
         "dependencies": [{
             "js-controller": ">=2.0.0"
+        }],
+        "globalDependencies": [{
+            "iobroker.admin": ">=5.1.0"
         }]
     },
     "native": {},
