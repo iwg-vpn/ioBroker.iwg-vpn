@@ -3,6 +3,18 @@
         "name": "iwg-vpn",
         "version": "0.0.8",
         "news": {
+            "0.0.9": {
+                "en": "Adapter review feedback incorporated",
+                "de": "Adapterüberprüfungs-Feedback integriert",
+                "ru": "Добавлен отзыв об обзоре адаптера",
+                "pt": "Feedback de revisão do adaptador incorporado",
+                "nl": "Adapter review feedback opgenomen",
+                "fr": "Commentaires sur l'examen de l'adaptateur incorporés",
+                "it": "Feedback sulla revisione dell'adattatore incorporato",
+                "es": "Comentarios de revisión del adaptador incorporados",
+                "pl": "Uwzględniono informacje zwrotne dotyczące przeglądu adaptera",
+                "zh-cn": "包含适配器审查反馈"
+            },
             "0.0.8": {
                 "en": "Validate your configuration before applying it",
                 "de": "Validieren Sie Ihre Konfiguration, bevor Sie sie anwenden",
@@ -98,7 +110,7 @@
             "js-controller": ">=2.0.0"
         }],
         "globalDependencies": [{
-            "iobroker.admin": ">=5.1.0"
+            "admin": ">=5.1.0"
         }]
     },
     "native": {},

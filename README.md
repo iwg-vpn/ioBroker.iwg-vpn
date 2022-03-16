@@ -18,10 +18,13 @@ link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn
 ## Prerequisites
 * node: >= 14.x
 * js-controller: >=2.0.0
-* iobroker.admin: >=5.1.0
+* admin: >=5.1.0
 
 
 ## Changelog
+
+### v0.0.9
+* Adapter review feedback incorporated
 
 ### v0.0.8
 * Validate your configuration before applying it
