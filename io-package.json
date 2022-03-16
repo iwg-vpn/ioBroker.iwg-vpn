@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.0.8",
+        "version": "0.0.9",
         "news": {
             "0.0.9": {
                 "en": "Adapter review feedback incorporated",
