@@ -244,14 +244,56 @@ body {
     -moz-osx-font-smoothing: grayscale
 }
 
+pre {
+    -webkit-overflow-scrolling: touch;
+    background-color: whitesmoke;
+    color: #4a4a4a;
+    font-size: 0.875em;
+    overflow-x: auto;
+    padding: 1.25rem 1.5rem;
+    white-space: pre;
+    word-wrap: normal;
+}
+
+.shellcontent pre {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    padding: 1.25em 1.5em;
+    white-space: pre;
+    word-wrap: normal;
+}
+
+code,
+pre {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    font-family: monospace;
+}
+
+.highlight {
+    font-weight: 400;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
 code {
+    background-color: whitesmoke;
+    color: #70877f;
+    font-size: 0.875em;
+    font-weight: normal;
+    padding: 0.25em 0.5em 0.25em;
+}
+
+
+/* code {
     background: rgba(0, 0, 0, 0.1);
     color: var(--color-body-color);
     border-radius: var(--radius);
     max-width: 100%;
     font-size: 80%;
     padding: 0.1em 0.25em
-}
+} */
 
 .iwg-header {
     height: var(--header-height);
@@ -312,6 +354,13 @@ code {
     color: var(--card-color);
     box-shadow: 0 0 0 1px var(--card-border);
     overflow-wrap: anywhere
+}
+
+.iwg-note {
+    background: whitesmoke;
+    font-size: 0.8rem;
+    border-left: solid;
+    padding-left: 0.8rem;
 }
 
 .sticky {

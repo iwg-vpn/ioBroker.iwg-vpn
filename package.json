@@ -1,6 +1,6 @@
 {
     "name": "iobroker.iwg-vpn",
-    "version": "0.0.9",
+    "version": "0.9.1",
     "description": "THE adapter for setting up a secure connection from remote devices to iobroker and local network leveraging the WireGuard VPN",
     "author": {
         "name": "iwg-vpn",
@@ -53,11 +53,8 @@
         "vinyl-sourcemaps-apply": "^0.2.1"
     },
     "engines": {
-        "node": ">=14.x"
+        "node": ">=12.x"
     },
-    "os": [
-        "linux"
-    ],
     "main": "main.js",
     "scripts": {
         "test:js": "mocha \"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\"",

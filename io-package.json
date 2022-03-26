@@ -1,8 +1,56 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.0.9",
+        "version": "0.9.1",
         "news": {
+            "0.9.1": {
+                "en": "Bug fixes",
+                "de": "Fehlerbehebung",
+                "ru": "Исправление ошибок",
+                "pt": "Correções de bugs",
+                "nl": "Bugfixes",
+                "fr": "Corrections de bogues",
+                "it": "Correzioni di bug",
+                "es": "Corrección de errores",
+                "pl": "Poprawki błędów",
+                "zh-cn": "Bug修复"
+            },
+            "0.9.0": {
+                "en": "Remote access support for ioBroker windows hosts",
+                "de": "Fernzugriffsunterstützung für ioBroker-Windows-Hosts",
+                "ru": "Поддержка удаленного доступа для хостов Windows ioBroker",
+                "pt": "Suporte de acesso remoto para hosts Windows ioBroker",
+                "nl": "Ondersteuning voor externe toegang voor ioBroker Windows-hosts",
+                "fr": "Prise en charge de l'accès à distance pour les hôtes Windows ioBroker",
+                "it": "Supporto per l'accesso remoto per gli host Windows di ioBroker",
+                "es": "Soporte de acceso remoto para hosts de Windows de ioBroker",
+                "pl": "Obsługa zdalnego dostępu dla hostów Windows ioBroker",
+                "zh-cn": "ioBroker windows 主机的远程访问支持"
+            },
+            "0.4.0": {
+                "en": "Peer configuration as QR Code to import into a WireGuard App on a mobile peer",
+                "de": "Peer-Konfiguration als QR-Code zum Importieren in eine WireGuard-App auf einem mobilen Peer",
+                "ru": "Конфигурация узла в виде QR-кода для импорта в приложение WireGuard на мобильном узле",
+                "pt": "Configuração de peer como QR Code para importar para um aplicativo WireGuard em um peer móvel",
+                "nl": "Peer-configuratie als QR-code om te importeren in een WireGuard-app op een mobiele peer",
+                "fr": "Configuration de pair sous forme de code QR à importer dans une application WireGuard sur un pair mobile",
+                "it": "Configurazione peer come codice QR da importare in un'app WireGuard su un peer mobile",
+                "es": "Configuración de pares como código QR para importar a una aplicación WireGuard en un compañero móvil",
+                "pl": "Konfiguracja peera jako kod QR do zaimportowania do aplikacji WireGuard na urządzeniu mobilnym",
+                "zh-cn": "对等配置为 QR 码以导入移动对等设备上的 WireGuard 应用程序"
+            },
+            "0.2.0": {
+                "en": "Auto generation of key pairs for configured peers",
+                "de": "Automatische Generierung von Schlüsselpaaren für konfigurierte Peers",
+                "ru": "Автоматическое создание пар ключей для настроенных одноранговых узлов",
+                "pt": "Geração automática de pares de chaves para peers configurados",
+                "nl": "Automatisch genereren van sleutelparen voor geconfigureerde peers",
+                "fr": "Génération automatique de paires de clés pour les pairs configurés",
+                "it": "Generazione automatica di coppie di chiavi per peer configurati",
+                "es": "Generación automática de pares de claves para pares configurados",
+                "pl": "Automatyczne generowanie par kluczy dla skonfigurowanych peerów",
+                "zh-cn": "为已配置的对等方自动生成密钥对"
+            },
             "0.0.9": {
                 "en": "Adapter review feedback incorporated",
                 "de": "Adapterüberprüfungs-Feedback integriert",
@@ -93,6 +141,7 @@
         "icon": "iwg-vpn.png",
         "enabled": true,
         "extIcon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/master/admin/iwg-vpn.png",
+        "localLink": "%web_protocol%://%ip%:%web_port%/iwg-vpn/index.html",
         "readme": "https://github.com/iwg-vpn/ioBroker.iwg-vpn/blob/master/README.md",
         "loglevel": "info",
         "mode": "daemon",
@@ -106,16 +155,21 @@
         },
         "messagebox": true,
         "subscribe": "messagebox",
-        "dependencies": [{
-            "js-controller": ">=2.0.0"
-        }],
-        "globalDependencies": [{
-            "admin": ">=5.1.0"
-        }]
+        "dependencies": [
+            {
+                "js-controller": ">=2.0.0"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.1.0"
+            }
+        ]
     },
     "native": {},
     "objects": [],
-    "instanceObjects": [{
+    "instanceObjects": [
+        {
             "_id": "info",
             "type": "channel",
             "common": {

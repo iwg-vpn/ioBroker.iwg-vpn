@@ -16,12 +16,20 @@ For detailed description please refer to the adapter configuration screen or fol
 link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/read-me.html.
 
 ## Prerequisites
-* node: >= 14.x
+* node: >= 12.x
 * js-controller: >=2.0.0
 * admin: >=5.1.0
 
 
 ## Changelog
+
+### v0.9.1
+* Bug fixes
+
+### v0.9.0
+* Remote access support for ioBroker windows hosts
+* Peer configuration as QR Code to import into a WireGuard App on a mobile peer
+* Auto generation of key pairs for configured peers
 
 ### v0.0.9
 * Adapter review feedback incorporated

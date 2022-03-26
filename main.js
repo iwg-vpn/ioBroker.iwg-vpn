@@ -23,39 +23,40 @@ class IwgVpn extends utils.Adapter {
     }
 
     async onMessage(msg) {
-
         this.log.silly(`message received: ${JSON.stringify(msg)}`);
+
+        if (!this.client) {
+            return this.sendTo(msg.from, msg.command, { error: 'Not connected yet' }, msg.callback);
+        }
 
         switch (msg.command) {
             case 'get-hosts':
-                if (!this.client) {
-                    this.sendTo(msg.from, msg.command, [{ label: 'Not connected yet', value: '' }], msg.callback);
-                } else {
-                    this.sendTo(msg.from, msg.command, this.client.getHosts(), msg.callback);
-                }
+                this.sendTo(msg.from, msg.command, this.client.getHosts(), msg.callback);
                 break;
 
             case 'validate-config':
                 let params = null;
-                try {
-                    // hack to extract nested json objects
-                    params = JSON.parse(msg.message.replace('"{', '{').replace('}"', '}')).config;
-                } catch (e) {
-                    this.log.warn(`Error parsing ${msg.message}`)
+                if (typeof (msg.message) === 'string') {
+                    try {
+                        // hack to extract nested json objects
+                        params = JSON.parse((msg.message || '{}').replace('"{', '{').replace('}"', '}')).config;
+                    } catch (e) {
+                        const response = `Error parsing ${msg.message}`;
+                        this.log.warn(response)
+                        this.sendTo(msg.from, msg.command, { error: response }, msg.callback);
+                        return;
+                    }
                 }
-
                 if (params) {
-                    if (this.client) {
-                        try {
-                            await this.client.validateConfig((params.remotes || []).filter(r => r.isActive), (params.nats || []).filter(n => n.isActive));
-                            this.sendTo(msg.from, msg.command, '', msg.callback);
-                        } catch (e) {
-                            let response = 'Configuration is invalid';
-                            if (e instanceof Error) {
-                                response = e.message;
-                            }
-                            this.sendTo(msg.from, msg.command, { error: response }, msg.callback);
+                    try {
+                        await this.client.validateConfig((params.remotes || []).filter(r => r.isActive), (params.nats || []).filter(n => n.isActive));
+                        this.sendTo(msg.from, msg.command, '', msg.callback);
+                    } catch (e) {
+                        let response = 'Configuration is invalid';
+                        if (e instanceof Error) {
+                            response = e.message;
                         }
+                        this.sendTo(msg.from, msg.command, { error: response }, msg.callback);
                     }
                 }
 
