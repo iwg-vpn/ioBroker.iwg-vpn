@@ -117,13 +117,6 @@
                         None of the devices is required to have a public IP address or to be reachable from the internet. No ports are required to be opened on your local network router. But, to be able to connect to each other via the VPN, the devices have to be properly set
                         up.
                     </p>
-                    <h2>
-                        Adding the adapter to ioBroker
-                    </h2>
-
-                    <div class="shellcontent"> <pre class="highlight"><code>$ cd /opt/iobroker
- $ sudo npm i iobroker.iwg-vpn
- $ sudo add iwg-vpn</code></pre></div>
 
                     <h2>
                         Installing Wireguard
@@ -134,7 +127,7 @@
                     </p>
 
                     <p>
-                        To install the WireGuard using the script, open the shell and exeute the commands:
+                        To install the WireGuard using the script, open the shell on the ioBroker host and exeute the commands:
                     </p>
 
                     <div class="shellcontent"><pre class="highlight"><code>$ cd /opt/iobroker
@@ -197,7 +190,7 @@
                     <p>Let's call the other devices on your VPN peers. The ioBroker host and the peers are devices on the same VPN.
                     </p>
                     <p>
-                        Once configured, the adapter not only gets its own IP address, it also gets 3 additional IP addresses to be used by peers or for
+                        Once configured, the adapter not only gets its own IP address, it also gets 3 additional IP addresses to be used by peers or for a
                         <a href="#nat">NAT</a> configuration (3 additional IP addresses is a soft limit that can be increased upon a request). Before adding a peer to your VPN you have to install the WireGuard package or the WireGuard app also on this
                         peer. For connecting individual devices to a network via VPN, there are apps or programs from WireGuard itself for most operating systems. Please follow the instructions on the official WireGuard
                         <a href="https://www.wireguard.com/install/">Installation</a> page matching to the operating system of the peer. If your peer running a Linux, you can use the same installation script as for the ioBroker host.
@@ -208,8 +201,8 @@
                     </p>
 
                     <p>
-                        The adapter can generate a key pair for a peer automatically or you can do it manually. In case of automatically generated keys the private key will never leave the iBroker host and will be only used to create a complete configuration for a peer. The
-                        prepared configuration can be then manually applied on a peer or scanned as a QR Code using a WireGuard app. If you create keys manually you have to add the private key to a prepared configuration before applying it on a peer.
+                        The adapter can generate a key pair for a peer automatically or you can do it manually. In case of automatically generated keys the private key will be only used to create a complete configuration for a peer. The configuration can then be applied manually
+                        or by scanning of a QR Code using a WireGuard app. If you create keys manually you have to add the private key to a configuration before applying it on a peer.
                     </p>
                     <p>If you would like the adapter to generate keys for your peers you can jump directly to the
                         <a href="#adding-peers">next chapter</a>. For manual key generation, continue reading.</p>
@@ -246,14 +239,14 @@
 
                     <ul id="auto-generated-keys">
                         <li>
-                            <code>IP</code> — The IP address you'd like to assign to the peer. The IP can be selected from a list of addresses in your VPN.
+                            <code>IP</code> — The IP address you'd like to assign to the peer. The IP must be selected from a list of addresses in your VPN.
                         </li>
                         <li>
                             <code>Name</code> — The name of the peer. Can be freely chosen.
                         </li>
                         <li>
-                            <code>Use Auto Generated Keys</code> — Enabling this option will cause the adapter to generate a key pair for the peer. The private key will never leave the ioBroker host and will be only used to generate a complete, ready
-                            to apply configuration file. If you enable this option, you also don't require to provide a public key for the peer.
+                            <code>Use Auto Generated Keys</code> — Enabling this option will cause the adapter to generate a key pair for the peer. The private key will be only used to generate a complete, ready to apply configuration. If you enable this
+                            option, you don't require to provide a public key for the peer.
                         </li>
 
                         <li>
@@ -286,7 +279,7 @@
                     </p>
 
 
-                    <p>This will open a screen where you can select a peer and display the prepared VPN configuration as text and as QR-Code. Use your WireGuard app installed on a peer to scan the QR-Code and to apply the configuration.
+                    <p>This will open a screen where you can select a peer and display the prepared VPN configuration as a text and as a QR-Code. Use your WireGuard app installed on a peer to scan the QR-Code and to apply the configuration.
                     </p>
                     <p>
                         <img src="./img/config-as-qr.png" loading="lazy">
@@ -362,6 +355,10 @@
                         </figure>
 
                         <p>
+                            You don't have to install the WireGuard on devices in local network that will be accessed via the NAT. In the example above, the local network device with IP address <code>192.168.0.1</code> doesn't require the WireGuard to
+                            be installed on it.
+                        </p>
+                        <p>
                             The VPN addresses the adapter gets can be configured either to be used as peer addresses or as addresses mapped to local network devices. The must be no overlap, i.e. a VPN IP address of an active peer cannot be used as a NAT IP address and vice versa.
                         </p>
 
@@ -379,7 +376,8 @@
 
                         <ul>
                             <li>
-                                <code>Source IP</code> — The VPN IP address you'd like to map to a device in the local network. The IP can be selected from a drop-down list of addresses in your VPN.
+                                <code>Source IP</code> — The VPN IP address you'd like to map to a device in the local network. The IP can be selected from a drop-down list of addresses in your VPN. This is the VPN address under which your local network
+                                device will be reachable in VPN from any other peer of your VPN.
                             </li>
                             <li>
                                 <code>Destination IP</code> — The IP of a device in the local network you'd like to access from your VPN peers.
