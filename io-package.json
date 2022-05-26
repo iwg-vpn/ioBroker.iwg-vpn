@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.9.1",
+        "version": "0.9.2",
         "news": {
+            "0.9.2": {
+                "en": "http server for QR config introduced",
+                "de": "http-Server für QR-Konfiguration eingeführt",
+                "ru": "Представлен http-сервер для конфигурации QR",
+                "pt": "servidor http para configuração QR introduzido",
+                "nl": "http-server voor QR-configuratie geïntroduceerd",
+                "fr": "introduction du serveur http pour la configuration QR",
+                "it": "Introdotto il server http per la configurazione QR",
+                "es": "Servidor http para configuración QR introducido",
+                "pl": "Wprowadzono serwer http do konfiguracji QR",
+                "zh-cn": "引入了用于 QR 配置的 http 服务器"
+            },
             "0.9.1": {
                 "en": "Bug fixes",
                 "de": "Fehlerbehebung",
@@ -140,9 +152,9 @@
         "main": "main.js",
         "icon": "iwg-vpn.png",
         "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/master/admin/iwg-vpn.png",
+        "extIcon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/admin/iwg-vpn.png",
         "localLink": "%web_protocol%://%ip%:%web_port%/iwg-vpn/index.html",
-        "readme": "https://github.com/iwg-vpn/ioBroker.iwg-vpn/blob/master/README.md",
+        "readme": "https://github.com/iwg-vpn/ioBroker.iwg-vpn/blob/main/README.md",
         "loglevel": "info",
         "mode": "daemon",
         "type": "network",
@@ -155,21 +167,16 @@
         },
         "messagebox": true,
         "subscribe": "messagebox",
-        "dependencies": [
-            {
-                "js-controller": ">=2.0.0"
-            }
-        ],
-        "globalDependencies": [
-            {
-                "admin": ">=5.1.0"
-            }
-        ]
+        "dependencies": [{
+            "js-controller": ">=2.0.0"
+        }],
+        "globalDependencies": [{
+            "admin": ">=5.1.0"
+        }]
     },
     "native": {},
     "objects": [],
-    "instanceObjects": [
-        {
+    "instanceObjects": [{
             "_id": "info",
             "type": "channel",
             "common": {

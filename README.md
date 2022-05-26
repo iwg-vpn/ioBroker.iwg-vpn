@@ -23,6 +23,9 @@ link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn
 
 ## Changelog
 
+### v0.9.2
+* Adapter starts own HTTP server to support configuration via QR Codes
+
 ### v0.9.1
 * Bug fixes
 

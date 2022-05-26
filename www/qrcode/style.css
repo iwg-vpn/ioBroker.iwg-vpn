@@ -1,0 +1,71 @@
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: #333;
+    text-shadow: none;
+}
+
+body {
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.b-example-divider {
+    height: 0.5rem;
+}
+
+textarea {
+    resize: none;
+    /* border-radius: .5rem; */
+    height: 150px;
+    width: 100%;
+    margin: auto;
+    font-size: 12px;
+    background-color: #343a40;
+    color: whitesmoke;
+}
+
+
+/* 
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none;
+  }
+} */
+
+.dropdown-menu {
+    position: static;
+    display: block;
+    width: auto;
+    margin: 4rem auto;
+}
+
+.dropdown-menu-macos {
+    display: grid;
+    gap: .25rem;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+#qrcode {
+    border-radius: .5rem;
+}
+
+.dropdown-menu-macos .dropdown-item {
+    border-radius: .25rem;
+}
+
+.cover-container {
+    max-width: 42em;
+}
+
+.copy-btn {
+    width: 16px;
+    height: 16px;
+    color: #999;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    color: #5c636a;
+}

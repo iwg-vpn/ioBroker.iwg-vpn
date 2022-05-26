@@ -276,29 +276,13 @@
                     <p>
                         Now it's time for the peers to join your VPN. If everything went well, the adapter has already created a config for every active peer.
                     </p>
-                    <p>
-                        First of all, I'd like to state here that due to the limited ioBroker adapter configuration possibilities or my inability to use them, no elegant solution to present a peer configuration came into my mind. Instead, I had to switch to an option of using
-                        another adapter for this purpose. In case you know how to do it in a more easy and user-friendly way please give me a hint, just drop me an e-mail. Every advice or help is welcome and highly appreciated. To cut a long story short,
-                        you can apply a configuration on a peer manually or by scanning a generated QR Code.
-                    </p>
+
                     <h4 id="config-as-qr">
                         Applying configuration by scanning a QR Code
                     </h4>
-                    <p>As mentioned, here another ioBroker adapter needs to be added (if not done yet) &#8212;
-                        <a href="https://github.com/ioBroker/ioBroker.web">ioBroker.web</a> adapter with activated built-in Simple-API:</p>
+                    <p>To generate and apply a peer configuration as a QR Code open the adapter settings and click on a link on the <code>README</code>: panel</p>
                     <p>
-                        <img src="./img/simple-api.png" loading="lazy">
-                    </p>
-                    <p>Once this done, an"instance link" action button to the rigth of the <code>iwg-vpn.0</code> adapter instance name appears. Hit this button.
-                    </p>
-                    <p>
-                        <img src="./img/instance-link.png" loading="lazy">
-                    </p>
-
-
-                    <p class="iwg-note">
-                        <i><b>Note:</b><br/> On some iobroker installations I saw an effect of the instance link button not showing up. If you experience the same issue, just navigate to the following URL to open the page:
-                        <code>http://&lt;your-iobroker-ip&gt;:&lt;web-adapter-port&gt;/iwg-vpn/index.html.</code> <br/> E.g., with default settings the URL is: <code>http://127.0.0.1:8082/iwg-vpn/index.html</code> <br/>In case you know how to get rid of this issue, please let me know.</i>
+                        <img src="./img/qr-config.png" loading="lazy">
                     </p>
 
 

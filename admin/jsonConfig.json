@@ -4,12 +4,22 @@
     "items": {
         "_docpanel": {
             "type": "panel",
-            "label": "READ ME",
+            "label": "README",
             "items": {
                 "_link2documentation": {
                     "type": "staticLink",
                     "label": "Click HERE for HowTo description",
                     "href": "https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/read-me.html",
+                    "style": {
+                        "fontSize": 16,
+                        "marginBottom": 20
+                    }
+                },
+                "_link2ConfigAsQRCode": {
+                    "type": "staticLink",
+                    "newLine": true,
+                    "label": "For applying a peer config via QR code click HERE",
+                    "href": "http://localhost:51822/qrcode/",
                     "style": {
                         "fontSize": 16,
                         "marginBottom": 20
@@ -24,9 +34,8 @@
             "items": {
                 "params.remotes": {
                     "type": "table",
-                    "items": [
-                        {
-                            "type": "selectSendTo",                           
+                    "items": [{
+                            "type": "selectSendTo",
                             "title": "IP",
                             "noTranslation": true,
                             "command": "get-hosts",
@@ -41,6 +50,12 @@
                             "attr": "name",
                             "validator": "data.name && data.name.length > 0",
                             "validatorNoSaveOnError": true
+                        },
+                        {
+                            "type": "checkbox",
+                            "title": "Use Auto Generated Keys",
+                            "attr": "isAutoGenerateKeys",
+                            "default": false
                         },
                         {
                             "type": "text",
@@ -68,7 +83,7 @@
                     "jsonData": "{\"config\": \"${JSON.stringify(data.params)}\"}",
                     "label": "Validate Config"
                 }
-            }    
+            }
         },
         "_nat": {
             "type": "panel",
@@ -77,9 +92,8 @@
             "items": {
                 "params.nats": {
                     "type": "table",
-                    "items": [
-                        {
-                            "type": "selectSendTo",                           
+                    "items": [{
+                            "type": "selectSendTo",
                             "title": "Source IP",
                             "noTranslation": true,
                             "command": "get-hosts",
@@ -112,8 +126,8 @@
                     "command": "validate-config",
                     "jsonData": "{\"config\": \"${JSON.stringify(data.params)}\"}",
                     "label": "Validate Config"
-                  }
+                }
             }
-        }        
+        }
     }
 }

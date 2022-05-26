@@ -1,7 +1,8 @@
 'use strict';
 
 const { adapter } = require('@iobroker/adapter-core');
-const iwgClient = require("./lib/iwg-client");
+const IwgClient = require("./lib/iwg-client");
+const HttpServer = require("./lib/http-server");
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require('@iobroker/adapter-core');
@@ -36,7 +37,7 @@ class IwgVpn extends utils.Adapter {
 
             case 'validate-config':
                 let params = null;
-                if (typeof (msg.message) === 'string') {
+                if (typeof(msg.message) === 'string') {
                     try {
                         // hack to extract nested json objects
                         params = JSON.parse((msg.message || '{}').replace('"{', '{').replace('}"', '}')).config;
@@ -77,7 +78,7 @@ class IwgVpn extends utils.Adapter {
 
         // create a channel for every peer
         // @ts-ignore
-        await keys.reduce(async (memo, key) => {
+        await keys.reduce(async(memo, key) => {
             await memo;
             const peer = peersObject[key];
             await self.createChannelAsync(device, peer.name);
@@ -146,10 +147,11 @@ class IwgVpn extends utils.Adapter {
         // Reset the connection indicator during startup
         this.setConnectionStatus(false);
 
-        // Initialize your adapter here
-        this.client = new iwgClient(this);
-
+        this.client = new IwgClient(this);
         await this.client.start();
+
+        this.httpServer = new HttpServer(this);
+        await this.httpServer.start();
     }
 
     /**
@@ -160,6 +162,9 @@ class IwgVpn extends utils.Adapter {
         try {
             if (this.client) {
                 this.client.stop();
+            }
+            if (this.httpServer) {
+                this.httpServer.stop();
             }
             callback();
         } catch (e) {

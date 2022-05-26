@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QR Code Generator</title>
+    <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="d-flex h-100 text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <main class="px-3">
+            <p class="lead">QR Code</p>
+
+            <ul class="mx-0 border-0" style="text-align: left; font-size: 0.6em">
+                <li>Only a QR Code with a private key can be imported in a WireGuard App. If you do not use the option <i>Use Auto Generated Keys</i>, please update the private key before scanning the code. </li>
+                <li>Only peers configured in the adapter instance <i>iwg-vpn.0</i> are shown here.</li>
+
+            </ul>
+
+            <div class="d-flex gap-5 justify-content-center">
+                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-macos mx-0 border-0 shadow" style="width: 100%; margin: auto;" id="peers-list">
+                    <li> <b>Choose a peer:</b> </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                </ul>
+            </div>
+            <div class="b-example-divider"></div>
+
+            <div id="config-container">
+
+                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-macos mx-0 border-0 shadow" style="width: 100%; margin: auto;" id="peers-list">
+                    <li>
+                        <div class="d-flex gap-5 justify-content-space-between">
+                            <b class="me-auto shadow">Config:</b>
+                            <a class="copy-btn" onclick="const text = document.getElementById('config-text'); text.select(); navigator.clipboard.writeText(text.value);"><i
+                                    class="fas fa-copy"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <textarea id="config-text" spellcheck="false" class="border-0" rows="5" cols="33" oninput="updateQrCode();"></textarea>
+                    </li>
+                    <li>
+                        <div class="d-flex flex-wrap gap-5 justify-content-center">
+                            <canvas id="qrcode"></canvas>
+                        </div>
+                    </li>
+                </ul>
+        </main>
+        </div>
+
+</body>
+
+
+<script type="text/javascript">
+    function updateQrCode() {
+        const qr = document.getElementById("qrcode");
+        const configText = document.getElementById("config-text");
+        const config = configText.value;
+        if (config) {
+            new QRious({
+                element: qr,
+                value: config,
+                size: 200
+            });
+            qr.style.visibility = 'visible';
+        } else {
+            qr.style.visibility = 'hidden';
+        }
+    }
+
+    function updateConfigText(name) {
+        const configText = document.getElementById("config-text");
+        const container = document.getElementById("config-container");
+        container.style.visibility = 'visible';
+
+        const url = `${baseUrl}/states/iwg-vpn.0.Peers.${name}.config`;
+        configText.value = 'No config for the selected peer available. Either the peer is not active or the config was not created yet.';
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                let config = data.value;
+                if (config) {
+                    configText.value = config;
+                }
+                updateQrCode();
+            })
+            .catch(e => {
+                updateQrCode();
+                console.log(e);
+            });
+    }
+    let baseUrl;
+    window.addEventListener('load', function() {
+        const container = document.getElementById("config-container");
+        container.style.visibility = 'hidden';
+
+
+        const peersList = document.getElementById("peers-list");
+
+        peersList.addEventListener('click', function(event) {
+            if (event.target && event.target.nodeName == "A") {
+                event.preventDefault();
+                const index = Array.prototype.indexOf.call(peersList.children, event.target.parentNode);
+                const text = peersList.children[index].children[0].textContent;
+                updateConfigText(text.split(' - ')[1]);
+            }
+        })
+
+        // baseUrl = window.location.href.substr(0, window.location.href.indexOf('/', 8));
+        baseUrl = `http://localhost:51822/api/v1`;
+
+        // query all configured peers
+        const url = `${baseUrl}/objects/system.adapter.iwg-vpn.0`;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const peers = ((data.value.native.params || {}).remotes || []);
+                let peersList = document.getElementById("peers-list");
+                if (peers.length == 0) {
+                    const listElement = document.createElement("li");
+                    listElement.textContent = 'No peer with auto generated keys found';
+                    peersList.appendChild(listElement)
+                } else {
+                    for (let i = 0; i < peers.length; i++) {
+                        const peer = peers[i];
+                        const listElement = document.createElement("li");
+                        const aElement = document.createElement("a");
+                        aElement.className = "dropdown-item";
+                        aElement.href = "#";
+                        aElement.textContent = peer.ip + ' - ' + peer.name;
+                        listElement.appendChild(aElement);
+                        peersList.appendChild(listElement)
+                    }
+                }
+            })
+            .catch(console.log);
+    })
+</script>
+
+</html>
