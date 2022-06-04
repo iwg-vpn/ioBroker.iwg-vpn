@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.9.2",
+        "version": "0.10.1",
         "news": {
+            "0.10.1": {
+                "en": "Control your real and virtual devices via Alexa",
+                "de": "Steuern Sie Ihre realen und virtuellen Geräte über Alexa",
+                "ru": "Управляйте своими реальными и виртуальными устройствами через Alexa",
+                "pt": "Controle seus dispositivos reais e virtuais via Alexa",
+                "nl": "Bedien uw echte en virtuele apparaten via Alexa",
+                "fr": "Contrôlez vos appareils réels et virtuels via Alexa",
+                "it": "Controlla i tuoi dispositivi reali e virtuali tramite Alexa",
+                "es": "Controla tus dispositivos reales y virtuales a través de Alexa",
+                "pl": "Kontroluj swoje rzeczywiste i wirtualne urządzenia za pośrednictwem Alexa",
+                "zh-cn": "通过 Alexa 控制您的真实和虚拟设备"
+            },
             "0.9.2": {
                 "en": "http server for QR config introduced",
                 "de": "http-Server für QR-Konfiguration eingeführt",
@@ -167,16 +179,21 @@
         },
         "messagebox": true,
         "subscribe": "messagebox",
-        "dependencies": [{
-            "js-controller": ">=2.0.0"
-        }],
-        "globalDependencies": [{
-            "admin": ">=5.1.0"
-        }]
+        "dependencies": [
+            {
+                "js-controller": ">=2.0.0"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.1.0"
+            }
+        ]
     },
     "native": {},
     "objects": [],
-    "instanceObjects": [{
+    "instanceObjects": [
+        {
             "_id": "info",
             "type": "channel",
             "common": {

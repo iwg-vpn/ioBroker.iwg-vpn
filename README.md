@@ -10,18 +10,21 @@ WireGuard is a registered trademark of Jason A. Donenfeld. (https://www.wireguar
 
 ## iwg-vpn adapter for ioBroker
 
-THE adapter for setting up a secure connection from remote devices to the ioBroker and local network leveraging the [WireGuard](https://www.wireguard.com) VPN.
+THE adapter for setting up a secure connection from remote devices to the ioBroker and local network leveraging the [WireGuard](https://www.wireguard.com) VPN and controlling local devices via Alexa.
 
 For detailed description please refer to the adapter configuration screen or follow the
 link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/read-me.html.
 
 ## Prerequisites
-* node: >= 12.x
+* node: >= 14.17.x
 * js-controller: >=2.0.0
 * admin: >=5.1.0
 
 
 ## Changelog
+
+### v0.10.1
+* Control your real and virtual devices via Alexa
 
 ### v0.9.2
 * Adapter starts own HTTP server to support configuration via QR Codes

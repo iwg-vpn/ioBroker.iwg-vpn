@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Setting up the iobroker.iwg-vpn adapter</title>
+    <link rel="stylesheet" media="all" href="./css/styles.css" />
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                    pageLanguage: 'en'
+                },
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <header class="iwg-header">
+        <div class="iwg-header-container">
+            <img class="site-logo-img" src="./img/iwg-vpn-skill-icon.png">
+            <h2>iwg-vpn Alexa Skill</h2>
+            <div id="google_translate_element" style="margin: 10px"></div>
+            <div class="iwg-header-container-right">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=6XZHXGV7UUM8N">
+                    <img src="https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="iwg-layout">
+        <main class="iwg-layout-content">
+            <article class="iwg-card">
+                <div class="iwg-article-body txt">
+                    <h1>
+                        Overview
+                    </h1>
+
+                    <p>Once everything configured you'll be able to interact with your Alexa voice assistant to control your devices. The rest is taken care by your <code>ioBroker.iwg-vpn</code> adapter and
+                        <a href="https://www.amazon.de/dp/B0B2PHFX13">iwg-vpn Alexa skill</a>. </p>
+
+                    <figure>
+                        <p>
+                            <img src="./img/alexa-overview.png" loading="lazy">
+                        </p>
+                        <figcaption>
+                            Overview
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        To get started the following things need to be done:
+                    </p>
+                    <ul>
+                        <li>
+                            Get a basic understanding of Alexa concepts
+                        </li>
+                        <li>
+                            Configure controllable via Alexa devices
+                        </li>
+                        <li>
+                            Activate and link to your ioBroker installation the <code>iwg-vpn skill</code>
+                        </li>
+                        <li>
+                            That's it :)
+                        </li>
+                    </ul>
+                    <p>
+                        Please note, that the skill sends your Alexa commands to your ioBroker installation via the VPN. Even if you're not considering to use the remote access or NAT provided by the <code>ioBroker.iwg-vpn</code> adapter, you still have
+                        to install WireGuard at least on your ioBroker host and setup the adapter as described
+                        <a href="read-me.html"> here</a> to control your devices via Alexa.
+                    </p>
+
+
+                    <h2>
+                        Alexa Concepts
+                    </h2>
+
+                    <p>
+                        This is pretty easy. Every device Alexa can controll has to respond to Alexa requests and commands in a pre-defined manner. As Alexa cannot talk directly to your local devices, and your devices probably don't respond to Alexa requests properly, there
+                        is a proxy required, which accepts the Alexa requests, translates them into the commands the local devices understand and replies back to Alexa. An Alexa skill in general and the <code>iwg-vpn skill</code>                        in particular is a such proxy.
+                    </p>
+
+                    <p>
+                        Every Alexa device has to announce so called <code>capabilities</code> it supports. Every device supports at least one capability. This is how Alexa knows which commands can be sent to a device. For example, if a device supports
+                        <code>switch</code> capability, Alexa knows that the device can be turned ON and OFF.
+                    </p>
+
+                    <p>
+                        While sending a request or a command to a proxy, i.e., to a skill, Alexa also sends a unique identifier of a device, the command should be forwarded to, and a unique identifier of a linked account, the command was issued by. The linked account represents
+                        your ioBroker installation. This is how the skill knows the exact destination of the command. The <code>Account Linking</code> is done by activiation of the skill with a unique set of credentials assigned
+                        to your ioBroker installtion.
+                    </p>
+
+                    <p>
+                        Even it sounds a bit complicated rigth now, don't worry. Almost everything is done behind the scenes by the skill. This is what it is supposed to do :) The rest is described below.
+                    </p>
+
+                    <h2>
+                        Configure Devices
+                    </h2>
+
+                    <p>As mentioned, Alexa has to know which devices are available in your ioBroker installation and which capabilities they support.</p>
+
+                    <p>
+                        To open device configuration navigate to <code>&lt;your ioBroker IP&gt;:51822/iwg-alexa-config.html</code>
+                    </p>
+
+                    <figure>
+                        <p>
+                            <img src="./img/device-config-start.png" loading="lazy">
+                        </p>
+                        <figcaption>
+                            Device Configuration
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        Initially there are no devices. To add a new device hit the
+                        <code>+</code> button. A device with name "New Device" is added. Change the name of the device to a desired one and select the corresponding Alexa display category(ies):
+                    </p>
+                    <figure>
+                        <p>
+                            <img src="./img/device-config-name.png" loading="lazy">
+                        </p>
+                    </figure>
+
+                    <p>
+                        If you try to save the configuration now, you get the error message saying "Every device must have at least one capability".
+                    </p>
+
+                    <figure>
+                        <p>
+                            <img src="./img/device-config-no-caps.png" loading="lazy">
+                        </p>
+                    </figure>
+
+                    <p>
+                        So let's open the combobox and add the capabilites the <code>Hauptlicht</code> device supports. In this example we just select the <code>switch</code> capability to be able turn the light ON and OFF via Alexa.
+                    </p>
+
+
+                    <figure>
+                        <p>
+                            <img src="./img/device-config-caps.png" loading="lazy">
+                        </p>
+                    </figure>
+                    <p>
+                        When you finish adding the capabilities and close the combobox, the selected capabilites are added to your device and can be configured now. Expand the <code>switch</code> capability panel to open the configuration. Some capabilities
+                        have pre-defined values the Alexa sends to a device. So the <code>switch</code> capability with values ON and OFF. Here we have to provide two things: first, which ioBroker state should a value be written to, and second - the values
+                        mapping, i.e. which value should be written in case the Alexa sends the value ON and which - in case the Alexa sends the value OFF. This mapping is also used to report the values to Alexa on Alexa request. A value currently the
+                        ioBroker state is set to will be converted to either ON or OFF, according to the mapping, and then reported to Alexa.
+
+                    </p>
+                    <figure>
+                        <p>
+                            <img src="./img/device-config-switch.png" loading="lazy">
+                        </p>
+                    </figure>
+                    <p>
+                        If a capabilty doesn't have any predefined values, the mapping is not required. E.g., in case of the <code>dimmer</code> capability Alexa sends values between 0 and 100 to adjust brightness of a device. In this case the value will
+                        be written as is into the selected ioBroker state.
+
+                    </p>
+
+
+                    <p>
+                        To select a state the values should be written to just click on the search icon and choose a state:
+
+                    </p>
+                    <figure>
+                        <p>
+                            <img src="./img/device-config-select-state.png" loading="lazy">
+                        </p>
+                    </figure>
+                    <p>
+                        To define the mapping type the values directly in the table. Once done, you should get something like this:
+
+                    </p>
+                    <figure>
+                        <p>
+                            <img src="./img/device-config-switch-end.png" loading="lazy">
+                        </p>
+                    </figure>
+
+                    <p>
+                        Please ensure, that the type of the selected state corresponds to the type of values defined in the mapping. Also be aware, that if a state value cannot be converted to an Alexa pre-defined value or vice versa due to missing or wrong mapping, the Alexa
+                        will complain about that :)
+
+                    </p>
+
+                    <p>
+                        That's it! The configuration of the <code>Hauptlicht</code> is finished and can be persisted. Press the save icon, confirm the warning and ensure the success confirmation appeard:
+
+                    </p>
+                    <figure>
+                        <p>
+                            <img src="./img/device-config-save.png" loading="lazy">
+                        </p>
+                    </figure>
+                    <figure>
+                        <p>
+                            <img src="./img/device-config-saved.png" style="width: 200px;" loading="lazy">
+                        </p>
+                    </figure>
+
+                    <p>
+                        Next step is skill activation and account linking.
+
+                    </p>
+
+                    <h2>
+                        Activate the Skill and Link your ioBroker Installation
+                    </h2>
+
+                    <p>
+                        You can activate the skill using your Alexa app or via Amazon Web-Site. In this example we'll do it via the Web-Site.
+                    </p>
+
+                    <p>
+                        Navigate to the <a href="https://www.amazon.de/dp/B0B2PHFX13">iwg-vpn Alexa skill</a> page, login with your Amazon account (the account your registered your Alexa with) if required and hit <code>Aktivieren</code>. This will take
+                        you to the account linking page where you should login using the credentials generated for you in the device configuration UI (click on the link icon in the upper-right conner to display the credentials):
+                    </p>
+                    <figure>
+                        <p>
+                            <img src="./img/account-linking.png" loading="lazy">
+                        </p>
+                    </figure>
+
+
+                    <p>If everything goes well your skill is activated, linked and you can start device discovery directly on the Web-Site or just asking your Alexa
+                    </p>
+                    <figure>
+                        <p>
+                            <img src="./img/account-linked.png" loading="lazy">
+                        </p>
+                    </figure>
+
+                    <p>
+                        As soon as Alexa device discovery is finished, open Alexa app and turn on your <code>Hauptlicht</code> or, even beter, just say: "Alexa, schalte mein Hauptlicht ein"
+                    </p>
+                    <figure>
+                        <p>
+                            <img src="./img/alexa-app.png" style="width: 300px;" loading="lazy">
+                        </p>
+                    </figure>
+                    <h2>
+                        Limitations
+                    </h2>
+                    <p>
+                        Currently only three capabilities are supported. More to come.
+                    </p>
+                    <p>
+                        Change reporting is not supported yet. Means the values, if changed in ioBroker, are not immediately reported to Alexa. Only on Alexa request to report values, the currently set values are sent to Alexa. Watch the next versions for change reporting.
+                    </p>
+
+                    <h2>
+                        Support
+                    </h2>
+                    <p>
+                        In case you have a question or missing a feature feel free to contact iwg.vpn@gmail.com
+                    </p>
+
+                </div>
+
+            </article>
+        </main>
+    </div>
+</body>
+
+</html>
