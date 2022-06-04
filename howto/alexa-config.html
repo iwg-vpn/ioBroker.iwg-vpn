@@ -65,7 +65,7 @@
                             Configure controllable via Alexa devices
                         </li>
                         <li>
-                            Activate and link to your ioBroker installation the <code>iwg-vpn skill</code>
+                            Activate and link the <code>iwg-vpn skill</code> to your ioBroker installation
                         </li>
                         <li>
                             That's it :)
@@ -83,8 +83,9 @@
                     </h2>
 
                     <p>
-                        This is pretty easy. Every device Alexa can controll has to respond to Alexa requests and commands in a pre-defined manner. As Alexa cannot talk directly to your local devices, and your devices probably don't respond to Alexa requests properly, there
-                        is a proxy required, which accepts the Alexa requests, translates them into the commands the local devices understand and replies back to Alexa. An Alexa skill in general and the <code>iwg-vpn skill</code>                        in particular is a such proxy.
+                        This is pretty easy. Every device Alexa can control has to respond to Alexa requests and commands in a certain way. As Alexa cannot talk directly to your local devices, and your devices probably don't respond to Alexa requests properly, a proxy is required,
+                        which accepts the Alexa requests, translates them into the commands the local devices understand and replies back to Alexa. An Alexa skill in general and the <code>iwg-vpn skill</code> in particular is a
+                        such proxy.
                     </p>
 
                     <p>
@@ -99,11 +100,11 @@
                     </p>
 
                     <p>
-                        Even it sounds a bit complicated rigth now, don't worry. Almost everything is done behind the scenes by the skill. This is what it is supposed to do :) The rest is described below.
+                        Even if it sounds a bit complicated rigth now, don't worry. Almost everything is done behind the scenes by the skill. This is what it is supposed to do :) The rest is described below.
                     </p>
 
                     <h2>
-                        Configure Devices
+                        Device Configuration
                     </h2>
 
                     <p>As mentioned, Alexa has to know which devices are available in your ioBroker installation and which capabilities they support.</p>
@@ -123,7 +124,7 @@
 
                     <p>
                         Initially there are no devices. To add a new device hit the
-                        <code>+</code> button. A device with name "New Device" is added. Change the name of the device to a desired one and select the corresponding Alexa display category(ies):
+                        <code>+</code> button. A device with the name "New Device" is added. Change the name of the device to a desired one and select the corresponding Alexa display category(ies):
                     </p>
                     <figure>
                         <p>
@@ -132,7 +133,7 @@
                     </figure>
 
                     <p>
-                        If you try to save the configuration now, you get the error message saying "Every device must have at least one capability".
+                        If you try to save the configuration now, you get the error message saying "A device must have at least one capability".
                     </p>
 
                     <figure>
@@ -142,7 +143,7 @@
                     </figure>
 
                     <p>
-                        So let's open the combobox and add the capabilites the <code>Hauptlicht</code> device supports. In this example we just select the <code>switch</code> capability to be able turn the light ON and OFF via Alexa.
+                        So let's open the combobox and add the capabilites the <code>Hauptlicht</code> device supports. In this example we just select the <code>switch</code> capability to be able to turn the light ON and OFF via Alexa.
                     </p>
 
 
@@ -152,10 +153,10 @@
                         </p>
                     </figure>
                     <p>
-                        When you finish adding the capabilities and close the combobox, the selected capabilites are added to your device and can be configured now. Expand the <code>switch</code> capability panel to open the configuration. Some capabilities
-                        have pre-defined values the Alexa sends to a device. So the <code>switch</code> capability with values ON and OFF. Here we have to provide two things: first, which ioBroker state should a value be written to, and second - the values
-                        mapping, i.e. which value should be written in case the Alexa sends the value ON and which - in case the Alexa sends the value OFF. This mapping is also used to report the values to Alexa on Alexa request. A value currently the
-                        ioBroker state is set to will be converted to either ON or OFF, according to the mapping, and then reported to Alexa.
+                        When you finish adding the capabilities and close the combobox, the selected capabilites are added to your device and can be configured. Expand the <code>switch</code> capability panel to open the configuration. Some capabilities
+                        have pre-defined values the Alexa sends to a device. So the <code>switch</code> capability with pre-defined values <code>ON</code> and <code>OFF</code>. Here we have to provide two things: first, which ioBroker state should a value
+                        be written to, and second - the values mapping, i.e. which value should be written in case the Alexa sends the value <code>ON</code> and which - in case the Alexa sends the value <code>OFF</code>. This mapping is also used to report
+                        the values to Alexa on Alexa request. A value currently the ioBroker state is set to will be converted to either <code>ON</code> or <code>OFF</code>, according to the mapping, and then reported to Alexa.
 
                     </p>
                     <figure>
@@ -164,14 +165,14 @@
                         </p>
                     </figure>
                     <p>
-                        If a capabilty doesn't have any predefined values, the mapping is not required. E.g., in case of the <code>dimmer</code> capability Alexa sends values between 0 and 100 to adjust brightness of a device. In this case the value will
-                        be written as is into the selected ioBroker state.
+                        If a capabilty doesn't have any pre-defined values, the mapping is not required. E.g., in case of the <code>dimmer</code> capability Alexa sends values between 0 and 100 to adjust brightness of a device. In this case the value
+                        will be written as is into the selected ioBroker state.
 
                     </p>
 
 
                     <p>
-                        To select a state the values should be written to just click on the search icon and choose a state:
+                        To select an ioBroker state the values should be written to just click on the search icon and choose a state:
 
                     </p>
                     <figure>
@@ -180,7 +181,7 @@
                         </p>
                     </figure>
                     <p>
-                        To define the mapping type the values directly in the table. Once done, you should get something like this:
+                        To define the mapping - type the values directly into the table. Once done, you should get something like this:
 
                     </p>
                     <figure>
@@ -190,13 +191,13 @@
                     </figure>
 
                     <p>
-                        Please ensure, that the type of the selected state corresponds to the type of values defined in the mapping. Also be aware, that if a state value cannot be converted to an Alexa pre-defined value or vice versa due to missing or wrong mapping, the Alexa
+                        Please ensure, that the type of the selected state corresponds to the type of values defined in the mapping. Also be aware, that if a state value cannot be converted to an Alexa pre-defined value or vice versa due to a missing or a wrong mapping, Alexa
                         will complain about that :)
 
                     </p>
 
                     <p>
-                        That's it! The configuration of the <code>Hauptlicht</code> is finished and can be persisted. Press the save icon, confirm the warning and ensure the success confirmation appeard:
+                        That's it! The configuration of the <code>Hauptlicht</code> is finished and can be persisted. Press the save icon, confirm the warning and ensure the success confirmation appears:
 
                     </p>
                     <figure>
@@ -243,7 +244,7 @@
                     </figure>
 
                     <p>
-                        As soon as Alexa device discovery is finished, open Alexa app and turn on your <code>Hauptlicht</code> or, even beter, just say: "Alexa, schalte mein Hauptlicht ein"
+                        As soon as Alexa device discovery is finished, open Alexa app and turn ON your <code>Hauptlicht</code> or, even beter, just say: "Alexa, schalte mein Hauptlicht ein"
                     </p>
                     <figure>
                         <p>
