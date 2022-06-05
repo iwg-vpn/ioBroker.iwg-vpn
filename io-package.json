@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.10.1",
+        "version": "0.10.2",
         "news": {
+            "0.10.2": {
+                "en": "config screen enhancements",
+                "de": "Verbesserungen des Konfigurationsbildschirms",
+                "ru": "улучшения экрана конфигурации",
+                "pt": "melhorias na tela de configuração",
+                "nl": "verbeteringen in het configuratiescherm",
+                "fr": "améliorations de l'écran de configuration",
+                "it": "miglioramenti della schermata di configurazione",
+                "es": "mejoras en la pantalla de configuración",
+                "pl": "Ulepszenia ekranu konfiguracji",
+                "zh-cn": "配置屏幕增强"
+            },
             "0.10.1": {
                 "en": "Control your real and virtual devices via Alexa",
                 "de": "Steuern Sie Ihre realen und virtuellen Geräte über Alexa",
@@ -165,7 +177,7 @@
         "icon": "iwg-vpn.png",
         "enabled": true,
         "extIcon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/admin/iwg-vpn.png",
-        "localLink": "%web_protocol%://%ip%:%web_port%/iwg-vpn/index.html",
+        "localLink": "http://%ip%:51822/qrcode/index.html",
         "readme": "https://github.com/iwg-vpn/ioBroker.iwg-vpn/blob/main/README.md",
         "loglevel": "info",
         "mode": "daemon",

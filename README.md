@@ -23,6 +23,9 @@ link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn
 
 ## Changelog
 
+### v0.10.2
+* Config screen enhancements
+
 ### v0.10.1
 * Control your real and virtual devices via Alexa
 

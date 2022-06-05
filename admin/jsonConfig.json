@@ -6,25 +6,100 @@
             "type": "panel",
             "label": "README",
             "items": {
+                "_img": {
+                    "type": "staticImage",
+                    "href": "https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/read-me.html",
+                    "src": "/adapter/iwg-vpn/iwg-vpn.png",
+                    "style": {
+                        "width": 40,
+                        "height": 40
+                      }
+                },
                 "_link2documentation": {
                     "type": "staticLink",
-                    "label": "Click HERE for HowTo description",
+                    "label": "Click here for VPN setup HowTo",
                     "href": "https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/read-me.html",
                     "style": {
                         "fontSize": 16,
                         "marginBottom": 20
                     }
                 },
+                "_qrimg": {
+                    "type": "staticImage",
+                    "newLine": true,
+                    "href": "http://localhost:51822/qrcode/",
+                    "src": "/adapter/iwg-vpn/qr.png",
+                    "style": {
+                        "width": 40,
+                        "height": 40
+                      }
+                },
                 "_link2ConfigAsQRCode": {
                     "type": "staticLink",
-                    "newLine": true,
-                    "label": "For applying a peer config via QR code click HERE",
+                    "label": "Click here to apply a peer config via QR code",
                     "href": "http://localhost:51822/qrcode/",
                     "style": {
                         "fontSize": 16,
                         "marginBottom": 20
                     }
-                }
+                },
+                "_docimg": {
+                    "type": "staticImage",
+                    "newLine": true,
+                    "href": "https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/alexa-config.html",
+                    "src": "/adapter/iwg-vpn/iwg-vpn.png",
+                    "style": {
+                        "width": 40,
+                        "height": 40
+                      }
+                },
+                "_link2AlexaDocumentation": {
+                    "type": "staticLink",
+                    "label": "Click here for Alexa HowTo",
+                    "href": "https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/alexa-config.html",
+                    "style": {
+                        "fontSize": 16,
+                        "marginBottom": 20
+                    }
+                },
+                "_img2": {
+                    "type": "staticImage",
+                    "newLine": true,
+                    "href": "https://www.amazon.de/dp/B0B2PHFX13",
+                    "src": "/adapter/iwg-vpn/skill-icon.png",
+                    "style": {
+                        "width": 40,
+                        "height": 40
+                      }
+                }, 
+                "_link2AlexaConfig": {
+                    "type": "staticLink",
+                    "label": "Click here for Alexa Configuration",
+                    "href": "http://localhost:51822/iwg-alexa-config/",
+                    "style": {
+                        "fontSize": 16,
+                        "marginBottom": 20
+                    }
+                },
+                "_skillimg": {
+                    "type": "staticImage",
+                    "newLine": true,
+                    "href": "https://www.amazon.de/dp/B0B2PHFX13",
+                    "src": "/adapter/iwg-vpn/skill-icon.png",
+                    "style": {
+                        "width": 40,
+                        "height": 40
+                      }
+                },                
+                "_link2AlexaSkill": {
+                    "type": "staticLink",
+                    "label": "Click here for iwg-vpn Alexa Skill",
+                    "href": "https://www.amazon.de/dp/B0B2PHFX13",
+                    "style": {
+                        "fontSize": 16,
+                        "marginBottom": 20
+                    }
+                }                
             }
         },
         "_remotes": {
@@ -34,8 +109,9 @@
             "items": {
                 "params.remotes": {
                     "type": "table",
-                    "items": [{
-                            "type": "selectSendTo",
+                    "items": [
+                        {
+                            "type": "selectSendTo",                           
                             "title": "IP",
                             "noTranslation": true,
                             "command": "get-hosts",
@@ -83,7 +159,7 @@
                     "jsonData": "{\"config\": \"${JSON.stringify(data.params)}\"}",
                     "label": "Validate Config"
                 }
-            }
+            }    
         },
         "_nat": {
             "type": "panel",
@@ -92,8 +168,9 @@
             "items": {
                 "params.nats": {
                     "type": "table",
-                    "items": [{
-                            "type": "selectSendTo",
+                    "items": [
+                        {
+                            "type": "selectSendTo",                           
                             "title": "Source IP",
                             "noTranslation": true,
                             "command": "get-hosts",
