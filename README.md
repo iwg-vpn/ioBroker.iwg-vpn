@@ -23,6 +23,9 @@ link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn
 
 ## Changelog
 
+### v0.10.3
+* Bug fixes
+
 ### v0.10.2
 * Config screen enhancements
 
