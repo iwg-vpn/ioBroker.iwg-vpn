@@ -1,0 +1,58 @@
+{
+    "capabilities": [
+        {
+            "namespace": "Alexa.PowerController",
+            "friendly_name": "switch",
+            "properties": [
+                {
+                    "name": "powerState",
+                    "type": "enum",
+                    "values": [
+                        "OFF",
+                        "ON"
+                    ]
+                }
+            ]
+        },
+        {
+            "namespace": "Alexa.BrightnessController",
+            "friendly_name": "dimmer",
+            "properties": [
+                {
+                    "name": "brightness",
+                    "type": "float",
+                    "values": []
+                }
+            ]
+        },
+        {
+            "namespace": "Alexa.LockController",
+            "friendly_name": "lock",
+            "properties": [
+                {
+                    "name": "lockState",
+                    "type": "enum",
+                    "values": [
+                        "JAMMED",
+                        "LOCKED",
+                        "UNLOCKED"
+                    ]
+                }
+            ]
+        },
+        {
+            "namespace": "Alexa.MotionSensor",
+            "friendly_name": "motion-sensor",
+            "properties": [
+                {
+                    "name": "detectionState",
+                    "type": "enum",
+                    "values": [
+                        "DETECTED",
+                        "NOT_DETETCTED"
+                    ]
+                }
+            ]
+        }        
+    ]
+}

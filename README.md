@@ -23,6 +23,9 @@ link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn
 
 ## Changelog
 
+### v0.10.4
+* Change reporting and motion sensor support added
+
 ### v0.10.3
 * Bug fixes
 

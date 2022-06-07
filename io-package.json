@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.10.3",
+        "version": "0.10.4",
         "news": {
+            "0.10.4": {
+                "en": "Motion sensor support added",
+                "de": "Unterstützung für Bewegungssensoren hinzugefügt",
+                "ru": "Добавлена поддержка датчика движения",
+                "pt": "Adicionado suporte ao sensor de movimento",
+                "nl": "Ondersteuning voor bewegingssensoren toegevoegd",
+                "fr": "Prise en charge du capteur de mouvement ajoutée",
+                "it": "Aggiunto il supporto del sensore di movimento",
+                "es": "Soporte de sensor de movimiento agregado",
+                "pl": "Dodano obsługę czujnika ruchu",
+                "zh-cn": "添加了运动传感器支持"
+            },
             "0.10.3": {
                 "en": "Bug fixes",
                 "de": "Fehlerbehebung",
