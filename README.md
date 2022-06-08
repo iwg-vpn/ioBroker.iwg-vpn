@@ -23,6 +23,10 @@ link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn
 
 ## Changelog
 
+### v0.10.5
+* Change reporting on ack=true only
+* Local keys storage moved to iobroker-data
+
 ### v0.10.4
 * Change reporting and motion sensor support added
 

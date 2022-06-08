@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.10.4",
+        "version": "0.10.5",
         "news": {
+            "0.10.5": {
+                "en": "Change reporting on ack=true only; Local keys storage moved to iobroker-data",
+                "de": "Änderung der Berichterstattung nur auf ack=true; Lokale Schlüsselspeicher bewegt auf iobroker-Daten",
+                "ru": "Изменить отчетность по ack=true только; Местное хранение ключей перенесено на iobroker-data",
+                "pt": "Alterar relatórios sobre ack=true somente; O armazenamento de chaves locais mudou-se para dados do iobroker",
+                "nl": "Veranderingsrapporten over Ack Etrue alleen, de lokale sleutels zijn verplaatst naar iobroker-data",
+                "fr": "Changement de rapport sur ack=true seulement; le stockage des clés locales s'est déplacé vers iobroker-data",
+                "it": "Cambiare la segnalazione solo su ack=true; L'archiviazione delle chiavi locale si è spostata a ibroker-data",
+                "es": "Cambio reportando sólo ack=true; almacenamiento de llaves locales movido a iobroker-data",
+                "pl": "Zmiana raportu Ack=true'a, lokalne klawisze przeniesiono do iobroker-data",
+                "zh-cn": "关于包装的变更报告:当地的关键储存移到Oiobroker-data。"
+            },
             "0.10.4": {
                 "en": "Motion sensor support added",
                 "de": "Unterstützung für Bewegungssensoren hinzugefügt",
@@ -201,7 +213,7 @@
         "icon": "iwg-vpn.png",
         "enabled": true,
         "extIcon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/admin/iwg-vpn.png",
-        "localLink": "http://%ip%:51822/qrcode/index.html",
+        "localLink": "http://%ip%:51822/index.html",
         "readme": "https://github.com/iwg-vpn/ioBroker.iwg-vpn/blob/main/README.md",
         "loglevel": "info",
         "mode": "daemon",

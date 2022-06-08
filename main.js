@@ -7,6 +7,7 @@ const AlexaHandler = require("./lib/alexa-handler");
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require('@iobroker/adapter-core');
+const FileSystemHelper = require('./lib/file-system-helper');
 
 class IwgVpn extends utils.Adapter {
 
@@ -148,6 +149,8 @@ class IwgVpn extends utils.Adapter {
         // Reset the connection indicator during startup
         this.setConnectionStatus(false);
 
+        FileSystemHelper.init(this)
+
         this.client = new IwgClient(this);
         await this.client.start();
 
@@ -155,6 +158,7 @@ class IwgVpn extends utils.Adapter {
         await this.httpServer.start();
 
         await AlexaHandler.init(this)
+
     }
 
     /**
