@@ -23,48 +23,28 @@ link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn
 
 ## Changelog
 
+### v0.10.6
+* http server enhancements
+* bug fixes
+* doorbell capability support added
+
 ### v0.10.5
 * Change reporting on ack=true only
 * Local keys storage moved to iobroker-data
 
-### v0.10.4
+### Previous versions
 * Change reporting and motion sensor support added
-
-### v0.10.3
 * Bug fixes
-
-### v0.10.2
 * Config screen enhancements
-
-### v0.10.1
 * Control your real and virtual devices via Alexa
-
-### v0.9.2
 * Adapter starts own HTTP server to support configuration via QR Codes
-
-### v0.9.1
-* Bug fixes
-
-### v0.9.0
 * Remote access support for ioBroker windows hosts
 * Peer configuration as QR Code to import into a WireGuard App on a mobile peer
 * Auto generation of key pairs for configured peers
-
-### v0.0.9
 * Adapter review feedback incorporated
-
-### v0.0.8
 * Validate your configuration before applying it
 * Information about latest handshake and sent/received bytes via the WireGuard network interface
-
-### v0.0.7 
-
 * Support of NAT between VPN and the ioBroker host's local network
-
-### v0.0.5 
-
-* Initial published release
-
 
 ## License
 Creative Commons Attribution-NonCommercial (CC BY-NC)

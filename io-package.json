@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.10.5",
+        "version": "0.10.6",
         "news": {
+            "0.10.6": {
+                "en": "http server enhancements; doorbell support; bug fixes",
+                "de": "http servererweiterungen; türklingelunterstützung; bugfixes",
+                "ru": "http улучшения сервера; поддержка дверного звонка; исправления ошибок",
+                "pt": "http server enhances; suporte de campainha; correções de bugs",
+                "nl": "htp server verbetering; deurbel ondersteuning, bug fix",
+                "fr": "améliorations de serveur http; support de portebell; corrections de bug",
+                "it": "miglioramenti del server http; supporto del campanello; correzioni di bug",
+                "es": "mejoras del servidor http; soporte del timbre; correcciones de errores",
+                "pl": "serwer http; obsługa dzwonków do drzwi; trąb naprawia",
+                "zh-cn": "http://服务器的加强;大门支持;bug fixes"
+            },
             "0.10.5": {
                 "en": "Change reporting on ack=true only; Local keys storage moved to iobroker-data",
                 "de": "Änderung der Berichterstattung nur auf ack=true; Lokale Schlüsselspeicher bewegt auf iobroker-Daten",

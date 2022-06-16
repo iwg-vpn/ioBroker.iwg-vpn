@@ -12,7 +12,8 @@
                         "ON"
                     ]
                 }
-            ]
+            ],
+            "color": "teal lighteen-1"
         },
         {
             "namespace": "Alexa.BrightnessController",
@@ -23,7 +24,8 @@
                     "type": "float",
                     "values": []
                 }
-            ]
+            ],
+            "color": "orange lighteen-1"
         },
         {
             "namespace": "Alexa.LockController",
@@ -38,7 +40,8 @@
                         "UNLOCKED"
                     ]
                 }
-            ]
+            ],
+            "color": "green lighteen-1"
         },
         {
             "namespace": "Alexa.MotionSensor",
@@ -52,7 +55,20 @@
                         "NOT_DETETCTED"
                     ]
                 }
-            ]
+            ],
+            "color": "purple lighteen-1"
+        },
+        {
+            "namespace": "Alexa.DoorbellEventSource",
+            "friendly_name": "doorbell",
+            "properties": [
+                {
+                    "name": "doorbellEventSource",
+                    "type": "int",
+                    "values": []
+                }
+            ],
+            "color": "lime darken-3"
         }        
     ]
 }

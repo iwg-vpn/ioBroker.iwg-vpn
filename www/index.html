@@ -5,22 +5,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>QR Code Generator</title>
-    <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <link href="/css/bootstrap.51.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link href="style.css" rel="stylesheet">
 </head>
 
 <body class="d-flex h-100 text-center text-white bg-dark">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <main class="px-3">
-            <p class="lead"><a href="/qrcode/index.html">Peers' config as QR Code</a></p>
-            <p class="lead"><a href="/iwg-alexa-config/index.html">Alexa Device Configuration</a></p>
-        </main>
-    </div>
-
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <a href="/qrcode/index.html">
+              <p class="lead">Peers' config as QR Code</p>
+              <img src="./img/qr-cfg-sm.png" style="width: 200px;"/>
+            </a>
+          </div>
+          <div class="col-sm">
+            <a href="/iwg-alexa-config/index.html">
+              <p class="lead">Alexa Device Configuration</p>
+              <img src="./img/alx-cfg-sm.png" style="width: 200px;"/>
+            </a>
+          </div>
+        </div>
+      </div>
 </body>
-
-
 </html>
