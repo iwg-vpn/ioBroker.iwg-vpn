@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.10.6",
+        "version": "0.10.7",
         "news": {
+            "0.10.7": {
+                "en": "bug fixes",
+                "de": "fehlerbehebungen",
+                "ru": "исправления ошибок",
+                "pt": "correções de bugs",
+                "nl": "vertaling:",
+                "fr": "bug corrige",
+                "it": "correzioni di bug",
+                "es": "bug fixes",
+                "pl": "trąbka",
+                "zh-cn": "bug fix"
+            },
             "0.10.6": {
                 "en": "http server enhancements; doorbell support; bug fixes",
                 "de": "http servererweiterungen; türklingelunterstützung; bugfixes",
@@ -213,11 +225,15 @@
             "iwg-vpn <iwg.vpn@gmail.com>"
         ],
         "keywords": [
-            "von",
+            "vpn",
             "remote",
+            "fernzugriff",
+            "fernsteurung",
             "connect",
             "link",
-            "wireguard"
+            "wireguard",
+            "voice assistant",
+            "alexa"
         ],
         "license": "CC-BY-NC-4.0",
         "platform": "Javascript/Node.js",
@@ -239,21 +255,16 @@
         },
         "messagebox": true,
         "subscribe": "messagebox",
-        "dependencies": [
-            {
-                "js-controller": ">=2.0.0"
-            }
-        ],
-        "globalDependencies": [
-            {
-                "admin": ">=5.1.0"
-            }
-        ]
+        "dependencies": [{
+            "js-controller": ">=2.0.0"
+        }],
+        "globalDependencies": [{
+            "admin": ">=5.1.0"
+        }]
     },
     "native": {},
     "objects": [],
-    "instanceObjects": [
-        {
+    "instanceObjects": [{
             "_id": "info",
             "type": "channel",
             "common": {

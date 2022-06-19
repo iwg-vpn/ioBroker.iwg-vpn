@@ -52,7 +52,7 @@
                     "type": "enum",
                     "values": [
                         "DETECTED",
-                        "NOT_DETETCTED"
+                        "NOT_DETECTED"
                     ]
                 }
             ],
