@@ -1,8 +1,56 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.10.7",
+        "version": "0.11.3",
         "news": {
+            "0.11.3": {
+                "en": "a way to allow write operations on whitelisted variables added",
+                "de": "eine möglichkeit, schreibvorgänge auf weiße variablen hinzufügen",
+                "ru": "способ позволить писать операции на whitelisted variables добавлен",
+                "pt": "uma maneira de permitir as operações de gravação em variáveis listadas brancas adicionadas",
+                "nl": "_",
+                "fr": "un moyen de permettre des opérations d'écriture sur des variables blanches ajoutées",
+                "it": "un modo per consentire operazioni di scrittura su variabili whitelisted aggiunte",
+                "es": "una manera de permitir las operaciones de escritura en las variables de lista blanca",
+                "pl": "w ten sposób, aby umożliwić pisanie operacji na zmiennych białolistych, dodane zostały zmiany",
+                "zh-cn": "a 允许用白色变量写出业务的方式增加"
+            },
+            "0.11.2": {
+                "en": "warnings while writing a state fixed",
+                "de": "warnungen beim schreiben eines zustands fest",
+                "ru": "исправления c целью избежания предупреждений при изменении статусов",
+                "pt": "avisos ao escrever um estado fixo",
+                "nl": "waarschuwingen terwijl je een staat gerepareerd hebt",
+                "fr": "avertissements en écrivant un état fixe",
+                "it": "avvertimenti durante la scrittura di uno stato fisso",
+                "es": "advertencias mientras escribe un estado fijo",
+                "pl": "podczas pisania ustalono stan",
+                "zh-cn": "警告,同时写明一国的固定状态"
+            },
+            "0.11.1": {
+                "en": "http communication over VPN additionally secured by means of asymmetric keys; bug fixes",
+                "de": "http-kommunikation über VPN zusätzlich durch asymmetrische schlüssel gesichert; bugfixes",
+                "ru": "http сообщение через VPN дополнительно защищено с помощью асимметричных ключей; исправления ошибок",
+                "pt": "http comunicação sobre VPN adicionalmente assegurada por meio de chaves assimétricas; correções de bugs",
+                "nl": "htp-communicatie boven VPN extra beveiligd door middel van asymmetrische sleutels",
+                "fr": "http communication sur VPN également sécurisé au moyen de clés asymétriques; corrections de bugs",
+                "it": "http communication over VPN inoltre protetto per mezzo di chiavi asimmetriche; correzioni di bug",
+                "es": "http communication over VPN adicionally secured by means of asymmetric keys; bug fixes",
+                "pl": "http komunikacja nad VPN dodatkowo zabezpieczona przez klucze asymetryczne; trąb naprawia błędy",
+                "zh-cn": "补充通过不对称关键手段确保尼共体交流;bug fix"
+            },
+            "0.11.0": {
+                "en": "improved http communication; percentage controller capability added; relative changes support added",
+                "de": "verbesserte http-kommunikation; prozent-controller-fähigkeit hinzugefügt; relative änderungen unterstützung hinzugefügt",
+                "ru": "улучшенный http сообщение; добавлена возможность регулятора процент; добавленная поддержка относительного изменения",
+                "pt": "melhoria da comunicação http; capacidade de controlador de porcentagem adicionado; apoio de alterações relativas adicionado",
+                "nl": "verbeterde htp-communicatie",
+                "fr": "amélioration de la communication http; capacité de contrôleur en pourcentage ajoutée; changement relatif support ajouté",
+                "it": "miglioramento della comunicazione http; aggiunta di capacità del controllo percentuale; aggiunta di modifiche relative",
+                "es": "mejora de la comunicación http; aumento de la capacidad de control porcentual; apoyo a cambios relativos",
+                "pl": "poprawiona została komunikacja http; dodano możliwość kontrolera odsetek; względne zmiany wsparcia dodały się w sposób poprawny",
+                "zh-cn": "改善了通信;控制容忍能力增加;相对变化支助增加"
+            },
             "0.10.7": {
                 "en": "bug fixes",
                 "de": "fehlerbehebungen",
@@ -228,12 +276,15 @@
             "vpn",
             "remote",
             "fernzugriff",
-            "fernsteurung",
+            "fernsteuerung",
             "connect",
             "link",
             "wireguard",
-            "voice assistant",
-            "alexa"
+            "alexa",
+            "amazon",
+            "cloud",
+            "nat",
+            "iot"
         ],
         "license": "CC-BY-NC-4.0",
         "platform": "Javascript/Node.js",
@@ -255,16 +306,21 @@
         },
         "messagebox": true,
         "subscribe": "messagebox",
-        "dependencies": [{
-            "js-controller": ">=2.0.0"
-        }],
-        "globalDependencies": [{
-            "admin": ">=5.1.0"
-        }]
+        "dependencies": [
+            {
+                "js-controller": ">=2.0.0"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.1.0"
+            }
+        ]
     },
     "native": {},
     "objects": [],
-    "instanceObjects": [{
+    "instanceObjects": [
+        {
             "_id": "info",
             "type": "channel",
             "common": {

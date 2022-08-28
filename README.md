@@ -23,6 +23,22 @@ link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn
 
 ## Changelog
 
+### v0.11.3
+* a way to allow write operations on whitelisted variables added
+* bug fixes
+
+### v0.11.2
+* warnings while writing a state fixed
+
+### v0.11.1
+* http communication over VPN additionally secured by means of asymmetric keys
+* bug fixes
+
+### v0.11.0
+* improved http communication
+* percentage controller capability added
+* relative changes support added
+
 ### v0.10.7
 * bug fixes
 

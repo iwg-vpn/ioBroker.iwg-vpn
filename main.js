@@ -1,6 +1,5 @@
 'use strict';
 
-const { adapter } = require('@iobroker/adapter-core');
 const IwgClient = require("./lib/iwg-client");
 const HttpServer = require("./lib/http-server");
 const AlexaHandler = require("./lib/alexa-handler");
@@ -114,7 +113,6 @@ class IwgVpn extends utils.Adapter {
 
             await self.setStateAsync(`${prefix}.config`, peer.config, true);
 
-
         }, undefined);
     }
 
@@ -158,7 +156,6 @@ class IwgVpn extends utils.Adapter {
         await this.httpServer.start();
 
         await AlexaHandler.init(this)
-
     }
 
     /**

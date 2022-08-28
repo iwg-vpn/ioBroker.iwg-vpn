@@ -69,6 +69,18 @@
                 }
             ],
             "color": "lime darken-3"
-        }        
+        },
+        {
+            "namespace": "Alexa.PercentageController",
+            "friendly_name": "percentage-ctrl",
+            "properties": [
+                {
+                    "name": "percentage",
+                    "type": "float",
+                    "values": []
+                }
+            ],
+            "color": "brown darken-3"
+        }
     ]
 }
