@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "0.11.3",
+        "version": "0.11.4",
         "news": {
+            "0.11.4": {
+                "en": "icons in settings fixed; deps updated; orphan keys clean up added",
+                "de": "icons in einstellungen fixiert; deps aktualisiert; waisenschlüssel aufräumen hinzugefügt",
+                "ru": "иконки в настройках исправлены; депс обновлены; неиспользуемые ключи удаляются",
+                "pt": "ícones em configurações fixas; deps atualizado; chaves órfãos limpar adicionado",
+                "nl": "icoons in settings gerepareerd, verdorven, weessleutels opgeruimd",
+                "fr": "icônes dans les réglages fixés; deps mis à jour; clés orphelins nettoyer ajoutés",
+                "it": "icone in impostazioni fisse; deps aggiornato; chiavi orfane pulire aggiunto",
+                "es": "iconos en los ajustes fijos; deps actualizado; llaves huérfanos limpiar añadido",
+                "pl": "ikony w ustawieniach ustalono; depozyty aktualizowane; klucze sierociane dodawane dodać",
+                "uk": "ікони в налаштуваннях фіксованих; deps оновлений; ключі для дітей очищають додані",
+                "zh-cn": "b. 固定环境中的缺陷;更新的降解;或"
+            },
             "0.11.3": {
                 "en": "a way to allow write operations on whitelisted variables added",
                 "de": "eine möglichkeit, schreibvorgänge auf weiße variablen hinzufügen",

@@ -9,7 +9,7 @@
                 "_img": {
                     "type": "staticImage",
                     "href": "https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/read-me.html",
-                    "src": "/adapter/iwg-vpn/iwg-vpn.png",
+                    "src": "adapter/iwg-vpn/iwg-vpn.png",
                     "style": {
                         "width": 40,
                         "height": 40
@@ -28,7 +28,7 @@
                     "type": "staticImage",
                     "newLine": true,
                     "href": "https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/alexa-config.html",
-                    "src": "/adapter/iwg-vpn/iwg-vpn.png",
+                    "src": "adapter/iwg-vpn/iwg-vpn.png",
                     "style": {
                         "width": 40,
                         "height": 40
@@ -47,7 +47,7 @@
                     "type": "staticImage",
                     "newLine": true,
                     "href": "https://www.amazon.de/dp/B0B2PHFX13",
-                    "src": "/adapter/iwg-vpn/skill-icon.png",
+                    "src": "adapter/iwg-vpn/skill-icon.png",
                     "style": {
                         "width": 40,
                         "height": 40
@@ -57,6 +57,16 @@
                     "type": "staticLink",
                     "label": "Click here for iwg-vpn Alexa Skill",
                     "href": "https://www.amazon.de/dp/B0B2PHFX13",
+                    "style": {
+                        "fontSize": 16,
+                        "marginBottom": 20
+                    }
+                },
+                "_link2pp": {
+                    "type": "staticLink",
+                    "newLine": true,
+                    "label": "Donate a cup of coffee to the maintainer",
+                    "href": "https://www.paypal.com/donate/?hosted_button_id=6XZHXGV7UUM8N",
                     "style": {
                         "fontSize": 16,
                         "marginBottom": 20
