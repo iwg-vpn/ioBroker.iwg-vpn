@@ -252,18 +252,31 @@
                     <h4 id="config-as-qr">
                         Applying configuration by scanning a QR Code
                     </h4>
-                    <p>To generate and apply a peer configuration as a QR Code open the adapter settings and click on a link on the <code>README</code>: panel</p>
+                    <p>To generate and apply a peer configuration as a QR Code open the adapter' instance link...</p>
+                    <p>
+                        <img src="./img/www-settings.png" loading="lazy">
+                    </p>
+
+                    <p>
+                        ...and then select the <code>Peers' config as QR Code</code>.
+                    </p>
+
                     <p>
                         <img src="./img/qr-config.png" loading="lazy">
                     </p>
-
-
-                    <p>This will open a screen where you can select a peer and display the prepared VPN configuration as a text and as a QR-Code. Use your WireGuard app installed on a peer to scan the QR-Code and to apply the configuration.
+                    
+                    <p>
+                        This will open a screen where you can select a peer and display the prepared VPN configuration as a text and as a
+                        QR-Code. Use your WireGuard app installed on a peer to scan the QR-Code and to apply the configuration.
                     </p>
                     <p>
                         <img src="./img/config-as-qr.png" loading="lazy">
                     </p>
-                    <p>Please note, that a configuration with no or invalid private key cannot be imported. So to import a configuration for the peers with the <code>Use Auto Generated Keys</code> option deactivated, first replace the placeholder <code>&lt;private_key&gt;</code>                        with the real private key generated on the peer and then scan the code. The QR Code updates itself automatically on every change made in the text above the QR Code.</p>
+                    <p>Please note, that a configuration with no or invalid private key cannot be imported. So to import a configuration for
+                        the peers with the <code>Use Auto Generated Keys</code> option deactivated, first replace the placeholder
+                        <code>&lt;private_key&gt;</code> with the real private key generated on the peer and then scan the code. The QR Code
+                        updates itself automatically on every change made in the text above the QR Code.
+                    </p>
 
                     <h4>
                         Applying configuration manually
@@ -273,7 +286,8 @@
                         you don't have the ioBroker.web adapter installed and don't want to install it, you can still access the configuration text via the <code>Objects</code> screen. Open the <code>Objects</code> screen in the ioBroker, find the
                         <code>iwg-vpn</code> section and your active peers. Every peer object has an
                         <code>address</code> state containing the assigned private IP address and the
-                        <code>config</code> state with prepared configuration.</p>
+                        <code>config</code> state with prepared configuration.
+                        </p>
 
                     <p>
                         <img src="./img/peer-config.png" loading="lazy">
@@ -281,7 +295,9 @@
 
                     <p>Copy the configuration string and paste it into a text editor. If you generated the keys manually, replace the placeholder <code>&lt;private_key&gt;</code> with your peer's private key and place the whole content as a config on a peer.
                         If you used the
-                        <code>Use Auto Generated Keys</code> option, the private key is already included and you just have to apply the configuration on the peer.</p>
+                        <code>Use Auto Generated Keys</code> option, the private key is already included and you just have to apply the
+                        configuration on the peer.
+                        </p>
 
                     <p>
                         <img src="./img/peer-config-file.png" loading="lazy">
@@ -297,10 +313,14 @@
                         <p>
                             Having the WireGuard installed and configuration file created, the VPN interface can be started on a peer. To start/stop the WireGuard on the mobile peer use the installed app, on a Linux peer you can use the command:
                         </p>
-                        <div class="shellcontent"><pre class="highlight"><code>$ wg-quick up wg0</code></pre></div>
+                        <div class="shellcontent">
+                            <pre class="highlight"><code>$ wg-quick up wg0</code></pre>
+                        </div>
                         <p>to start and </p>
 
-                        <div class="shellcontent"><pre class="highlight"><code>$ wg-quick down wg0</code></pre></div>
+                        <div class="shellcontent">
+                            <pre class="highlight"><code>$ wg-quick down wg0</code></pre>
+                        </div>
 
                         <p>to stop the WireGuard interface.</p>
                         <h2>
@@ -317,7 +337,7 @@
                             NAT
                         </h2>
                         <p class="iwg-note">
-                            <i><b>Note:</b><br/> NAT is not supported for ioBroker windows hosts yet</i>
+                            <i><b>Note:</b><br /> NAT is not supported for ioBroker windows hosts yet</i>
                         </p>
                         <p>
                             The adapter supports NAT (<b>N</b>etwork <b>A</b>ddress <b>T</b>ranslation) or more precisely 1:1 NAT that maps one internal address (in a local network) to one external address (in VPN). The figure below shows an example of
@@ -362,8 +382,10 @@
                                 <code>Destination IP</code> — The IP of a device in the local network you'd like to access from your VPN peers.
                             </li>
                             <li>
-                                <code>Active</code> — Only active NAT configurations are really available on VPN. You can have more NAT configurations than VPN IP addresses available, e.g., by creating multiple NAT configurations for the same <code>Source IP</code>,
-                                but only active ones with unique IP addresses will be added to your VPN. By switching this property on and off you can add or remove a predefined NAT configuration to/from your VPN.
+                                <code>Active</code> — Only active NAT configurations are really available on VPN. You can have more NAT configurations
+                                than VPN IP addresses available, e.g., by creating multiple NAT configurations for the same
+                                <code>Source IP</code>, but only active ones with unique IP addresses will be added to your VPN. By switching this
+                                property on and off you can add or remove a predefined NAT configuration to/from your VPN.
                             </li>
                         </ul>
                         <p>
@@ -390,12 +412,16 @@
                             First of all, with Simple-API activated in ioBroker (if you're using the feature of generating a configuration as a QR-Code, then it's already activated) you can read and write any states in exactly the same way as you would do it also with <code>ioBroker.cloud</code>                            adapter and iobroker.pro account. The only difference is that you would use the ioBroker VPN address in this case and not the iobroker.pro cloud. And as a side effect: no iobroker.pro account needed and it's for free :). For
                             example, if your <code>iobroker.web</code> is listenning on port 8082, then getting a state object is as simple as:
                         </p>
-                        <div class="shellcontent"><pre class="highlight"><code>GET http://10.0.0.136:8082/get/&lt;state_id&gt;</code></pre></div>
+                        <div class="shellcontent">
+                            <pre class="highlight"><code>GET http://10.0.0.136:8082/get/&lt;state_id&gt;</code></pre>
+                        </div>
 
                         <p>Replace the <code>&lt;state_id&gt;</code> with the ID of a state you're interested in, e.g.,
-                            <code>admin.0.info.lastUpdateCheck</code>, and you'll get as a response something like:</p>
+                            <code>admin.0.info.lastUpdateCheck</code>, and you'll get as a response something like:
+                            </p>
 
-                        <div class="shellcontent"><pre class="highlight"><code>{
+                        <div class="shellcontent">
+                            <pre class="highlight"><code>{
     "val":1646429215353,
     "ack":true,
     "ts":1587296099233,
@@ -412,29 +438,44 @@
                         </div>
 
                         <p> To read just a value itself, use </p>
-                        <div class="shellcontent"><pre class="highlight"><code>GET http://10.0.0.136:8082/getPlainValue/admin.0.info.lastUpdateCheck</code></pre></div>
+                        <div class="shellcontent">
+                            <pre class="highlight"><code>GET http://10.0.0.136:8082/getPlainValue/admin.0.info.lastUpdateCheck</code></pre>
+                        </div>
 
                         <p>Response:</p>
-                        <div class="shellcontent"><pre class="highlight"><code>1646429215353</code></pre></div>
+                        <div class="shellcontent">
+                            <pre class="highlight"><code>1646429215353</code></pre>
+                        </div>
 
                         <p> To write a value use </p>
-                        <div class="shellcontent"><pre class="highlight"><code>GET http://10.0.0.136:8082/set/&lt;state_id&gt;?value=1</code></pre></div>
+                        <div class="shellcontent">
+                            <pre class="highlight"><code>GET http://10.0.0.136:8082/set/&lt;state_id&gt;?value=1</code></pre>
+                        </div>
 
                         <p>Response:</p>
-                        <div class="shellcontent"><pre class="highlight"><code>{"result":"OK"}</code></pre></div>
+                        <div class="shellcontent">
+                            <pre class="highlight"><code>{"result":"OK"}</code></pre>
+                        </div>
 
                         <h3>
                             Text2Command
                         </h3>
-                        <p> If you're using the <code>ioBroker.text2command</code> adapter, then sending a remote command is just setting the <code>text</code> state of the adapter instance, e.g., to send the <code>what time is it now?</code> command: </p>
+                        <p> If you're using the <code>ioBroker.text2command</code> adapter, then sending a remote command is just setting the
+                            <code>text</code> state of the adapter instance, e.g., to send the <code>what time is it now?</code> command:
+                        </p>
 
-                        <div class="shellcontent"><pre class="highlight"><code>curl 10.0.0.136:8082/set/text2command.0.text?value=what%20time%20is%20it%20now?</code></pre>
+                        <div class="shellcontent">
+                            <pre
+                                class="highlight"><code>curl 10.0.0.136:8082/set/text2command.0.text?value=what%20time%20is%20it%20now?</code></pre>
                         </div>
                         <p> If you're using
                             <code>curl</code> to send an HTTP request don't forget to replace blanks in your command text with <code>%20</code>. To get the command's response, just read the adapter's
-                            <code>response</code> state:</p>
+                            <code>response</code> state:
+                            </p>
 
-                        <div class="shellcontent"><pre class="highlight"><code>curl 10.0.0.136:8082/getPlainValue/text2command.0.response</code></pre></div>
+                        <div class="shellcontent">
+                            <pre class="highlight"><code>curl 10.0.0.136:8082/getPlainValue/text2command.0.response</code></pre>
+                        </div>
 
                         <h2>
                             Some words about security
@@ -457,7 +498,9 @@
                             Alternatives
                         </h2>
                         <p class="iwg-note">
-                            <i><b>Disclaimer:</b><br/> This comparison doesn't claim to be neither correct nor complete. The considered information about the alternatives was limited to the publicly available only and some statements and conclusions provided below
+                            <i><b>Disclaimer:</b><br /> This comparison doesn't claim to be neither correct nor complete. The considered
+                                information about the alternatives was limited to the publicly available only and some statements and
+                                conclusions provided below
                             might be wrong. <br/> Neither performance nor throuput via the different solutions were measured, instead assumptions based on the pure theory of physics were made, that nevetheless were pretty much confirmed by non-scientific tests :)</i>
                         </p>
 
@@ -468,8 +511,9 @@
                         </p>
                         <p>
                             If you don't feel comfortable setting everything up on your own and exposing your local network to the Internet by following some instructions from the Internet, then you're probably looking for a solution which takes the configuration burden, easy to
-                            use and secure at the same time. At the moment there are two alternatives available which are comparable to the <code>ioBroker.iwg-vpn</code>: <code>ioBoker.link</code> and <code>ioBroker.cloud</code>.
-                            So let's take a look at the commonalities and differences between those and let me know if I missed another one :).
+                            use and secure at the same time. At the moment there are two alternatives available which are comparable to the
+                            <code>ioBroker.iwg-vpn</code>: <code>ioBoker.link</code> and <code>ioBroker.cloud</code>. So let's take a look at the
+                            commonalities and differences between those and let me know if I missed another one :).
                         </p>
 
 
@@ -533,7 +577,8 @@
                         </p>
                         <p>
                             <code>ioBroker.iwg-vpn</code> doesn't intervene into the communication, so the performace is equal to the
-                            <a href="https://www.wireguard.com/performance/"> WireGuard native</a> performance.</p>
+                            <a href="https://www.wireguard.com/performance/"> WireGuard native</a> performance.
+                            </p>
                         <h3>Maintenance</h3>
                         <p>
                             <code>ioBroker.link</code> seems to be not really maintained. The last commit is from <code>3 Oct 2021</code> which just fixes the type of the adapter's <code>indicator.connection</code> state. The second latest commit is from
@@ -541,13 +586,17 @@
                             Also the underlying <a href="https://securesocketfunneling.github.io/ssf/#home">SSF</a> package seems to be abandoned with the latest commit from <code>13 Nov 2017</code>.</p>
 
                         <p>
-                            <code>ioBroker.cloud</code> is maintaned as it seems to generate the most profit.</p>
+                            <code>ioBroker.cloud</code> is maintaned as it seems to generate the most profit.
+                            </p>
 
                         <h3>Open/Closed Source</h3>
                         <p>
-                            <code>ioBroker.link</code> is completelly closed source. Neither the adapter, nor link-box, nor the relay server code is available.</p>
+                            <code>ioBroker.link</code> is completelly closed source. Neither the adapter, nor link-box, nor the relay server code is
+                            available.
+                            </p>
                         <p>
-                            <code>ioBroker.cloud</code> and <code>ioBroker.iwg-vpn</code> adapters' code is open.</p>
+                            <code>ioBroker.cloud</code> and <code>ioBroker.iwg-vpn</code> adapters' code is open.
+                            </p>
 
                         <h3>Costs</h3>
 
