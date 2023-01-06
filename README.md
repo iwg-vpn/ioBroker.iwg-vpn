@@ -1,4 +1,5 @@
-<img src="admin/iwg-vpn.png" width="100">
+![Logo](admin/iwg-vpn-sm.png)
+
 
 # ioBroker.iwg-vpn
 
