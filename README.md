@@ -1,4 +1,5 @@
-![Logo](admin/iwg-vpn.png)
+<img src="admin/iwg-vpn.png" width="100">
+
 # ioBroker.iwg-vpn
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.iwg-vpn.svg)](https://www.npmjs.com/package/iobroker.iwg-vpn)
