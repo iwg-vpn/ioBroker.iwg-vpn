@@ -155,11 +155,31 @@
                         <img src="./img/adapter-connection-status.png" loading="lazy">
                     </p>
                     <p>
-                        Once connected, the adapter gets a private IP address and assigns it to the local WireGuard network interface. Starting from this point the ioBroker host is reachable in VPN under this IP address. You can always see the private IP address of your ioBroker
-                        host in the <code>Objects</code> screen of the ioBroker:
+                        Once connected, the adapter gets a private IP address and assigns it to the local WireGuard network interface. Starting from this point the ioBroker host is reachable in your VPN under this IP address. You can always see the private IP address of your
+                        ioBroker host in the <code>Objects</code> screen of the ioBroker:
                     </p>
                     <p>
                         <img src="./img/local-address.png" loading="lazy">
+                    </p>
+
+                    <p class="iwg-note">
+                        <i><b>Keep in mind:</b><br />
+                            Once configured, the adapter not only gets its own IP address, it also gets an IP range consisting of 3
+                            additional IP addresses to be used
+                            by peers or for a
+                            <a href="#nat">NAT</a> configuration (3 additional IP addresses is a soft limit that can be increased upon
+                            request). The assigned IP range is exclusively reserved for your adapter. So even if you don't use the adapter,
+                            the assigned IP range still remains
+                            unavailable for other users.
+                            As you probably know, the IPv4 addresses are scarce goods, for this reason the IP range might be released and
+                            assigned to other users after the adapter not being used for a long period
+                            of time. This doesn't mean that your configured devices will suddenly become reachable by other users if you
+                            switch the adapter on again, but in this case your adapter might get a new IP range assigned and you have to
+                            reconfigure all your peers and NATs.<br />
+                            This is not a request to keep the adapter running all the time, in contrast, you are encouraged to switch
+                            it off if you don't need it.
+                            But a continuously switched off adapter is considered to be not required, so that the assigned IP range might be
+                            released for usage by other users. </i>
                     </p>
 
                     <h2>
@@ -169,9 +189,8 @@
                     <p>Let's call the other devices on your VPN peers. The ioBroker host and the peers are devices on the same VPN.
                     </p>
                     <p>
-                        Once configured, the adapter not only gets its own IP address, it also gets 3 additional IP addresses to be used by peers or for a
-                        <a href="#nat">NAT</a> configuration (3 additional IP addresses is a soft limit that can be increased upon a request). Before adding a peer to your VPN you have to install the WireGuard package or the WireGuard app also on this
-                        peer. For connecting individual devices to a network via VPN, there are apps or programs from WireGuard itself for most operating systems. Please follow the instructions on the official WireGuard
+                        Before adding a peer to your VPN you have to install the WireGuard package or the WireGuard app also on this peer. For connecting individual devices to a network via VPN, there are apps or programs from WireGuard itself for most operating systems. Please
+                        follow the instructions on the official WireGuard
                         <a href="https://www.wireguard.com/install/">Installation</a> page matching to the operating system of the peer. If your peer running a Linux, you can use the same installation script as for the ioBroker host.
                     </p>
 
@@ -264,18 +283,15 @@
                     <p>
                         <img src="./img/qr-config.png" loading="lazy">
                     </p>
-                    
+
                     <p>
-                        This will open a screen where you can select a peer and display the prepared VPN configuration as a text and as a
-                        QR-Code. Use your WireGuard app installed on a peer to scan the QR-Code and to apply the configuration.
+                        This will open a screen where you can select a peer and display the prepared VPN configuration as a text and as a QR-Code. Use your WireGuard app installed on a peer to scan the QR-Code and to apply the configuration.
                     </p>
                     <p>
                         <img src="./img/config-as-qr.png" loading="lazy">
                     </p>
-                    <p>Please note, that a configuration with no or invalid private key cannot be imported. So to import a configuration for
-                        the peers with the <code>Use Auto Generated Keys</code> option deactivated, first replace the placeholder
-                        <code>&lt;private_key&gt;</code> with the real private key generated on the peer and then scan the code. The QR Code
-                        updates itself automatically on every change made in the text above the QR Code.
+                    <p>Please note, that a configuration with no or invalid private key cannot be imported. So to import a configuration for the peers with the <code>Use Auto Generated Keys</code> option deactivated, first replace the placeholder
+                        <code>&lt;private_key&gt;</code> with the real private key generated on the peer and then scan the code. The QR Code updates itself automatically on every change made in the text above the QR Code.
                     </p>
 
                     <h4>
@@ -287,7 +303,7 @@
                         <code>iwg-vpn</code> section and your active peers. Every peer object has an
                         <code>address</code> state containing the assigned private IP address and the
                         <code>config</code> state with prepared configuration.
-                        </p>
+                    </p>
 
                     <p>
                         <img src="./img/peer-config.png" loading="lazy">
@@ -295,9 +311,8 @@
 
                     <p>Copy the configuration string and paste it into a text editor. If you generated the keys manually, replace the placeholder <code>&lt;private_key&gt;</code> with your peer's private key and place the whole content as a config on a peer.
                         If you used the
-                        <code>Use Auto Generated Keys</code> option, the private key is already included and you just have to apply the
-                        configuration on the peer.
-                        </p>
+                        <code>Use Auto Generated Keys</code> option, the private key is already included and you just have to apply the configuration on the peer.
+                    </p>
 
                     <p>
                         <img src="./img/peer-config-file.png" loading="lazy">
@@ -382,10 +397,8 @@
                                 <code>Destination IP</code> — The IP of a device in the local network you'd like to access from your VPN peers.
                             </li>
                             <li>
-                                <code>Active</code> — Only active NAT configurations are really available on VPN. You can have more NAT configurations
-                                than VPN IP addresses available, e.g., by creating multiple NAT configurations for the same
-                                <code>Source IP</code>, but only active ones with unique IP addresses will be added to your VPN. By switching this
-                                property on and off you can add or remove a predefined NAT configuration to/from your VPN.
+                                <code>Active</code> — Only active NAT configurations are really available on VPN. You can have more NAT configurations than VPN IP addresses available, e.g., by creating multiple NAT configurations for the same
+                                <code>Source IP</code>, but only active ones with unique IP addresses will be added to your VPN. By switching this property on and off you can add or remove a predefined NAT configuration to/from your VPN.
                             </li>
                         </ul>
                         <p>
@@ -418,7 +431,7 @@
 
                         <p>Replace the <code>&lt;state_id&gt;</code> with the ID of a state you're interested in, e.g.,
                             <code>admin.0.info.lastUpdateCheck</code>, and you'll get as a response something like:
-                            </p>
+                        </p>
 
                         <div class="shellcontent">
                             <pre class="highlight"><code>{
@@ -465,13 +478,12 @@
                         </p>
 
                         <div class="shellcontent">
-                            <pre
-                                class="highlight"><code>curl 10.0.0.136:8082/set/text2command.0.text?value=what%20time%20is%20it%20now?</code></pre>
+                            <pre class="highlight"><code>curl 10.0.0.136:8082/set/text2command.0.text?value=what%20time%20is%20it%20now?</code></pre>
                         </div>
                         <p> If you're using
                             <code>curl</code> to send an HTTP request don't forget to replace blanks in your command text with <code>%20</code>. To get the command's response, just read the adapter's
                             <code>response</code> state:
-                            </p>
+                        </p>
 
                         <div class="shellcontent">
                             <pre class="highlight"><code>curl 10.0.0.136:8082/getPlainValue/text2command.0.response</code></pre>
@@ -512,8 +524,7 @@
                         <p>
                             If you don't feel comfortable setting everything up on your own and exposing your local network to the Internet by following some instructions from the Internet, then you're probably looking for a solution which takes the configuration burden, easy to
                             use and secure at the same time. At the moment there are two alternatives available which are comparable to the
-                            <code>ioBroker.iwg-vpn</code>: <code>ioBoker.link</code> and <code>ioBroker.cloud</code>. So let's take a look at the
-                            commonalities and differences between those and let me know if I missed another one :).
+                            <code>ioBroker.iwg-vpn</code>: <code>ioBoker.link</code> and <code>ioBroker.cloud</code>. So let's take a look at the commonalities and differences between those and let me know if I missed another one :).
                         </p>
 
 
@@ -578,7 +589,7 @@
                         <p>
                             <code>ioBroker.iwg-vpn</code> doesn't intervene into the communication, so the performace is equal to the
                             <a href="https://www.wireguard.com/performance/"> WireGuard native</a> performance.
-                            </p>
+                        </p>
                         <h3>Maintenance</h3>
                         <p>
                             <code>ioBroker.link</code> seems to be not really maintained. The last commit is from <code>3 Oct 2021</code> which just fixes the type of the adapter's <code>indicator.connection</code> state. The second latest commit is from
@@ -587,16 +598,15 @@
 
                         <p>
                             <code>ioBroker.cloud</code> is maintaned as it seems to generate the most profit.
-                            </p>
+                        </p>
 
                         <h3>Open/Closed Source</h3>
                         <p>
-                            <code>ioBroker.link</code> is completelly closed source. Neither the adapter, nor link-box, nor the relay server code is
-                            available.
-                            </p>
+                            <code>ioBroker.link</code> is completelly closed source. Neither the adapter, nor link-box, nor the relay server code is available.
+                        </p>
                         <p>
                             <code>ioBroker.cloud</code> and <code>ioBroker.iwg-vpn</code> adapters' code is open.
-                            </p>
+                        </p>
 
                         <h3>Costs</h3>
 
