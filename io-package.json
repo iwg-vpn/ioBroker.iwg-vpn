@@ -148,126 +148,6 @@
                 "es": "mejoras en la pantalla de configuración",
                 "pl": "Ulepszenia ekranu konfiguracji",
                 "zh-cn": "配置屏幕增强"
-            },
-            "0.10.1": {
-                "en": "Control your real and virtual devices via Alexa",
-                "de": "Steuern Sie Ihre realen und virtuellen Geräte über Alexa",
-                "ru": "Управляйте своими реальными и виртуальными устройствами через Alexa",
-                "pt": "Controle seus dispositivos reais e virtuais via Alexa",
-                "nl": "Bedien uw echte en virtuele apparaten via Alexa",
-                "fr": "Contrôlez vos appareils réels et virtuels via Alexa",
-                "it": "Controlla i tuoi dispositivi reali e virtuali tramite Alexa",
-                "es": "Controla tus dispositivos reales y virtuales a través de Alexa",
-                "pl": "Kontroluj swoje rzeczywiste i wirtualne urządzenia za pośrednictwem Alexa",
-                "zh-cn": "通过 Alexa 控制您的真实和虚拟设备"
-            },
-            "0.9.2": {
-                "en": "http server for QR config introduced",
-                "de": "http-Server für QR-Konfiguration eingeführt",
-                "ru": "Представлен http-сервер для конфигурации QR",
-                "pt": "servidor http para configuração QR introduzido",
-                "nl": "http-server voor QR-configuratie geïntroduceerd",
-                "fr": "introduction du serveur http pour la configuration QR",
-                "it": "Introdotto il server http per la configurazione QR",
-                "es": "Servidor http para configuración QR introducido",
-                "pl": "Wprowadzono serwer http do konfiguracji QR",
-                "zh-cn": "引入了用于 QR 配置的 http 服务器"
-            },
-            "0.9.1": {
-                "en": "Bug fixes",
-                "de": "Fehlerbehebung",
-                "ru": "Исправление ошибок",
-                "pt": "Correções de bugs",
-                "nl": "Bugfixes",
-                "fr": "Corrections de bogues",
-                "it": "Correzioni di bug",
-                "es": "Corrección de errores",
-                "pl": "Poprawki błędów",
-                "zh-cn": "Bug修复"
-            },
-            "0.9.0": {
-                "en": "Remote access support for ioBroker windows hosts",
-                "de": "Fernzugriffsunterstützung für ioBroker-Windows-Hosts",
-                "ru": "Поддержка удаленного доступа для хостов Windows ioBroker",
-                "pt": "Suporte de acesso remoto para hosts Windows ioBroker",
-                "nl": "Ondersteuning voor externe toegang voor ioBroker Windows-hosts",
-                "fr": "Prise en charge de l'accès à distance pour les hôtes Windows ioBroker",
-                "it": "Supporto per l'accesso remoto per gli host Windows di ioBroker",
-                "es": "Soporte de acceso remoto para hosts de Windows de ioBroker",
-                "pl": "Obsługa zdalnego dostępu dla hostów Windows ioBroker",
-                "zh-cn": "ioBroker windows 主机的远程访问支持"
-            },
-            "0.4.0": {
-                "en": "Peer configuration as QR Code to import into a WireGuard App on a mobile peer",
-                "de": "Peer-Konfiguration als QR-Code zum Importieren in eine WireGuard-App auf einem mobilen Peer",
-                "ru": "Конфигурация узла в виде QR-кода для импорта в приложение WireGuard на мобильном узле",
-                "pt": "Configuração de peer como QR Code para importar para um aplicativo WireGuard em um peer móvel",
-                "nl": "Peer-configuratie als QR-code om te importeren in een WireGuard-app op een mobiele peer",
-                "fr": "Configuration de pair sous forme de code QR à importer dans une application WireGuard sur un pair mobile",
-                "it": "Configurazione peer come codice QR da importare in un'app WireGuard su un peer mobile",
-                "es": "Configuración de pares como código QR para importar a una aplicación WireGuard en un compañero móvil",
-                "pl": "Konfiguracja peera jako kod QR do zaimportowania do aplikacji WireGuard na urządzeniu mobilnym",
-                "zh-cn": "对等配置为 QR 码以导入移动对等设备上的 WireGuard 应用程序"
-            },
-            "0.2.0": {
-                "en": "Auto generation of key pairs for configured peers",
-                "de": "Automatische Generierung von Schlüsselpaaren für konfigurierte Peers",
-                "ru": "Автоматическое создание пар ключей для настроенных одноранговых узлов",
-                "pt": "Geração automática de pares de chaves para peers configurados",
-                "nl": "Automatisch genereren van sleutelparen voor geconfigureerde peers",
-                "fr": "Génération automatique de paires de clés pour les pairs configurés",
-                "it": "Generazione automatica di coppie di chiavi per peer configurati",
-                "es": "Generación automática de pares de claves para pares configurados",
-                "pl": "Automatyczne generowanie par kluczy dla skonfigurowanych peerów",
-                "zh-cn": "为已配置的对等方自动生成密钥对"
-            },
-            "0.0.9": {
-                "en": "Adapter review feedback incorporated",
-                "de": "Adapterüberprüfungs-Feedback integriert",
-                "ru": "Добавлен отзыв об обзоре адаптера",
-                "pt": "Feedback de revisão do adaptador incorporado",
-                "nl": "Adapter review feedback opgenomen",
-                "fr": "Commentaires sur l'examen de l'adaptateur incorporés",
-                "it": "Feedback sulla revisione dell'adattatore incorporato",
-                "es": "Comentarios de revisión del adaptador incorporados",
-                "pl": "Uwzględniono informacje zwrotne dotyczące przeglądu adaptera",
-                "zh-cn": "包含适配器审查反馈"
-            },
-            "0.0.8": {
-                "en": "Validate your configuration before applying it",
-                "de": "Validieren Sie Ihre Konfiguration, bevor Sie sie anwenden",
-                "ru": "Проверьте свою конфигурацию перед ее применением",
-                "pt": "Valide sua configuração antes de aplicá-la",
-                "nl": "Valideer uw configuratie voordat u deze toepast",
-                "fr": "Validez votre configuration avant de l'appliquer",
-                "it": "Convalida la tua configurazione prima di applicarla",
-                "es": "Valida tu configuración antes de aplicarla",
-                "pl": "Sprawdź poprawność konfiguracji przed jej zastosowaniem",
-                "zh-cn": "在应用之前验证您的配置"
-            },
-            "0.0.7": {
-                "en": "NAT into the local network",
-                "de": "NAT in das lokale Netzwerk",
-                "ru": "NAT в локальную сеть",
-                "pt": "NAT na rede local",
-                "nl": "NAT in het lokale netwerk",
-                "fr": "NAT dans le réseau local",
-                "it": "NAT nella rete locale",
-                "es": "NAT en la red local",
-                "pl": "NAT do sieci lokalnej",
-                "zh-cn": "NAT 进入本地网络"
-            },
-            "0.0.5": {
-                "en": "initial release",
-                "de": "Erstveröffentlichung",
-                "ru": "Начальная версия",
-                "pt": "lançamento inicial",
-                "nl": "Eerste uitgave",
-                "fr": "Première version",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Pierwsze wydanie",
-                "zh-cn": "首次出版"
             }
         },
         "title": "WireGuard VPN",
@@ -332,21 +212,16 @@
         },
         "messagebox": true,
         "subscribe": "messagebox",
-        "dependencies": [
-            {
-                "js-controller": ">=2.0.0"
-            }
-        ],
-        "globalDependencies": [
-            {
-                "admin": ">=5.1.0"
-            }
-        ]
+        "dependencies": [{
+            "js-controller": ">=2.0.0"
+        }],
+        "globalDependencies": [{
+            "admin": ">=5.1.0"
+        }]
     },
     "native": {},
     "objects": [],
-    "instanceObjects": [
-        {
+    "instanceObjects": [{
             "_id": "info",
             "type": "channel",
             "common": {
