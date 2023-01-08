@@ -65,7 +65,7 @@
                 "_link2pp": {
                     "type": "staticLink",
                     "newLine": true,
-                    "label": "Donate a cup of coffee to the maintainer",
+                    "label": "Click here to donate a cup of coffee to the maintainer",
                     "href": "https://www.paypal.com/donate/?hosted_button_id=6XZHXGV7UUM8N",
                     "style": {
                         "fontSize": 16,

@@ -1,0 +1,26 @@
+.DS_Store
+.git
+.github
+.idea
+*.code-workspace
+node_modules
+nbproject
+keys/*
+wg-config/*
+wg-config-iob/*
+#main.js
+
+# npm package files
+iobroker.*.tgz
+
+Thumbs.db
+
+# i18n intermediate files
+admin/i18n/flat.txt
+admin/i18n/*/flat.txt
+
+/keys/*
+/wg-config/*
+/wg-config-iob/*
+
+test*.*

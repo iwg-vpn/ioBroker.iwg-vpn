@@ -13,6 +13,7 @@ Thumbs.db
 gulpfile.js
 test.js
 main.test.js
+iwg-vpn.js
 keys/*
 wg-config/*
 wg-config-iob/*
@@ -44,4 +45,15 @@ admin/i18n
 # maintenance scripts
 maintenance/**
 
-howto/**
+# map files
+*.map
+
+
+# test files
+test*.*
+
+/keys/*
+/wg-config/*
+/wg-config-iob/*
+
+debug
