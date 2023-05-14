@@ -23,12 +23,12 @@
 
     <header class="iwg-header">
         <div class="iwg-header-container">
-            <img class="site-logo-img" src="./img/iwg-vpn.png">
+            <img class="site-logo-img" src="./img/iwg-vpn.png" alt="">
             <h2>iobroker.iwg-vpn</h2>
             <div id="google_translate_element" style="margin: 10px"></div>
             <div class="iwg-header-container-right">
                 <a href="https://www.paypal.com/donate/?hosted_button_id=6XZHXGV7UUM8N">
-                    <img src="https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif">
+                    <img src="https://www.paypalobjects.com/en_US/DK/i/btn/btn_donateCC_LG.gif" alt="">
                 </a>
             </div>
         </div>
@@ -85,7 +85,7 @@
 
                     <figure>
                         <p>
-                            <img src="./img/overview.png" loading="lazy">
+                            <img src="./img/overview.png" loading="lazy" alt="">
                         </p>
                         <figcaption>
                             Overview
@@ -152,14 +152,14 @@
                     </p>
 
                     <p>
-                        <img src="./img/adapter-connection-status.png" loading="lazy">
+                        <img src="./img/adapter-connection-status.png" loading="lazy" alt="">
                     </p>
                     <p>
                         Once connected, the adapter gets a private IP address and assigns it to the local WireGuard network interface. Starting from this point the ioBroker host is reachable in your VPN under this IP address. You can always see the private IP address of your
                         ioBroker host in the <code>Objects</code> screen of the ioBroker:
                     </p>
                     <p>
-                        <img src="./img/local-address.png" loading="lazy">
+                        <img src="./img/local-address.png" loading="lazy" alt="">
                     </p>
 
                     <p class="iwg-note">
@@ -174,8 +174,8 @@
                             As you probably know, the IPv4 addresses are scarce goods, for this reason the IP range might be released and
                             assigned to other users after the adapter not being used for a long period
                             of time. This doesn't mean that your configured devices will suddenly become reachable by other users if you
-                            switch the adapter on again, but in this case your adapter might get a new IP range assigned and you have to
-                            reconfigure all your peers and NATs.<br />
+                            switch the adapter on again, but in this case your adapter might get a new IP range assigned, and you have to
+                            delete and re-create all your peers and NATs.<br />
                             This is not a request to keep the adapter running all the time, in contrast, you are encouraged to switch
                             it off if you don't need it.
                             But a continuously switched off adapter is considered to be not required, so that the assigned IP range might be
@@ -231,7 +231,7 @@
                     </p>
 
                     <p>
-                        <img src="./img/adapter-config-peers.png" loading="lazy">
+                        <img src="./img/adapter-config-peers.png" loading="lazy" alt="">
                     </p>
 
 
@@ -273,7 +273,7 @@
                     </h4>
                     <p>To generate and apply a peer configuration as a QR Code open the adapter' instance link...</p>
                     <p>
-                        <img src="./img/www-settings.png" loading="lazy">
+                        <img src="./img/www-settings.png" loading="lazy" alt="">
                     </p>
 
                     <p>
@@ -281,14 +281,14 @@
                     </p>
 
                     <p>
-                        <img src="./img/qr-config.png" loading="lazy">
+                        <img src="./img/qr-config.png" loading="lazy" alt="">
                     </p>
 
                     <p>
                         This will open a screen where you can select a peer and display the prepared VPN configuration as a text and as a QR-Code. Use your WireGuard app installed on a peer to scan the QR-Code and to apply the configuration.
                     </p>
                     <p>
-                        <img src="./img/config-as-qr.png" loading="lazy">
+                        <img src="./img/config-as-qr.png" loading="lazy" alt="">
                     </p>
                     <p>Please note, that a configuration with no or invalid private key cannot be imported. So to import a configuration for the peers with the <code>Use Auto Generated Keys</code> option deactivated, first replace the placeholder
                         <code>&lt;private_key&gt;</code> with the real private key generated on the peer and then scan the code. The QR Code updates itself automatically on every change made in the text above the QR Code.
@@ -306,7 +306,7 @@
                     </p>
 
                     <p>
-                        <img src="./img/peer-config.png" loading="lazy">
+                        <img src="./img/peer-config.png" loading="lazy" alt="">
                     </p>
 
                     <p>Copy the configuration string and paste it into a text editor. If you generated the keys manually, replace the placeholder <code>&lt;private_key&gt;</code> with your peer's private key and place the whole content as a config on a peer.
@@ -315,14 +315,14 @@
                     </p>
 
                     <p>
-                        <img src="./img/peer-config-file.png" loading="lazy">
+                        <img src="./img/peer-config-file.png" loading="lazy" alt="">
                     </p>
 
                     <p>
                         To apply a configuration on a Linux peer create a file containing the configuration at
                         <code>/etc/wireguard/wg0.conf</code>. For a mobile device with a WireGuard app installed use the app to apply the configuration, e.g., on an Android device, it looks like this:
                         <p>
-                            <img src="./img/android-config.png" style="width: auto; min-width: 50px" loading="lazy">
+                            <img src="./img/android-config.png" style="width: auto; min-width: 50px" loading="lazy" alt="">
                         </p>
 
                         <p>
@@ -345,7 +345,7 @@
                             Everything is set up and you're ready to go! Open your favorite browser on a peer and navigate to the ioBroker via the VPN using the ioBroker's private IP address:
                         </p>
                         <p>
-                            <img src="./img/connected.png" loading="lazy">
+                            <img src="./img/connected.png" loading="lazy" alt="">
                         </p>
 
                         <h2 id="nat">
@@ -364,7 +364,7 @@
                         </p>
                         <figure>
                             <p>
-                                <img src="./img/nat.png" loading="lazy">
+                                <img src="./img/nat.png" loading="lazy" alt="">
                             </p>
                             <figcaption>
                                 1:1 NAT
@@ -388,7 +388,7 @@
                             The NAT configuration is very simple and similar to the Peers configuration. Open the adapter configuration, click on <code>NAT</code>, then <code>+</code> to add a new row in the table and provide the required details:
                         </p>
                         <p>
-                            <img src="./img/nat-configuration.png" loading="lazy">
+                            <img src="./img/nat-configuration.png" loading="lazy" alt="">
                         </p>
 
                         <ul>
@@ -411,14 +411,14 @@
                             Once the NAT is configured the devices in the local network can be accessed in exactly the same way as the ioBroker host. Just navigate on your peer to the as NAT configured VPN <code>Source IP</code> address:
                         </p>
                         <p>
-                            <img src="./img/nat-access.png" style="width: auto; min-width: 50px" loading="lazy">
+                            <img src="./img/nat-access.png" style="width: auto; min-width: 50px" loading="lazy" alt="">
                         </p>
 
                         <h2>
                             What else?
                         </h2>
                         <p>
-                            If you're asking youself what else you can do using this adapter, well... pretty much everything you can do also locally with your ioBroker installation. Here's a couple of examples.
+                            If you're asking yourself what else you can do using this adapter, well... pretty much everything you can do also locally with your ioBroker installation. Here's a couple of examples.
                         </p>
 
                         <h3>
@@ -613,7 +613,7 @@
 
                         <h3>Costs</h3>
 
-                        <code>ioBroker.iwg-vpn</code> is free of charge. The two others &#8212; not.</p>
+                        <code>ioBroker.iwg-vpn</code> is free of charge. The two others &#8212; not.
                     <h2>
                         Support
                     </h2>

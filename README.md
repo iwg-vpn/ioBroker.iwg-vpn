@@ -25,6 +25,10 @@ link: https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn
 
 ## Changelog
 
+### v1.0.1
+* bug fixes
+* dependencies updated
+
 ### v1.0.0
 * IP ranges are released after a long inactivity period
 * additional checks for NAT functionality
