@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "news": {
+            "1.0.1": {
+                "en": "Bug fixes",
+                "de": "Fehlerbehebung",
+                "ru": "Исправление ошибок",
+                "pt": "Correções de bugs",
+                "nl": "Bugfixes",
+                "fr": "Corrections de bogues",
+                "it": "Correzioni di bug",
+                "es": "Corrección de errores",
+                "pl": "Poprawki błędów",
+                "zh-cn": "Bug修复"
+            },
             "1.0.0": {
                 "en": "IP ranges are released after a long inactivity period; additional checks for NAT functionality; logo fixed; dependencies updated",
                 "de": "IP-Bereiche werden nach einer langen Inaktivitätszeit freigegeben; zusätzliche Überprüfungen für NAT-Funktionalität; Logo fixiert; Abhängigkeiten aktualisiert",
@@ -15,139 +27,6 @@
                 "pl": "Oblicza IP są wydawane po długim okresie nieaktywności; dodatkowe kontrolki dla NAT; logo ustalone; zależności aktualizowane",
                 "uk": "IP- діапазони випускаються після тривалого періоду бездіяльності; додаткові перевірки для функції NAT; виправлені логотипи; оновлені залежності",
                 "zh-cn": "实施计划的范围在很长的一段时间之后获释;对国家航空航天系统功能进行更多的检查;逻辑固定;更新的频率"
-            },
-            "0.11.4": {
-                "en": "icons in settings fixed; deps updated; orphan keys clean up added",
-                "de": "icons in einstellungen fixiert; deps aktualisiert; waisenschlüssel aufräumen hinzugefügt",
-                "ru": "иконки в настройках исправлены; депс обновлены; неиспользуемые ключи удаляются",
-                "pt": "ícones em configurações fixas; deps atualizado; chaves órfãos limpar adicionado",
-                "nl": "icoons in settings gerepareerd, verdorven, weessleutels opgeruimd",
-                "fr": "icônes dans les réglages fixés; deps mis à jour; clés orphelins nettoyer ajoutés",
-                "it": "icone in impostazioni fisse; deps aggiornato; chiavi orfane pulire aggiunto",
-                "es": "iconos en los ajustes fijos; deps actualizado; llaves huérfanos limpiar añadido",
-                "pl": "ikony w ustawieniach ustalono; depozyty aktualizowane; klucze sierociane dodawane dodać",
-                "uk": "ікони в налаштуваннях фіксованих; deps оновлений; ключі для дітей очищають додані",
-                "zh-cn": "b. 固定环境中的缺陷;更新的降解;或"
-            },
-            "0.11.3": {
-                "en": "a way to allow write operations on whitelisted variables added",
-                "de": "eine möglichkeit, schreibvorgänge auf weiße variablen hinzufügen",
-                "ru": "способ позволить писать операции на whitelisted variables добавлен",
-                "pt": "uma maneira de permitir as operações de gravação em variáveis listadas brancas adicionadas",
-                "nl": "_",
-                "fr": "un moyen de permettre des opérations d'écriture sur des variables blanches ajoutées",
-                "it": "un modo per consentire operazioni di scrittura su variabili whitelisted aggiunte",
-                "es": "una manera de permitir las operaciones de escritura en las variables de lista blanca",
-                "pl": "w ten sposób, aby umożliwić pisanie operacji na zmiennych białolistych, dodane zostały zmiany",
-                "zh-cn": "a 允许用白色变量写出业务的方式增加"
-            },
-            "0.11.2": {
-                "en": "warnings while writing a state fixed",
-                "de": "warnungen beim schreiben eines zustands fest",
-                "ru": "исправления c целью избежания предупреждений при изменении статусов",
-                "pt": "avisos ao escrever um estado fixo",
-                "nl": "waarschuwingen terwijl je een staat gerepareerd hebt",
-                "fr": "avertissements en écrivant un état fixe",
-                "it": "avvertimenti durante la scrittura di uno stato fisso",
-                "es": "advertencias mientras escribe un estado fijo",
-                "pl": "podczas pisania ustalono stan",
-                "zh-cn": "警告,同时写明一国的固定状态"
-            },
-            "0.11.1": {
-                "en": "http communication over VPN additionally secured by means of asymmetric keys; bug fixes",
-                "de": "http-kommunikation über VPN zusätzlich durch asymmetrische schlüssel gesichert; bugfixes",
-                "ru": "http сообщение через VPN дополнительно защищено с помощью асимметричных ключей; исправления ошибок",
-                "pt": "http comunicação sobre VPN adicionalmente assegurada por meio de chaves assimétricas; correções de bugs",
-                "nl": "htp-communicatie boven VPN extra beveiligd door middel van asymmetrische sleutels",
-                "fr": "http communication sur VPN également sécurisé au moyen de clés asymétriques; corrections de bugs",
-                "it": "http communication over VPN inoltre protetto per mezzo di chiavi asimmetriche; correzioni di bug",
-                "es": "http communication over VPN adicionally secured by means of asymmetric keys; bug fixes",
-                "pl": "http komunikacja nad VPN dodatkowo zabezpieczona przez klucze asymetryczne; trąb naprawia błędy",
-                "zh-cn": "补充通过不对称关键手段确保尼共体交流;bug fix"
-            },
-            "0.11.0": {
-                "en": "improved http communication; percentage controller capability added; relative changes support added",
-                "de": "verbesserte http-kommunikation; prozent-controller-fähigkeit hinzugefügt; relative änderungen unterstützung hinzugefügt",
-                "ru": "улучшенный http сообщение; добавлена возможность регулятора процент; добавленная поддержка относительного изменения",
-                "pt": "melhoria da comunicação http; capacidade de controlador de porcentagem adicionado; apoio de alterações relativas adicionado",
-                "nl": "verbeterde htp-communicatie",
-                "fr": "amélioration de la communication http; capacité de contrôleur en pourcentage ajoutée; changement relatif support ajouté",
-                "it": "miglioramento della comunicazione http; aggiunta di capacità del controllo percentuale; aggiunta di modifiche relative",
-                "es": "mejora de la comunicación http; aumento de la capacidad de control porcentual; apoyo a cambios relativos",
-                "pl": "poprawiona została komunikacja http; dodano możliwość kontrolera odsetek; względne zmiany wsparcia dodały się w sposób poprawny",
-                "zh-cn": "改善了通信;控制容忍能力增加;相对变化支助增加"
-            },
-            "0.10.7": {
-                "en": "bug fixes",
-                "de": "fehlerbehebungen",
-                "ru": "исправления ошибок",
-                "pt": "correções de bugs",
-                "nl": "vertaling:",
-                "fr": "bug corrige",
-                "it": "correzioni di bug",
-                "es": "bug fixes",
-                "pl": "trąbka",
-                "zh-cn": "bug fix"
-            },
-            "0.10.6": {
-                "en": "http server enhancements; doorbell support; bug fixes",
-                "de": "http servererweiterungen; türklingelunterstützung; bugfixes",
-                "ru": "http улучшения сервера; поддержка дверного звонка; исправления ошибок",
-                "pt": "http server enhances; suporte de campainha; correções de bugs",
-                "nl": "htp server verbetering; deurbel ondersteuning, bug fix",
-                "fr": "améliorations de serveur http; support de portebell; corrections de bug",
-                "it": "miglioramenti del server http; supporto del campanello; correzioni di bug",
-                "es": "mejoras del servidor http; soporte del timbre; correcciones de errores",
-                "pl": "serwer http; obsługa dzwonków do drzwi; trąb naprawia",
-                "zh-cn": "http://服务器的加强;大门支持;bug fixes"
-            },
-            "0.10.5": {
-                "en": "Change reporting on ack=true only; Local keys storage moved to iobroker-data",
-                "de": "Änderung der Berichterstattung nur auf ack=true; Lokale Schlüsselspeicher bewegt auf iobroker-Daten",
-                "ru": "Изменить отчетность по ack=true только; Местное хранение ключей перенесено на iobroker-data",
-                "pt": "Alterar relatórios sobre ack=true somente; O armazenamento de chaves locais mudou-se para dados do iobroker",
-                "nl": "Veranderingsrapporten over Ack Etrue alleen, de lokale sleutels zijn verplaatst naar iobroker-data",
-                "fr": "Changement de rapport sur ack=true seulement; le stockage des clés locales s'est déplacé vers iobroker-data",
-                "it": "Cambiare la segnalazione solo su ack=true; L'archiviazione delle chiavi locale si è spostata a ibroker-data",
-                "es": "Cambio reportando sólo ack=true; almacenamiento de llaves locales movido a iobroker-data",
-                "pl": "Zmiana raportu Ack=true'a, lokalne klawisze przeniesiono do iobroker-data",
-                "zh-cn": "关于包装的变更报告:当地的关键储存移到Oiobroker-data。"
-            },
-            "0.10.4": {
-                "en": "Motion sensor support added",
-                "de": "Unterstützung für Bewegungssensoren hinzugefügt",
-                "ru": "Добавлена поддержка датчика движения",
-                "pt": "Adicionado suporte ao sensor de movimento",
-                "nl": "Ondersteuning voor bewegingssensoren toegevoegd",
-                "fr": "Prise en charge du capteur de mouvement ajoutée",
-                "it": "Aggiunto il supporto del sensore di movimento",
-                "es": "Soporte de sensor de movimiento agregado",
-                "pl": "Dodano obsługę czujnika ruchu",
-                "zh-cn": "添加了运动传感器支持"
-            },
-            "0.10.3": {
-                "en": "Bug fixes",
-                "de": "Fehlerbehebung",
-                "ru": "Исправление ошибок",
-                "pt": "Correções de bugs",
-                "nl": "Bugfixes",
-                "fr": "Corrections de bogues",
-                "it": "Correzioni di bug",
-                "es": "Corrección de errores",
-                "pl": "Poprawki błędów",
-                "zh-cn": "Bug修复"
-            },
-            "0.10.2": {
-                "en": "config screen enhancements",
-                "de": "Verbesserungen des Konfigurationsbildschirms",
-                "ru": "улучшения экрана конфигурации",
-                "pt": "melhorias na tela de configuração",
-                "nl": "verbeteringen in het configuratiescherm",
-                "fr": "améliorations de l'écran de configuration",
-                "it": "miglioramenti della schermata di configurazione",
-                "es": "mejoras en la pantalla de configuración",
-                "pl": "Ulepszenia ekranu konfiguracji",
-                "zh-cn": "配置屏幕增强"
             }
         },
         "title": "WireGuard VPN",
