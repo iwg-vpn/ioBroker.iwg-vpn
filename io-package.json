@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "news": {
+            "1.0.2": {
+                "en": "please reconfigure (re-scan QR-Codes) on Peers",
+                "de": "bitte rekonfigurieren (re-scan QR-Codes) auf Peers",
+                "ru": "пожалуйста reconfigure (re-scan QR-Codes) на Peers",
+                "pt": "por favor reconfigurar (re-scan QR-Codes) em Peers",
+                "nl": "vertaling:",
+                "fr": "veuillez reconfigurer (re-scan QR-Codes) sur Peers",
+                "it": "si prega di riconfigurare (re-scan QR-Codes) su Peers",
+                "es": "por favor reconfigure (re-scan QR-Codes) en Peers",
+                "pl": "proszę pogodzić (re-scan QR-Codes) na Peersach",
+                "uk": "будь ласка, переналаштувати (re-scan QR-Codes) на Peers",
+                "zh-cn": "请对白人进行改建(re-scan QR-Codes)。"
+            },
             "1.0.1": {
                 "en": "Bug fixes",
                 "de": "Fehlerbehebung",
@@ -13,6 +26,7 @@
                 "it": "Correzioni di bug",
                 "es": "Corrección de errores",
                 "pl": "Poprawki błędów",
+                "uk": "Виправлення помилок",
                 "zh-cn": "Bug修复"
             },
             "1.0.0": {
@@ -40,6 +54,7 @@
             "it": "WireGuard VPN",
             "es": "VPN de WireGuard",
             "pl": "WireGuard VPN",
+            "uk": "CyberGhost VPN купони",
             "zh-cn": "线卫VPN"
         },
         "desc": {
@@ -52,6 +67,7 @@
             "it": "L'adattatore per configurare WireGuard VPN",
             "es": "EL adaptador para configurar WireGuard VPN",
             "pl": "Adapter do konfiguracji WireGuard VPN",
+            "uk": "Адаптер для налаштування WireGuard VPN",
             "zh-cn": "用于设置 WireGuard VPN 的适配器"
         },
         "authors": [
@@ -77,7 +93,9 @@
         "icon": "iwg-vpn.png",
         "enabled": true,
         "extIcon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/admin/iwg-vpn.png",
-        "localLink": "http://%ip%:51822/index.html",
+        "localLinks": {
+            "_default": "http://%ip%:51822/index.html"
+        },
         "readme": "https://github.com/iwg-vpn/ioBroker.iwg-vpn/blob/main/README.md",
         "loglevel": "info",
         "mode": "daemon",
