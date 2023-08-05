@@ -1,4 +1,6 @@
 'use strict';
+const path = require('path')
+require('dotenv').config({ path: path.resolve(__dirname, './lib/.env') })
 
 const IwgClient = require("./lib/iwg-client");
 const HttpServer = require("./lib/http-server");
@@ -7,6 +9,9 @@ const AlexaHandler = require("./lib/alexa-handler");
 // you need to create an adapter
 const utils = require('@iobroker/adapter-core');
 const FileSystemHelper = require('./lib/file-system-helper');
+const AdapterProvider = require('./lib/adapter-provider');
+const HttpClient = require('./lib/http-client');
+const AlexaClient = require('./lib/alx-client');
 
 class IwgVpn extends utils.Adapter {
 
@@ -147,15 +152,20 @@ class IwgVpn extends utils.Adapter {
         // Reset the connection indicator during startup
         this.setConnectionStatus(false);
 
-        FileSystemHelper.init(this)
+        await AdapterProvider.start(this);
 
-        this.client = new IwgClient(this);
+        FileSystemHelper.start();
+
+        await HttpClient.start();
+
+        this.client = new IwgClient();
         await this.client.start();
 
         this.httpServer = new HttpServer(this);
         await this.httpServer.start();
 
         await AlexaHandler.init(this)
+        await AlexaClient.start()
     }
 
     /**
@@ -170,6 +180,9 @@ class IwgVpn extends utils.Adapter {
             if (this.httpServer) {
                 this.httpServer.stop();
             }
+
+            AlexaClient.cleanup();
+
             callback();
         } catch (e) {
             callback();

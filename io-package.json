@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "1.0.2",
+        "version": "2.0.0",
         "news": {
+            "2.0.0": {
+                "en": "Alexa integration re-designed",
+                "de": "Alexa Integration neu gestaltet",
+                "ru": "Интеграция Alexa переработана",
+                "pt": "Integração Alexa redesenhada",
+                "nl": "Alexa integratie her-design",
+                "fr": "Intégration Alexa re-conçue",
+                "it": "Alexa integrazione ridisegnata",
+                "es": "Reforma de la integración de Alexa",
+                "pl": "Ponowna integracja Alexa została przeprojektowana",
+                "uk": "Інтеграція Alexa re-designed",
+                "zh-cn": "Alexa一体化重新设计"
+            },
             "1.0.2": {
                 "en": "please reconfigure (re-scan QR-Codes) on Peers",
                 "de": "bitte rekonfigurieren (re-scan QR-Codes) auf Peers",

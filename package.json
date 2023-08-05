@@ -1,6 +1,6 @@
 {
     "name": "iobroker.iwg-vpn",
-    "version": "1.0.2",
+    "version": "2.0.0",
     "description": "THE adapter for setting up a secure connection from remote devices to iobroker and local network leveraging the WireGuard VPN and controlling local devices via Alexa",
     "author": {
         "name": "iwg-vpn",
@@ -22,6 +22,7 @@
     },
     "dependencies": {
         "@iobroker/adapter-core": "^2.6.8",
+        "dotenv": "^16.1.4",
         "jwt-simple": "^0.5.6",
         "node-rsa": "^1.1.1"
     },
