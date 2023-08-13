@@ -1,9 +1,9 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "2.0.0",
+        "version": "2.0.1",
         "news": {
-            "2.0.0": {
+            "2.0.1": {
                 "en": "Alexa integration re-designed",
                 "de": "Alexa Integration neu gestaltet",
                 "ru": "Интеграция Alexa переработана",
