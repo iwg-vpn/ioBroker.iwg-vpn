@@ -4,7 +4,19 @@
     "items": {
         "_docpanel": {
             "type": "panel",
-            "label": "README",
+            "label": {
+                "en": "README",
+                "de": "LIESMICH",
+                "ru": "ЧИТАТЬ",
+                "pt": "REALIZAÇÃO",
+                "nl": "VERTALING:",
+                "fr": "README",
+                "it": "READEM",
+                "es": "LEERME",
+                "pl": "README",
+                "uk": "ЗАМОВИТИ",
+                "zh-cn": "建 议"
+            },
             "items": {
                 "_img": {
                     "type": "staticImage",
@@ -17,7 +29,19 @@
                 },
                 "_link2documentation": {
                     "type": "staticLink",
-                    "label": "Click here for VPN setup HowTo",
+                    "label": {
+                        "en": "Click here for VPN setup HowTo",
+                        "de": "Klicken Sie hier für VPN-Setup HowTo",
+                        "ru": "Нажмите здесь для описания установки VPN",
+                        "pt": "Clique aqui para configuração VPN HowTo",
+                        "nl": "Klik hier voor VPN opgezette How ToTo",
+                        "fr": "Cliquez ici pour configurer VPN CommentTo",
+                        "it": "Clicca qui per la configurazione VPN HowTo",
+                        "es": "Haga clic aquí para configurar VPN Cómo",
+                        "pl": "Oficjalna strona VPN HowTo",
+                        "uk": "Натисніть тут для налаштування VPN",
+                        "zh-cn": "这里点击VPNup如何处理To"
+                    },
                     "href": "https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/read-me.html",
                     "style": {
                         "fontSize": 16,
@@ -36,7 +60,19 @@
                 },
                 "_link2AlexaDocumentation": {
                     "type": "staticLink",
-                    "label": "Click here for Alexa HowTo",
+                    "label": {
+                        "en": "Click here for Alexa HowTo",
+                        "de": "Für Alexa HowTo hier klicken",
+                        "ru": "Нажмите здесь для Alexa HowTo",
+                        "pt": "Clique aqui para Alexa HowTo",
+                        "nl": "Klik hier voor Alexa How To",
+                        "fr": "Cliquez ici pour Alexa HowTo",
+                        "it": "Clicca qui per Alexa HowTo",
+                        "es": "Haga clic aquí para Alexa HowTo",
+                        "pl": "Alexa How To (ang.)",
+                        "uk": "Натисніть тут для Alexa HowTo",
+                        "zh-cn": "这里的Alexa Howto"
+                    },
                     "href": "https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/alexa-config.html",
                     "style": {
                         "fontSize": 16,
@@ -55,7 +91,19 @@
                 },                
                 "_link2AlexaSkill": {
                     "type": "staticLink",
-                    "label": "Click here for iwg-vpn Alexa Skill",
+                    "label": {
+                        "en": "Click here for iwg-vpn Alexa Skill",
+                        "de": "Für iwg-vpn Alexa Skill hier klicken",
+                        "ru": "Нажмите здесь для iwg-vpn Алекса Skill",
+                        "pt": "Clique aqui para iwg-vpn Habilidade de Alexa",
+                        "nl": "Klik hier voor iwg-vpn Alexa Skill",
+                        "fr": "Cliquez ici pour iwg-vpn Alexa Skill",
+                        "it": "Clicca qui per iwg-vpn Alexa Skill",
+                        "es": "Haga clic aquí para iwg-vpn Alexa Skill",
+                        "pl": "Click here for iwg-vpn (ang.). Alexa Skillera",
+                        "uk": "Натисніть тут для iwg-vpn Алекса Skill",
+                        "zh-cn": "这里点击iwg-vpn Alexa 技能"
+                    },
                     "href": "https://www.amazon.de/dp/B0B2PHFX13",
                     "style": {
                         "fontSize": 16,
@@ -65,7 +113,19 @@
                 "_link2pp": {
                     "type": "staticLink",
                     "newLine": true,
-                    "label": "Click here to donate a cup of coffee to the maintainer",
+                    "label": {
+                        "en": "Click here to donate a cup of coffee to the maintainer",
+                        "de": "Hier klicken, um dem Entwickler einen Kaffee zu spendieren",
+                        "ru": "Нажмите здесь, чтобы пожертвовать чашечку кофе для разработчика",
+                        "pt": "Clique aqui para doar uma xícara de café para o mantenedor",
+                        "nl": "Klik hier om een kop koffie te doneren aan de bediende",
+                        "fr": "Cliquez ici pour donner une tasse de café au responsable",
+                        "it": "Clicca qui per donare una tazza di caffè al manutentore",
+                        "es": "Haga clic aquí para donar una taza de café al encargado",
+                        "pl": "Click here to dodanie kawy do konserwatora",
+                        "uk": "Натисніть тут, щоб пожертвувати чашку кави для підтримки",
+                        "zh-cn": "这里的点是捐赠咖啡,以维持咖啡"
+                    },
                     "href": "https://www.paypal.com/donate/?hosted_button_id=6XZHXGV7UUM8N",
                     "style": {
                         "fontSize": 16,
@@ -94,20 +154,56 @@
                         },
                         {
                             "type": "text",
-                            "title": "Name",
+                            "title": {
+                                "en": "Name",
+                                "de": "Name",
+                                "ru": "Имя",
+                                "pt": "Nome",
+                                "nl": "Naam",
+                                "fr": "Nom",
+                                "it": "Nome",
+                                "es": "Nombre",
+                                "pl": "Nazwa",
+                                "uk": "Ім'я",
+                                "zh-cn": "姓名"
+                            },
                             "attr": "name",
                             "validator": "data.name && data.name.length > 0",
                             "validatorNoSaveOnError": true
                         },
                         {
                             "type": "checkbox",
-                            "title": "Use Auto Generated Keys",
+                            "title": {
+                                "en": "Use Auto Generated Keys",
+                                "de": "Automatisch generierte Schlüssel verwenden",
+                                "ru": "Используйте автоматические генерированные ключи",
+                                "pt": "Use as chaves geradas automáticas",
+                                "nl": "Gebruik auto gegenereerde sleutels",
+                                "fr": "Utilisez les clés générées automatiques",
+                                "it": "Utilizzare le chiavi generate automaticamente",
+                                "es": "Usar teclas generadas automáticas",
+                                "pl": "Wykorzystywana firma Keys",
+                                "uk": "Використовуйте автоматичні генераторні ключі",
+                                "zh-cn": "A. 使用自动生成的关键"
+                            },
                             "attr": "isAutoGenerateKeys",
                             "default": false
                         },
                         {
                             "type": "text",
-                            "title": "Public Key",
+                            "title": {
+                                "en": "Public Key",
+                                "de": "Öffentlicher Schlüssel",
+                                "ru": "Публичный ключ",
+                                "pt": "Chave pública",
+                                "nl": "Public Key",
+                                "fr": "Public Key",
+                                "it": "Chiave pubblica",
+                                "es": "Clave pública",
+                                "pl": "Strona internetowa",
+                                "uk": "Публічний ключ",
+                                "zh-cn": "B. 公共关键"
+                            },
                             "attr": "publicKey",
                             "hidden": "data.isAutoGenerateKeys == true",
                             "validator": "data.publicKey && data.publicKey.length == 44",
@@ -115,7 +211,19 @@
                         },
                         {
                             "type": "checkbox",
-                            "title": "Active",
+                            "title": {
+                                "en": "Active",
+                                "de": "Aktiv",
+                                "ru": "Активно",
+                                "pt": "Activo",
+                                "nl": "Active",
+                                "fr": "Active",
+                                "it": "Attivo",
+                                "es": "Activo",
+                                "pl": "Aktywny",
+                                "uk": "Активний",
+                                "zh-cn": "精算师"
+                            },
                             "attr": "isActive",
                             "default": false
                         }
@@ -129,7 +237,19 @@
                     "type": "sendTo",
                     "command": "validate-config",
                     "jsonData": "{\"config\": \"${JSON.stringify(data.params)}\"}",
-                    "label": "Validate Config"
+                    "label": {
+                        "en": "Validate Config",
+                        "de": "Konfiguration überprüfen",
+                        "ru": "Проверить конфигурацию",
+                        "pt": "Validar configuração",
+                        "nl": "Validate Configuratie",
+                        "fr": "Valider la configuration",
+                        "it": "Configurazione valida",
+                        "es": "Validate Configuración",
+                        "pl": "Konflikt Validida",
+                        "uk": "Налаштування",
+                        "zh-cn": "固定配件"
+                    }
                 }
             }    
         },
@@ -143,7 +263,19 @@
                     "items": [
                         {
                             "type": "selectSendTo",                           
-                            "title": "Source IP",
+                            "title": {
+                                "en": "Source IP",
+                                "de": "Quelle IP",
+                                "ru": "Источник IP",
+                                "pt": "Fonte IP",
+                                "nl": "Source IP",
+                                "fr": "Source IP",
+                                "it": "Fonte IP",
+                                "es": "Fuente IP",
+                                "pl": "Źródło IP",
+                                "uk": "Джерело IP",
+                                "zh-cn": "资料来源IPIP"
+                            },
                             "noTranslation": true,
                             "command": "get-hosts",
                             "attr": "src",
@@ -153,14 +285,38 @@
                         },
                         {
                             "type": "text",
-                            "title": "Destination IP",
+                            "title": {
+                                "en": "Destination IP",
+                                "de": "Ziel IP",
+                                "ru": "Направление IP",
+                                "pt": "Destino IP",
+                                "nl": "Bestemming IP",
+                                "fr": "Destination IP",
+                                "it": "Destinazione IP",
+                                "es": "Destino IP",
+                                "pl": "IP",
+                                "uk": "Призначення IP",
+                                "zh-cn": "实施计划的情况"
+                            },
                             "attr": "dst",
                             "validator": "data.dst && data.dst.length > 0",
                             "validatorNoSaveOnError": true
                         },
                         {
                             "type": "checkbox",
-                            "title": "Active",
+                            "title": {
+                                "en": "Active",
+                                "de": "Aktiv",
+                                "ru": "Активно",
+                                "pt": "Activo",
+                                "nl": "Active",
+                                "fr": "Active",
+                                "it": "Attivo",
+                                "es": "Activo",
+                                "pl": "Aktywny",
+                                "uk": "Активний",
+                                "zh-cn": "精算师"
+                            },
                             "attr": "isActive",
                             "default": false
                         }
@@ -174,7 +330,19 @@
                     "type": "sendTo",
                     "command": "validate-config",
                     "jsonData": "{\"config\": \"${JSON.stringify(data.params)}\"}",
-                    "label": "Validate Config"
+                    "label": {
+                        "en": "Validate Config",
+                        "de": "Konfiguration überprüfen",
+                        "ru": "Проверить конфигурацию",
+                        "pt": "Validar configuração",
+                        "nl": "Validate Configuratie",
+                        "fr": "Valider la configuration",
+                        "it": "Configurazione valida",
+                        "es": "Validate Configuración",
+                        "pl": "Konflikt Validida",
+                        "uk": "Налаштування",
+                        "zh-cn": "固定配件"
+                    }
                 }
             }
         }

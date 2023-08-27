@@ -1,35 +1,9 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "2.0.1",
+        "version": "2.0.3",
         "news": {
-            "2.0.1": {
-                "en": "Alexa integration re-designed",
-                "de": "Alexa Integration neu gestaltet",
-                "ru": "Интеграция Alexa переработана",
-                "pt": "Integração Alexa redesenhada",
-                "nl": "Alexa integratie her-design",
-                "fr": "Intégration Alexa re-conçue",
-                "it": "Alexa integrazione ridisegnata",
-                "es": "Reforma de la integración de Alexa",
-                "pl": "Ponowna integracja Alexa została przeprojektowana",
-                "uk": "Інтеграція Alexa re-designed",
-                "zh-cn": "Alexa一体化重新设计"
-            },
-            "1.0.2": {
-                "en": "please reconfigure (re-scan QR-Codes) on Peers",
-                "de": "bitte rekonfigurieren (re-scan QR-Codes) auf Peers",
-                "ru": "пожалуйста reconfigure (re-scan QR-Codes) на Peers",
-                "pt": "por favor reconfigurar (re-scan QR-Codes) em Peers",
-                "nl": "vertaling:",
-                "fr": "veuillez reconfigurer (re-scan QR-Codes) sur Peers",
-                "it": "si prega di riconfigurare (re-scan QR-Codes) su Peers",
-                "es": "por favor reconfigure (re-scan QR-Codes) en Peers",
-                "pl": "proszę pogodzić (re-scan QR-Codes) na Peersach",
-                "uk": "будь ласка, переналаштувати (re-scan QR-Codes) на Peers",
-                "zh-cn": "请对白人进行改建(re-scan QR-Codes)。"
-            },
-            "1.0.1": {
+            "2.0.3": {
                 "en": "Bug fixes",
                 "de": "Fehlerbehebung",
                 "ru": "Исправление ошибок",
@@ -42,18 +16,31 @@
                 "uk": "Виправлення помилок",
                 "zh-cn": "Bug修复"
             },
-            "1.0.0": {
-                "en": "IP ranges are released after a long inactivity period; additional checks for NAT functionality; logo fixed; dependencies updated",
-                "de": "IP-Bereiche werden nach einer langen Inaktivitätszeit freigegeben; zusätzliche Überprüfungen für NAT-Funktionalität; Logo fixiert; Abhängigkeiten aktualisiert",
-                "ru": "IP диапазоны освобождаются после длительного периода неактивности; дополнительные проверки для функциональности NAT; логотип исправлен; зависимости обновлены",
-                "pt": "Os intervalos IP são liberados após um longo período de inatividade; verificações adicionais para a funcionalidade NAT; logo fixo; dependências atualizadas",
-                "nl": "IP-bereik wordt vrijgelaten na een lange inactiviteitsperiode, extra checks voor NAT functionality, logo gerepareerd, afhankelijkheid geüpdateerd",
-                "fr": "Les plages IP sont libérées après une longue période d'inactivité; vérifications supplémentaires pour la fonctionnalité NAT; logo fixe; dépendances mises à jour",
-                "it": "Gli intervalli IP vengono rilasciati dopo un lungo periodo di inattività; controlli aggiuntivi per la funzionalità NAT; logo fisso; dipendenze aggiornate",
-                "es": "Los rangos IP se liberan después de un largo período de inactividad; cheques adicionales para la funcionalidad NAT; logo fijo; dependencias actualizadas",
-                "pl": "Oblicza IP są wydawane po długim okresie nieaktywności; dodatkowe kontrolki dla NAT; logo ustalone; zależności aktualizowane",
-                "uk": "IP- діапазони випускаються після тривалого періоду бездіяльності; додаткові перевірки для функції NAT; виправлені логотипи; оновлені залежності",
-                "zh-cn": "实施计划的范围在很长的一段时间之后获释;对国家航空航天系统功能进行更多的检查;逻辑固定;更新的频率"
+            "2.0.2": {
+                "en": "Bug fixes",
+                "de": "Fehlerbehebung",
+                "ru": "Исправление ошибок",
+                "pt": "Correções de bugs",
+                "nl": "Bugfixes",
+                "fr": "Corrections de bogues",
+                "it": "Correzioni di bug",
+                "es": "Corrección de errores",
+                "pl": "Poprawki błędów",
+                "uk": "Виправлення помилок",
+                "zh-cn": "Bug修复"
+            },
+            "2.0.1": {
+                "en": "Alexa integration re-designed",
+                "de": "Alexa Integration neu gestaltet",
+                "ru": "Интеграция Alexa переработана",
+                "pt": "Integração Alexa redesenhada",
+                "nl": "Alexa integratie her-design",
+                "fr": "Intégration Alexa re-conçue",
+                "it": "Alexa integrazione ridisegnata",
+                "es": "Reforma de la integración de Alexa",
+                "pl": "Ponowna integracja Alexa została przeprojektowana",
+                "uk": "Інтеграція Alexa re-designed",
+                "zh-cn": "Alexa一体化重新设计"
             }
         },
         "title": "WireGuard VPN",
@@ -112,7 +99,7 @@
         "readme": "https://github.com/iwg-vpn/ioBroker.iwg-vpn/blob/main/README.md",
         "loglevel": "info",
         "mode": "daemon",
-        "type": "network",
+        "type": "communication",
         "connectionType": "cloud",
         "dataSource": "push",
         "compact": true,
