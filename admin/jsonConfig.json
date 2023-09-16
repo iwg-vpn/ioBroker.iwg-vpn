@@ -345,6 +345,67 @@
                     }
                 }
             }
+        },
+        "_alexa": {
+            "type": "panel",
+            "label": "Alexa",
+            "items": {
+                "_infoText": {
+                    "type": "staticText",
+                    "label": {
+                        "en": "If you activate the Alexa integration, you can use this adapter as a free of charge alternative to the ioBroker.iot adapter to send speech commands to your devices. The currently existing configuration will be applied, you don't have to re-configure your Alexa devices. The commands will be sent via the set up VPN channel. Please note, for the Alexa integration to work you also have to activate and bind the iwg-vpn Alexa skill in the Alexa App. Please follow the HowTo documentation for detailed description.",
+                        "de": "Wenn Sie die Alexa-Integration aktivieren, können Sie diesen Adapter als kostenlose Alternative zum ioBroker.iot Adapter verwenden, um Sprachbefehle an Ihre Geräte zu senden. Die aktuell vorhandene Konfiguration wird übernommen, Sie müssen Ihre Alexa-Geräte nicht neu konfigurieren. Die Befehle werden über den eingerichteten VPN-Kanal gesendet. Bitte beachten Sie, dass Sie für die Alexa-Integration auch das iwg-vpn Alexa Skill in der Alexa App aktivieren und verknüpfen müssen. Bitte folgen Sie der HowTo-Dokumentation zur detaillierten Beschreibung.",
+                        "ru": "Если вы активируете интеграцию Alexa, вы можете использовать этот адаптер в качестве бесплатной альтернативы ioBroker. iot адаптер для отправки речевых команд на ваши устройства. В настоящее время существующая конфигурация будет применяться, вам не нужно перенастроить ваши устройства Alexa. Команды будут отправлены через установленный VPN-канал. Пожалуйста, обратите внимание, для интеграции Alexa, чтобы работать вы также должны активировать и связывать мастерство iwg-vpn Alexa в приложении Alexa. Пожалуйста, следуйте документации HowTo для подробного описания.",
+                        "pt": "Se você ativar a integração Alexa, você pode usar este adaptador como uma alternativa gratuita para o ioBroker. iot adaptador para enviar comandos de fala para seus dispositivos. A configuração atualmente existente será aplicada, você não precisa reconfigurar seus dispositivos Alexa. Os comandos serão enviados através do canal VPN configurado. Por favor, note que para a integração de Alexa trabalhar você também tem que ativar e ligar a habilidade iwg-vpn Alexa no Alexa App. Por favor, siga a documentação HowTo para descrição detalhada.",
+                        "nl": "Als je de Alexa integratie activeert, kun je deze adapter gebruiken als vrije van het alternatief voor de ioBroker. Iot adapter om toespraakcommando's naar je apparaten te sturen. De huidige bestaande configuratie zal worden toegevoegd, je hoeft je Alexa apparaten niet te herconfigureren. De commando's worden gestuurd via het VPN-kanaal. Let op, voor de Alexa integratie om te werken, moet je ook activeren en de vaardige Alexa vaardigheid binden in de Alexa App. Volg alsjeblieft de HowTo documentatie voor gedetailleerde beschrijving.",
+                        "fr": "Si vous activez l'intégration Alexa, vous pouvez utiliser cet adaptateur comme alternative gratuite à l'ioBroker. adaptateur iot pour envoyer des commandes vocales à vos appareils. La configuration existante sera appliquée, vous n'avez pas à reconfigurer vos appareils Alexa. Les commandes seront envoyées via le canal VPN configuré. Veuillez noter que pour l'intégration Alexa au travail, vous devez également activer et lier la compétence iwg-vpn Alexa dans l'application Alexa. Veuillez suivre la documentation HowTo pour une description détaillée.",
+                        "it": "Se si attiva l'integrazione di Alexa, è possibile utilizzare questo adattatore come alternativa gratuita allo ioBroker. iot adattatore per inviare comandi vocali ai tuoi dispositivi. La configurazione attualmente esistente verrà applicata, non è necessario riconfigurare i dispositivi Alexa. I comandi verranno inviati tramite il canale VPN impostato. Si prega di notare, per l'integrazione Alexa al lavoro è anche necessario attivare e legare l'abilità iwg-vpn Alexa nell'App Alexa. Si prega di seguire la documentazione HowTo per la descrizione dettagliata.",
+                        "es": "Si activa la integración de Alexa, puede utilizar este adaptador como alternativa gratuita al ioBroker. Adaptador iot para enviar comandos de discurso a sus dispositivos. La configuración actual se aplicará, no tienes que volver a configurar tus dispositivos Alexa. Los comandos serán enviados a través del canal VPN establecido. Tenga en cuenta, para que la integración de Alexa funcione también tiene que activar y vincular la habilidad iwg-vpn Alexa en la aplicación Alexa. Siga la documentación de HowTo para su descripción detallada.",
+                        "pl": "Jeśli uaktywnisz integrację Aleksy, możesz używać tego adaptera jako alternatywy dla ioBrokera. Iot adapter do wysyłania poleceń do swoich urządzeń. Obecnie istniejąca konfiguracja nie musisz skonfigurować urządzeń Alexy. Komendy będą przesyłane przez kanał VPN. Oświadczenie, dla całki Aleksy, aby pracować, musisz aktywować i wiązać umiejętności Alexy w Aleksie. Wykazuje dokumentację HowTo dla szczegółowego opisu.",
+                        "uk": "Якщо ви активуєте інтеграцію Alexa, ви можете використовувати цей адаптер як безкоштовний альтернатива ioBroker. iot адаптер для відправки мовних команд до ваших пристроїв. В даний час існуюча конфігурація буде застосована, вам не доведеться переналаштувати пристрій Alexa. Команди будуть відправлені через набір VPN-каналу. Будь ласка, зверніть увагу, для інтеграції Alexa для роботи, ви також повинні активувати та зв'язувати навички iwg-vpn Alexa в додатку Alexa. Будь ласка, дотримуйтесь інструкцій щодо детального опису.",
+                        "zh-cn": "如果你启动Alexa一体化,你可以将这一适应者作为免费的替代办法。 iottinger to letters. 现行组合将适用,你的捐助者必须重新配置你的阿克拉装置。 指挥部将通过设立尼共体渠道发送。 请注意,阿克纳一体化工作也不得不在阿克纳的“一夫格-vpn Alexa”。 请遵循详细说明的文件。."
+                    }
+                },
+                "_alexaDocumentation": {
+                    "type": "staticLink",
+                    "label": {
+                        "en": "Click here for Alexa HowTo",
+                        "de": "Für Alexa HowTo hier klicken",
+                        "ru": "Нажмите здесь для Alexa HowTo",
+                        "pt": "Clique aqui para Alexa HowTo",
+                        "nl": "Klik hier voor Alexa How To",
+                        "fr": "Cliquez ici pour Alexa HowTo",
+                        "it": "Clicca qui per Alexa HowTo",
+                        "es": "Haga clic aquí para Alexa HowTo",
+                        "pl": "Alexa How To (ang.)",
+                        "uk": "Натисніть тут для Alexa HowTo",
+                        "zh-cn": "这里的Alexa Howto"
+                    },
+                    "href": "https://htmlpreview.github.io/?https://github.com/iwg-vpn/iobroker.iwg-vpn/blob/main/howto/alexa-config.html",
+                    "style": {
+                        "fontSize": 16,
+                        "marginBottom": 20
+                    }
+                },
+                "params.alexaEnabled": {
+                    "type": "checkbox",
+                    "newLine": true,
+                    "label": {
+                        "en": "Active",
+                        "de": "Aktiv",
+                        "ru": "Активно",
+                        "pt": "Activo",
+                        "nl": "Active",
+                        "fr": "Active",
+                        "it": "Attivo",
+                        "es": "Activo",
+                        "pl": "Aktywny",
+                        "uk": "Активний",
+                        "zh-cn": "精算师"
+                    },
+                    "default": false
+                }
+            }
         }
     }
 }

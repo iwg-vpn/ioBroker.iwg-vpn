@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "2.0.3",
+        "version": "2.0.4",
         "news": {
+            "2.0.4": {
+                "en": "Apollon77's review feedback incorporated",
+                "de": "Apollon77's Review Feedback cd",
+                "ru": "Apollon77's обзор отзывов включен",
+                "pt": "O feedback de revisão da Apollon77 incorporado",
+                "nl": "Apollon77's review feedback incorporatie",
+                "fr": "Avis d'Apollon77 incorporé",
+                "it": "La recensione di Apollon77 incorporata",
+                "es": "La retroalimentación de la revisión de Apollon77 incorporada",
+                "pl": "Recenzja Apollon77's Recenzja została włączona do programu Apollon77",
+                "uk": "Аполлон77 відгуки включений",
+                "zh-cn": "Apollon77 审查反馈"
+            },
             "2.0.3": {
                 "en": "Bug fixes",
                 "de": "Fehlerbehebung",

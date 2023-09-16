@@ -59,7 +59,7 @@
                     </p>
                     <ul>
                         <li>
-                            Configure controllable via Alexa devices using either the adapters like ioBroker.iot, ioBroker.devices or manually by creating the corresponding ioBroker states and assigning them to Rooms and Functions.
+                            To have Alexa devices already configured or create a configuration using either the adapters like ioBroker.iot, ioBroker.devices or manually.
                         </li>
                         <li>
                             Activate and link the <code>iwg-vpn skill</code> to your ioBroker installation
@@ -90,7 +90,7 @@
                     </p>
                     <figure>
                         <p>
-                            <img src="./img/device-list.png" loading="lazy">
+                            <img src="./img/device-list.png" style="width: 600px" loading="lazy">
                         </p>
                     </figure>
 
@@ -128,10 +128,64 @@
                     </figure>
 
                     <h2>
+                        Background Info
+                    </h2>
+                    <h3>
+                        Alexa Device Discovery
+                    </h3>
+                    <p>
+                        Before a device can be controlled by an Alexa voice assistant, Amazon Web Services (AWS) Alexa Service requires the information about available Alexa capable devices.
+                        This is implemented by sending a so-called Discovery request. The response to the Discovery request has to be in a pre-defined format.
+                        <p/>
+                        This format significantly differs from how the devices are represented in ioBroker. Furthermore, the current ioBroker approach
+                        allows you to create and modify ioBroker states related to Alexa devices at many places by means of different adapters as well as manually.
+                        Currently, the ioBroker.iot adapter has a not intuitive logic to collect all the related information and compose a response Alexa expects during the device discovery.
+                        <p/>
+                        This adapter's main goal is to provide a free of charge drop-in replacement for ioBroker.iot adapter. This means that you should be able to use exactly the same
+                        device configuration. Unfortunately, the ioBroker.iot adapter doesn't expose the Alexa devices, so that this adapter has to implement the same logic to collect
+                        the configured Alexa devices on its own. Furthermore, any future changes in ioBroker.iot logic have to find their way into this adapter as well.
+                        <p/>
+                        To provide the best user experience and react to changes and bugs promptly the device collection logic is implemented in the Alexa Skill, not in the adapter.
+                        This allows to fix the bugs much faster without the need to publish and roll out a new version of the adapter. For this purpose the information related to device
+                        discover is published to the Skill, this includes only the <i>common</i> and <i>type</i> properties of the relevant ioBroker states.
+                     </p>
+
+                    <h3>
+                        State change reporting
+                    </h3>
+                    <p>
+                        This adapter implements Alexa API V3.
+                    <p/>
+                        Alexa API V3 introduced a lot of changes, one of these - proactive state change reporting. State change reporting means that every state change on an Alexa device
+                        is reported to AWS Alexa Service so that the devices' states in the Alexa App are always up-to-date, and you can implement/configure scenes or routines that are triggered
+                        on a state change.
+                    </p>
+                    <p>
+                        For example, you might want to close your windows' shutters every time you turn the lights on. Sending the lights' state to the AWS Alexa service will
+                        close the shutters even if you turn the light on manually, not via the Alexa App or voice command.
+                    <p/>
+                    <p>
+                        To support this feature the adapter subscribes to state changes and sends the acknowledged ones to the Skill.
+                    <p/>
+
+                    <h3>
+                        Why is the Skill free of charge?
+                    </h3>
+                    <p>
+                        The adapter and the Alexa Skill were designed and implemented in an efficient manner. For example, the Skill caches the last known states sent to the AWS Alexa Service,
+                        so that every time the AWS Alexa Service requests the current state of a device, and believe me, the Alexa service sends a LOT OF request to obtain the current values,
+                        the Skill can immediately respond. This avoids the unnecessary round trips to your ioBroker installation, reduces the execution time and at the end the infrastructure costs.
+                        This and many other optimizations allow to keep the costs low and provide the functionality to you for free.
+                    <p/>
+
+                    <h2>
                         Support
                     </h2>
                     <p>
-                        In case you have a question or missing a feature feel free to contact iwg.vpn@gmail.com
+                        In case you have a question or missing a feature feel free to contact the Alexa Skill and adapter maintainer Martin Bird by sending an e-mail to iwg.vpn@gmail.com.
+                    </p>
+                    <p>
+                        If you feel like donating a cup of coffee to the maintainer, you find the link in the upper right corner :).
                     </p>
 
                 </div>

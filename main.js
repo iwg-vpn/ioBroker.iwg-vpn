@@ -4,7 +4,6 @@ require('dotenv').config({ path: path.resolve(__dirname, './lib/.env') })
 
 const IwgClient = require("./lib/iwg-client");
 const HttpServer = require("./lib/http-server");
-const AlexaHandler = require("./lib/alexa-handler");
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require('@iobroker/adapter-core');
@@ -151,21 +150,19 @@ class IwgVpn extends utils.Adapter {
     async onReady() {
         // Reset the connection indicator during startup
         this.setConnectionStatus(false);
-
         await AdapterProvider.start(this);
-
         FileSystemHelper.start();
-
         await HttpClient.start();
-
         this.client = new IwgClient();
         await this.client.start();
-
-        this.httpServer = new HttpServer(this);
+        this.httpServer = new HttpServer();
         await this.httpServer.start();
 
-        await AlexaHandler.init(this)
-        await AlexaClient.start()
+        if (this.config?.params?.alexaEnabled) {
+            await AlexaClient.start()
+        } else {
+            this.log.info("Alexa integration is disabled");
+        }
     }
 
     /**
