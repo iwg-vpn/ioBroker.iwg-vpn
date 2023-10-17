@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "2.0.4",
+        "version": "2.0.5",
         "news": {
+            "2.0.5": {
+                "en": "\"objects\"-API introduced",
+                "de": "Objekte\"-API vorgestellt",
+                "ru": "объектов\"-API введен",
+                "pt": "objetos\"-API introduzido",
+                "nl": "Voorwerpen",
+                "fr": "objets\"-API introduit",
+                "it": "oggetti\"-API introdotto",
+                "es": "objetos\"-API introducido",
+                "pl": "obiektyw",
+                "uk": "об'єкти\"-API",
+                "zh-cn": "目标"
+            },
             "2.0.4": {
                 "en": "Apollon77's review feedback incorporated",
                 "de": "Apollon77's Review Feedback cd",
