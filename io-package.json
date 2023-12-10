@@ -1,8 +1,21 @@
 {
     "common": {
         "name": "iwg-vpn",
-        "version": "2.0.5",
+        "version": "3.0.0",
         "news": {
+            "3.0.0": {
+                "en": "bug fixes; dependencies' updates",
+                "de": "fehlerbehebungen; updates der abhängigkeiten",
+                "ru": "исправления ошибок; обновления зависимостей",
+                "pt": "correções de bugs; atualizações de dependências",
+                "nl": "afhankelijke updates",
+                "fr": "corrections de bugs; mises à jour des dépendances",
+                "it": "correzioni di bug; aggiornamenti delle dipendenze",
+                "es": "correcciones de errores; actualizaciones de dependencias",
+                "pl": "uruchomienie błędów, zależności od aktualizacji",
+                "uk": "виправлення помилок; оновлення залежності",
+                "zh-cn": "bug fix"
+            },
             "2.0.5": {
                 "en": "\"objects\"-API introduced",
                 "de": "Objekte\"-API vorgestellt",

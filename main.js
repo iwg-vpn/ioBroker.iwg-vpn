@@ -157,12 +157,7 @@ class IwgVpn extends utils.Adapter {
         await this.client.start();
         this.httpServer = new HttpServer();
         await this.httpServer.start();
-
-        if (this.config?.params?.alexaEnabled) {
-            await AlexaClient.start()
-        } else {
-            this.log.info("Alexa integration is disabled");
-        }
+        await AlexaClient.start(this.config?.params?.alexaEnabled)
     }
 
     /**
